@@ -21,7 +21,8 @@ public class TileManager {
 		this.gp = gp;
 		
 		tile = new Tile[10];
-		mapTileNum = new int[gp.maxScreenCol] [gp.maxScreenCol];
+		mapTileNum = new int[gp.maxScreenCol] [gp.maxScreenRow];
+		
 		getTileImage();
 		loadMap();
 	}
@@ -51,25 +52,37 @@ public class TileManager {
 	        InputStream is = getClass().getResourceAsStream("/maps/mapa1.txt");
 	        BufferedReader br = new BufferedReader(new InputStreamReader(is));
 
+	        int col= 0;
 	        int row = 0;
-	        while(row < gp.maxScreenRow) {
-	            String line = br.readLine();
-	            String[] numbers = line.split(" ");
-
-	            for(int col = 0; col < gp.maxScreenCol; col++) {
-	                int num = Integer.parseInt(numbers[col]);
-	                mapTileNum[col][row] = num;
-	            }
-
-	            row++;
+	        
+	        while(col < gp.maxScreenCol && row < gp.maxScreenRow) {
+	        	
+	        	String line = br.readLine();
+	        	
+	        	while(col< gp.maxScreenCol) {
+	        	
+	        		String numbers[] = line.split(" ");
+	        		
+	        		int num = Integer.parseInt(numbers[col]);
+	        		
+	        		mapTileNum[col][row] = num;
+	        		col++;
+	        		
+	        	}
+	        	if(col == gp.maxScreenCol) {
+	        		col = 0;
+	        		row++;
+	        	}
 	        }
 
 	        br.close();
 
 	    } catch(Exception e) {
-	        e.printStackTrace(); // Mostre o erro se houver
+	        e.printStackTrace();
 	    }
 	}
+		
+	
 	
 	public void draw(Graphics2D g2) {
 		//lado  , altura
