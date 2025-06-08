@@ -13,19 +13,19 @@ import tile.TileManager;
 public class GamePanel extends JPanel implements Runnable{
 
 	// Screen settings
-	final int originalTileSize = 16;
-	final int scale = 3;
+	final int originalTileSize = 10;
+	final int scale = 12;
 
 	public final int tileSize = originalTileSize * scale;
 
-	public final int maxScreenCol = 16;
-	public final int maxScreenRow = 12;
+	public final int maxScreenCol = 10;
+	public final int maxScreenRow = 6;
 	public final int screenWidth = tileSize * maxScreenCol; //769pixels
 	public final int screenHeight = tileSize * maxScreenRow;//576pixels
 	
 	//World setting
-	public final int maxWorldCol = 50;
-	public final int maxWorldRow = 50;
+	public final int maxWorldCol = 250;
+	public final int maxWorldRow = 250;
 	public final int worldWith = tileSize * maxWorldCol;
 	public final int worldHeight= tileSize * maxWorldRow;
 	

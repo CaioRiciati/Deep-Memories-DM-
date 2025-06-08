@@ -23,7 +23,7 @@ public class Player extends Entity{
 		
 		//isso aqui é a posição aonde o personagem fica na tela
 		//é recomendado por screenHeight e width /2 mas n ta dando certo
-		screenX = gp.screenWidth/2 - (gp.tileSize + 10);
+		screenX = gp.screenWidth/2 - (gp.tileSize - 10);
 		screenY = gp.screenHeight/2 - (gp.tileSize);
 		
 		setDefaultValues();
@@ -160,6 +160,6 @@ public class Player extends Entity{
 			
 		}
 		//Tamanho do player
-		g2.drawImage(image,screenX, screenY, 150, 150, null);
+		g2.drawImage(image,screenX, screenY, 180, 180, null);
 	}
 }
