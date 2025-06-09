@@ -32,7 +32,7 @@ public class Player extends Entity{
 	}
 	
 	public void setDefaultValues() {
-		
+		//local de spawn do player?
 		worldX = gp.tileSize * 13;
 		worldY = gp.tileSize * 13;
 		speed = 4;

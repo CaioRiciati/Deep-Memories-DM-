@@ -45,6 +45,9 @@ public class TileManager {
 			
 			tile[2] = new Tile();
 			tile[2].image = ImageIO.read(getClass().getResourceAsStream("/tiles/water.gif"));
+			tile[2].animated = true;
+			tile[2].animation = new ImageIcon(getClass().getResource("/tiles/water.gif"));
+			
 			
 			tile[3] = new Tile();
 			tile[3].image = ImageIO.read(getClass().getResourceAsStream("/tiles/earth.png"));
