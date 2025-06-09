@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 
 import main.GamePanel;
 
@@ -32,11 +33,14 @@ public class TileManager {
 		try {
 			
 			tile[0] = new Tile();
-			tile[0].image = ImageIO.read(getClass().getResourceAsStream("/tiles/grass.gif"));
+			tile[0].image = new ImageIcon(getClass().getResource("/tiles/grass.gif")).getImage();
+			tile[0].animated = true;
+			tile[0].animation = new ImageIcon(getClass().getResource("/tiles/grass.gif"));
 			
 			
 			tile[1] = new Tile();
 			tile[1].image = ImageIO.read(getClass().getResourceAsStream("/tiles/bricks.jpg"));
+
 			
 			
 			tile[2] = new Tile();
@@ -97,42 +101,44 @@ public class TileManager {
 	
 	
 	public void draw(Graphics2D g2) {
-		//lado  , altura
-		//g2.drawImage(tile[1].image, 0, 0, 300, 300, null);
+	    // lado , altura
+	    // g2.drawImage(tile[1].image, 0, 0, 300, 300, null);
 		
-		int worldCol = 0;
-		int worldRow = 0;
+	    int worldCol = 0;
+	    int worldRow = 0;
 
-		
-		while(worldCol < gp.maxWorldCol && worldRow < gp.maxWorldRow) {
-			
-			int tileNum = mapTileNum[worldCol] [worldRow];
-			
-			//fique de olho!! talvez vc tenha q mudar os numeros do world x e worldY pq vc usou tileSize
-			int worldX= worldCol * gp.tileSize;
-			int worldY = worldRow * gp.tileSize;
-			int screenX = worldX - gp.player.worldX + gp.player.screenX;
-			int screenY = worldY - gp.player.worldY + gp.player.screenY;
-			
-			if(worldX + (gp.tileSize)> gp.player.worldX - gp.player.screenX && 
-					worldX - (gp.tileSize ) < gp.player.worldX + gp.player.screenX &&
-					worldY + (gp.tileSize)> gp.player.worldY - gp.player.screenY &&
-					worldY - (gp.tileSize) < gp.player.worldY + gp.player.screenY) {
-				
-				g2.drawImage(tile[tileNum].image , screenX, screenY , gp.tileSize, gp.tileSize, null);
-			
-			}
-			
-			worldCol++;
+	    while (worldCol < gp.maxWorldCol && worldRow < gp.maxWorldRow) {
 
-			
-			if(worldCol == gp.maxWorldCol) {
-				worldCol = 0;
-				worldRow++;
-				
-			}
-			
-		}
+	        int tileNum = mapTileNum[worldCol][worldRow];
 
+	        // fique de olho!! talvez vc tenha q mudar os numeros do world x e worldY pq vc usou tileSize
+	        int worldX = worldCol * gp.tileSize;
+	        int worldY = worldRow * gp.tileSize;
+	        int screenX = worldX - gp.player.worldX + gp.player.screenX;
+	        int screenY = worldY - gp.player.worldY + gp.player.screenY;
+
+	        // originalmente aki n deveria ter os 120
+	        // mas como mudei algumas coisas no tileSize vai ficar assim.
+	        if (worldX + (gp.tileSize + 120) > gp.player.worldX - gp.player.screenX &&
+	            worldX - (gp.tileSize + 120) < gp.player.worldX + gp.player.screenX &&
+	            worldY + (gp.tileSize + 120) > gp.player.worldY - gp.player.screenY &&
+	            worldY - (gp.tileSize + 120) < gp.player.worldY + gp.player.screenY) {
+
+	            // Se for animado, desenha a imagem da animação
+	            if (tile[tileNum].animated && tile[tileNum].animation != null) {
+	                g2.drawImage(tile[tileNum].animation.getImage(), screenX, screenY, gp.tileSize, gp.tileSize, null);
+	            } else {
+	                g2.drawImage(tile[tileNum].image, screenX, screenY, gp.tileSize, gp.tileSize, null);
+	            }
+	        }
+
+	        worldCol++;
+
+	        if (worldCol == gp.maxWorldCol) {
+	            worldCol = 0;
+	            worldRow++;
+	        }
+	    }
 	}
+
 }

@@ -1,8 +1,12 @@
 package tile;
 
-import java.awt.image.BufferedImage;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
 
 public class Tile {
-	public BufferedImage image;
-	public boolean collision = false;
+    public Image image;
+    public boolean collision = false;
+    public boolean animated = false;
+    public ImageIcon animation;
 }
