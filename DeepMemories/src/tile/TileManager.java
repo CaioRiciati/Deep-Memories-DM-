@@ -20,7 +20,7 @@ public class TileManager {
 	
 	public TileManager(GamePanel gp) {
 		this.gp = gp;
-		
+		 
 		tile = new Tile[10];
 		mapTileNum = new int[gp.maxWorldCol] [gp.maxWorldRow];
 		
@@ -40,14 +40,13 @@ public class TileManager {
 			
 			tile[1] = new Tile();
 			tile[1].image = ImageIO.read(getClass().getResourceAsStream("/tiles/bricks.jpg"));
-
-			
+			tile[1].collision = true;
 			
 			tile[2] = new Tile();
 			tile[2].image = ImageIO.read(getClass().getResourceAsStream("/tiles/water.gif"));
 			tile[2].animated = true;
 			tile[2].animation = new ImageIcon(getClass().getResource("/tiles/water.gif"));
-			
+			tile[2].collision = true;			
 			
 			tile[3] = new Tile();
 			tile[3].image = ImageIO.read(getClass().getResourceAsStream("/tiles/earth.png"));
@@ -57,7 +56,7 @@ public class TileManager {
 			
 			tile[5] = new Tile();
 			tile[5].image = ImageIO.read(getClass().getResourceAsStream("/tiles/treeLittle.png"));
-			
+			tile[5].collision = true;	
 			
 			// 0 é grama , 1 é tijolos, 2 é agua, 3 é terra, 4 é areia e 5 são arbustos
 			
