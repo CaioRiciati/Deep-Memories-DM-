@@ -5,11 +5,11 @@ form.addEventListener("submit", async function(event) {
   event.preventDefault();
 
   const nome = document.getElementById("nome").value.trim();
-  const usename = document.getElementById("username").value.trim();
+  const username = document.getElementById("username").value.trim(); // Corrigido aqui
   const email = document.getElementById("email").value.trim();
   const senha = document.getElementById("senha").value.trim();
 
-  if (!nome || !username ||!email || !senha) {
+  if (!nome || !username || !email || !senha) {
     mensagem.textContent = "Preencha todos os campos.";
     mensagem.style.color = "red";
     return;
@@ -17,7 +17,7 @@ form.addEventListener("submit", async function(event) {
 
   // Parte para integrar com o back-end
   try {
-    const response = await fetch("http://localhost:8080/api/usuarios", {
+    const response = await fetch("http://localhost:8080/usuarios", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

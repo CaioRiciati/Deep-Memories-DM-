@@ -20,7 +20,7 @@ import br.com.DM.deepMemories.entity.Usuario;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping("usuarios")
+@RequestMapping("/usuarios")
 public class usuarioController {
 	
 	@Autowired
