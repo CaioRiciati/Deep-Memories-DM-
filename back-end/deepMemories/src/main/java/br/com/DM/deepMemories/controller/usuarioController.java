@@ -1,10 +1,13 @@
 package br.com.DM.deepMemories.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,6 +19,7 @@ import br.com.DM.deepMemories.entity.Usuario;
 
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping("usuarios")
 public class usuarioController {
 	
@@ -40,11 +44,12 @@ public class usuarioController {
 		}
 		
 		
-		
-		@DeleteMapping
-		public Usuario removerUsuario(Usuario usuario) {
-			Usuario usuarioRemovido = dao.delete(usuario);
-			return usuarioRemovido;
+		@DeleteMapping("/{id}")
+		public Optional<Usuario> excluirUsuario(@PathVariable Integer id) {
+			Optional<Usuario> usuario = dao.findById(id);
+			dao.deleteById(id);
+			return usuario;
+			
 		}
 		
 
