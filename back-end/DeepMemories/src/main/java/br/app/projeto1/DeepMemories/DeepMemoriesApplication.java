@@ -1,4 +1,4 @@
-package br.com.DM.deepMemories;
+package br.app.projeto1.DeepMemories;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

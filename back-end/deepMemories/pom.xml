@@ -8,11 +8,11 @@
 		<version>3.5.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.DM</groupId>
-	<artifactId>deepMemories</artifactId>
+	<groupId>br.app.projeto1</groupId>
+	<artifactId>DeepMemories</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>deepMemories</name>
-	<description>Demo project for Spring Boot</description>
+	<name>DeepMemories</name>
+	<description>projeto de uma wiki interativa para meu portifolio</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -36,7 +36,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 
 		<dependency>
