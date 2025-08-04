@@ -1,23 +1,14 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #621e23;
+  background-color: #5a1419;
   background-image: radial-gradient(circle at top left, rgba(255, 100, 60, 0.15), transparent),
-                    radial-gradient(circle at bottom right, rgba(139, 118, 112, 0.15), transparent);
+                    radial-gradient(circle at bottom right, rgba(255, 100, 60, 0.15), transparent);
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   height: 100vh;
-  position: relative;
-  overflow: hidden;
   
-}
-
-.recuperar {
-  color: #5a1419;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 30px;
 }
 
 .nuvem-topo {
@@ -40,8 +31,6 @@ body {
 }
 
 
-
-
 .background {
   width: 100%;
   height: 50%;    
@@ -58,17 +47,17 @@ body {
   background-color: #e0d1d1;
   padding: 40px;
   border-radius: 25px;
-  text-align: center;
-  width: 360px;
+  width: 290px;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
   z-index: 2;
   margin: auto;
 }
 
-h2 {
+h1 {
   color: #5a1419;
   font-weight: bold;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .logos {
@@ -89,14 +78,15 @@ h2 {
   background-color: #5a1419;
 }
 
-.label-codigo {
+label {
   font-size: 0.8rem;
   color: #00785a;
   display: block;
   margin-bottom: 6px;
+  margin-left: 20px;
 }
 
-input[type="text"] {
+input {
   width: 94%;
   padding: 10px;
   border: 2px solid #5a1419;
@@ -117,13 +107,24 @@ button {
   width: 100%;
 }
 
-.link-reenvio {
+.confirmar {
+  background-color: #5a1419;
+  border-radius: 20px;
+  height: 100%;
+  text-align: center;
+}
+
+a {
   display: block;
   font-size: 0.85rem;
   color: #00785a;
   text-decoration: none;
 }
 
-.link-reenvio:hover {
+a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 728px){
+
 }

@@ -1,26 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criação de conta</title>
-    <link rel="stylesheet" href="CreateLogin.css">
+    <link rel="stylesheet" href="../styles/CreateLogin.css">
+  <title>Criação de Login - Deep Memories</title>
+
 </head>
 <body>
-    <main>
-        <h1>Criar conta</h1>
-        <!-- imagens da logo do jogo -->
-         <label for="iemail">Digite ser E-mail</label>
-         <input type="email" name="email" id="iemail">
+  <div class="background">
+    <img src="../Imagens/nuvem-esquerda.png" class="nuvem-topo" alt="Nuvem topo esquerda">
+    <img src="../Imagens/nuvem-direita.png" class="nuvem-baixo" alt="Nuvem inferior direita">
+  </div>
+    <main class="container">
+        <section class="card">
+          <h1>Criar conta</h1>
+          <div class="logos">
+            <img src="../imagens/3.png" alt="Logo Simbiótica">
+            <div class="divisor"></div>
+            <img src="../imagens/1.png" alt="Deep Memories">
+          </div>
+           <form action="login" method="post">
+             <label for="iemail">Digite ser E-mail</label>
+             <input type="email" name="email" id="iemail" required>
+             <label for="iusuario">Crie um nome de usuário</label>
+             <input type="text" name="usuario" id="iusuario" required>
+           </form>
+           <img src="../Imagens/seta direita.png" alt="confirmar" class="confirmar">
+   
+           <a href="Login.html">Já tem uma conta? Faça login aqui!</a>
+           <!-- Criar com google -->
+      </main>
+        </section>
 
-         <label for="iusuario">Crie um nome de usuário</label>
-         <input type="text" name="usuario" id="iusuario">
-
-         <!-- seta de confimar-->
-
-         <a href="Login.html">Já tem uma conta? Faça login aqui!</a>
-         
-         <!-- Criar com google -->
-    </main>
 </body>
 </html>
