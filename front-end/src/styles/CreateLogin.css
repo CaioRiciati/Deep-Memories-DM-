@@ -111,8 +111,9 @@ button {
   background-color: #5a1419;
   border-radius: 20px;
   height: 100%;
-  text-align: center;
 }
+
+.sla {}
 
 a {
   display: block;
