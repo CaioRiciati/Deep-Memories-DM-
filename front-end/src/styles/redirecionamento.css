@@ -58,8 +58,8 @@ body {
 
 h1 {
   color: #5a1419;
-  font-size: 30px;
-  font-weight: 900;
+  font-size: 40px;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -110,7 +110,6 @@ button {
     margin: 15px auto 0 auto;
     width: 80%;
     font-size: 20px;
-    font-weight: 700;
 }
 
 button:hover {
@@ -119,31 +118,19 @@ button:hover {
 
 @media (max-width: 750px){
   .container {
-  width: 60%;
+  width: 70%;
   }
 
   button {
     width: 80%;
     font-size: 20px;
   }
-
-  h1{
-    font-size: 25px;
-  }
 }
 
 @media (min-width: 750px) and (max-width:1000px){
   .container {
-  width: 50%;
-  }
-
-  h1{
-    font-size: 25px;
+  width: 60%;
   }
 }
 
-@media  (max-width:1000px){
-  .container{
-  width: 40%;
-  }
-}
+
