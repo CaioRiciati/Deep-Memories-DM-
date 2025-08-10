@@ -13,28 +13,38 @@
     <img src="../Imagens/nuvem-esquerda.png" class="nuvem-topo" alt="Nuvem topo esquerda">
     <img src="../Imagens/nuvem-direita.png" class="nuvem-baixo" alt="Nuvem inferior direita">
   </div>
-    <main class="container">
-        <section class="card">
-          <h1>Criar conta</h1>
-          <div class="logos">
-            <img src="../imagens/3.png" alt="Logo Simbiótica">
-            <div class="divisor"></div>
-            <img src="../imagens/1.png" alt="Deep Memories">
-          </div>
-           <form action="login" method="post">
-             <label for="iemail">Digite ser E-mail</label>
-             <input type="email" name="email" id="iemail" required>
-             <label for="iusuario">Crie um nome de usuário</label>
-             <input type="text" name="usuario" id="iusuario" required>
-           </form>
 
-           <div class="sla">
-             <img src="../Imagens/seta direita.png" alt="confirmar" class="confirmar">
-             <a href="Login.html">Já tem uma conta? Faça login aqui!</a>
-             <!-- Criar com google -->
-           </div>
-      </main>
-        </section>
+  <main class="container">
+    <section class="card">
+      <h1>Criar conta</h1>
+      <div class="logos">
+        <img src="../imagens/deepmemories-logo.png" alt="Logo Simbiótica">
+        <div class="divisor"></div>
+        <img src="../imagens/1.png" alt="Deep Memories">
+      </div>
+      <form action="login" method="post">
+        <label for="iemail">Digite seu E-mail</label>
+        <input type="email" name="email" id="iemail" required>
+        <label for="iusuario">Crie um nome de usuário</label>
+        <input type="text" name="usuario" id="iusuario" required>
+      </form>
 
+      <div class="sla">
+        <button type="submit" class="confirmar">
+          <img src="../Imagens/seta direita.png" alt="confirmar">
+        </button>
+        <a href="Login.html">Já tem uma conta? Faça login aqui!</a>
+      </div>
+
+      <div class="divisor-ou">
+        <span></span>
+        <p>OU</p>
+        <span></span>
+      </div>
+
+      <!--Falta colocar o bagulho de login com o google-->
+    </section>
+  </main>
 </body>
+
 </html>
