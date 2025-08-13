@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: linear-gradient(to right, #015258, #131e31);
+    color: #333;
+}
+
+header {
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    gap: 30px;
+}
+
+header img {
+    height: 100px;
+    margin-left: 10px;
+}
+
+nav {
+    display: flex;
+    margin-right: 10px;
+    gap: 20px;
+
+}
+
+.dropdown {
+    position: relative;
+    border-radius: 10px;
+}
+
+  /* Container do menu */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Botão principal */
+  .dropbtn {
+    background-image: linear-gradient(to top, #015258, #131e31);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 120px;
+    height: 50px;
+  }
+
+  .dropbtn:hover {
+    background: #333;
+  }
+
+  /* Conteúdo do menu */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3b4b56;
+    min-width: 200px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Itens do menu */
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #556270;
+  }
+
+  /* Mostrar menu ao passar o mouse */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+  .conta {
+    background-image: linear-gradient(to top, #015258, #131e31);
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 120px;
+    height: 50px;
+  }
