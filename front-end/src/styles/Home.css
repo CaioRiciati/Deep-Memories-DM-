@@ -85,14 +85,20 @@ nav {
   }
 
 
-  .conta {
-    background-image: linear-gradient(to top, #015258, #131e31);
-    border-radius: 10px;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    width: 120px;
-    height: 50px;
-  }
+nav .conta {
+  position: absolute;
+  right: 20px; 
+  background-image: linear-gradient(to top, #015258, #131e31);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 120px;
+  height: 50px;
+}
+
+nav .conta:hover {
+  background-color: #00796B;
+}
