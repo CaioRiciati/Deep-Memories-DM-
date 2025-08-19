@@ -6,41 +6,54 @@
   <title>Página Inicial</title>
   <link rel="stylesheet" href="../styles/Home.css">
 </head>
-<body>
+<body> 
 
   <header>
-    <img src="../Imagens/deepmemories-logoAzul.png" alt="">
+    <img src="../Imagens/deepmemories-logoAzul.png" alt="logo">
     <nav>
-      <div class="dropdown">
-        <button class="dropbtn">JOGO</button>
-        <div class="dropdown-content">
-          <a href="#">Baixar</a>
-          <a href="#">Atualizações</a>
-          <a href="#">Versões</a>
-        </div>
-      </div>
+      <button id="btn-menu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+
+      <div class="menu">
         <div class="dropdown">
-        <button class="dropbtn">Sobre</button>
-        <div class="dropdown-content">
-          <a href="#">Geral</a>
-          <a href="#">iniciantes</a>
-          <a href="#">Níveis</a>
-          <a href="#">Seguraça da conta</a>
-          <a href="#">Política do jogo</a>
-          <a href="#">Suporte</a>
+            <button class="dropbtn">JOGO</button>
+          <div class="dropdown-content">
+            <a href="#">Baixar</a>
+            <a href="#">Atualizações</a>
+            <a href="#">Versões</a>
+          </div>
+
+        </div>
+          <div class="dropdown">
+            <button class="dropbtn">Sobre</button>
+          <div class="dropdown-content">
+            <a href="#">Geral</a>
+            <a href="#">iniciantes</a>
+            <a href="#">Níveis</a>
+            <a href="#">Seguraça da conta</a>
+            <a href="#">Política do jogo</a>
+            <a href="#">Suporte</a>
+          </div>
+
+        </div>
+          <div class="dropdown">
+            <button class="dropbtn">Comunidade</button>
+          <div class="dropdown-content">
+            <a href="#">DeepMemories Wiki</a>
+            <a href="#">Discord</a>
+            <a href="#">Instagram</a>
+            <a href="#">Faça parte</a>
+          </div>
+
         </div>
       </div>
-        <div class="dropdown">
-        <button class="dropbtn">Comunidade</button>
-        <div class="dropdown-content">
-          <a href="#">DeepMemories Wiki</a>
-          <a href="#">Discord</a>
-          <a href="#">Instagram</a>
-          <a href="#">Faça parte</a>
-        </div>
-      </div>
-      <button class="conta">Criar conta</button>
+
     </nav>
+
+    <button id="conta">Criar conta</button>
   </header>
 
   <div class="background">
@@ -60,5 +73,7 @@
     <section class="caixa-pequena"></section>
   </div>
 
+  <script src="../scripts/requisicaoAPI.js"></script>
+  <script src="../scripts/Home.js"></script>
 </body>
 </html>

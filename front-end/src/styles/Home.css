@@ -1,12 +1,16 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;    
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
     font-family: 'Arial', sans-serif;
     background-image: linear-gradient(to right, #015258, #131e31);
     color: #333;
+    transition: 0.5s ease;
 }
 
 header {
@@ -31,18 +35,50 @@ nav {
 
 }
 
-.dropdown {
-    position: relative;
-    border-radius: 10px;
+#btn-menu {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #131e31;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;   
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 }
 
-  /* Container do menu */
+.line {
+  width: 20px;
+  height: 3px;
+  background-color: #131e31;
+  display: block;
+  position: relative;
+  transform-origin: center;
+  transition: 0.2s;
+}
+
+#btn-menu.active .line:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+  background-color: #015258;
+}
+
+#btn-menu.active .line:nth-child(2) {
+  width: 0;
+}
+
+#btn-menu.active .line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  background-color: #015258;
+}
+
   .dropdown {
     position: relative;
     display: inline-block;
   }
 
-  /* Botão principal */
   .dropbtn {
     background-image: linear-gradient(to top, #015258, #131e31);
     color: white;
@@ -51,15 +87,14 @@ nav {
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
-    width: 10vw;
     height: 50px;
+    transition: 1s ease;
   }
 
   .dropbtn:hover {
-    background: #333;
+    background: #003c41;
   }
 
-  /* Conteúdo do menu */
   .dropdown-content {
     display: none;
     position: absolute;
@@ -69,7 +104,6 @@ nav {
     z-index: 1;
   }
 
-  /* Itens do menu */
   .dropdown-content a {
     color: white;
     padding: 12px 16px;
@@ -81,13 +115,12 @@ nav {
     background-color: #556270;
   }
 
-  /* Mostrar menu ao passar o mouse */
   .dropdown:hover .dropdown-content {
     display: block;
   }
 
 
-nav .conta {
+#conta {
   position: absolute;
   right: 20px; 
   background-image: linear-gradient(to top, #015258, #131e31);
@@ -97,12 +130,11 @@ nav .conta {
   border: none;
   border-radius: 10px;
   font-size: 16px;
-  width: 12vw;
   height: 50px;
   font-size: 1.1em;
 }
 
-nav .conta:hover {
+#conta:hover {
   background-color: #00796B;
 }
 
@@ -113,6 +145,12 @@ nav .conta:hover {
   width: 82%;
   z-index: 0;
   pointer-events: none;
+}
+
+nav div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 
 .nuvem-baixo {
@@ -156,4 +194,43 @@ nav .conta:hover {
   border-radius: 15px;
   z-index: 1;
   
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 30%;
+    background-color: #2f4c5f;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 40px;
+  }
+
+  .menu.show {
+    display: flex;
+    position: absolute;
+  }
+
+    .dropdown,
+  .conta {
+    width: 100%;
+  }
+
+  .dropbtn,
+  .conta {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  #btn-menu {
+    display: none;
+  }
 }
