@@ -32,7 +32,12 @@ nav {
     display: flex;
     margin-right: 10px;
     gap: 20px;
+}
 
+nav div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 #btn-menu {
@@ -74,50 +79,52 @@ nav {
   background-color: #015258;
 }
 
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
 
-  .dropbtn {
-    background-image: linear-gradient(to top, #015258, #131e31);
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    height: 50px;
-    transition: 1s ease;
-  }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
-  .dropbtn:hover {
-    background: #003c41;
-  }
+.dropbtn {
+  background-image: linear-gradient(to top, #015258, #131e31);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  height: 50px;
+  width: 150px;
+  transition: 1s ease;
+}
 
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #3b4b56;
-    min-width: 200px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
+.dropbtn:hover {
+  background: #003c41;
+}
 
-  .dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #3b4b56;
+  min-width: 200px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  z-index: 1;
+}
 
-  .dropdown-content a:hover {
-    background-color: #556270;
-  }
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
 
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+.dropdown-content a:hover {
+  background-color: #556270;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 
 #conta {
@@ -145,12 +152,6 @@ nav {
   width: 82%;
   z-index: 0;
   pointer-events: none;
-}
-
-nav div {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
 }
 
 .nuvem-baixo {
@@ -229,8 +230,24 @@ nav div {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   #btn-menu {
     display: none;
   }
+
+  .dropbtn {
+    padding: 5px;
+    font-size: 14px;
+    height: 36px;
+    width: 110px;
+  }
+
+  #conta {
+    padding: 5px;
+    font-size: 16px;
+    height: 40px;
+    width: 110px;
+    font-size: 14px;
+  }
+
 }
