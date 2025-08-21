@@ -5,7 +5,9 @@ async function chamarAPI() {
     if (resp.status === 200) {
         const obj = await resp.json();
         console.log(obj)
+        
     }
+    
 }
 
 chamarAPI();
