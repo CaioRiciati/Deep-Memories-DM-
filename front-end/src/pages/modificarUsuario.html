@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações de perfil</title>
+    <link rel="stylesheet" href="../styles/modificarUsuario.css">
+</head>
+<body>
+    <div class="background">
+        <img src="../Imagens/nuvem-esquerda.png" class="nuvem-topo" alt="Nuvem topo esquerda">
+        <img src="../Imagens/nuvem-direita.png" class="nuvem-baixo" alt="Nuvem inferior direita">
+    </div>
+  
+    <main class="container">
+        <!-- Card de trás -->
+        <div class="content">
+            <div class="perfil">
+                <img src="../Imagens/person.png" alt="foto de perfil">
+                <a href="#">Alterar foto de perfil</a>
+            </div>
+
+            <form>
+                <div class="input-group">
+                    <label for="email">Seu E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="user">Nome de usuário</label>
+                    <input type="text" id="user" name="user" placeholder="usuario" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" placeholder="123@Senha" required>
+                </div>
+
+                <button id="save">Salvar Alterações</button>
+            </form>
+        </div>
+
+        <!-- Card da frente -->
+        <div class="content2">
+            <form>
+                <div class="input-group">
+                    <label for="novoUser">Novo nome de usuário</label>
+                    <input type="text" id="novoUser" name="novoUser" placeholder="Digite o novo nome" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirmaUser">Confirme o nome de usuário</label>
+                    <input type="text" id="confirmaUser" name="confirmaUser" placeholder="Confirme o nome" required>
+                </div>
+
+                <button id="confirmar">Confirmar</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
