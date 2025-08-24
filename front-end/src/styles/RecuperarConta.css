@@ -132,3 +132,21 @@ button {
 .link-reenvio:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 1024px) {
+    .content {
+        width: 70vw;
+    }
+
+    .nuvem-topo {
+        bottom: 70%;
+        right: 46%;
+        width: 82%;
+    }
+
+    .nuvem-baixo {
+        top: 60%;
+        left: 30%;
+        width: 130%;
+    }
+}

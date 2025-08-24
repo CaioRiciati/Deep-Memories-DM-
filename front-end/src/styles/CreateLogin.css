@@ -9,10 +9,8 @@ body {
   background-color: #5a1419;
   background-image: radial-gradient(circle at top left, rgba(255, 100, 60, 0.15), transparent),
                     radial-gradient(circle at bottom right, rgba(255, 100, 60, 0.15), transparent);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .nuvem-topo {
@@ -40,19 +38,17 @@ body {
 }
 
 .container {
+  height: 100vh;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 25%;
-  z-index: 2;
 }
 
 .card {
   background-color: #e0d1d1;
   padding: 40px;
   border-radius: 25px;
-  width: 100%;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
   z-index: 2;
 }
@@ -141,4 +137,26 @@ a:hover {
   margin: 0 10px;
   font-weight: bold;
   color: #5a1419;
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 70vw;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+    .nuvem-topo {
+        bottom: 70%;
+        right: 46%;
+        width: 82%;
+    }
+
+    .nuvem-baixo {
+        top: 60%;
+        left: 30%;
+        width: 130%;
+    }
 }

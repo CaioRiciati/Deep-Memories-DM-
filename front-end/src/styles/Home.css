@@ -47,7 +47,6 @@ nav div {
   border-radius: 10px;
   background: transparent;
   cursor: pointer;
-
   display: flex;
   flex-direction: column;   
   align-items: center;
@@ -78,7 +77,6 @@ nav div {
   transform: translateY(-8px) rotate(-45deg);
   background-color: #015258;
 }
-
 
 .dropdown {
   position: relative;
@@ -143,6 +141,12 @@ nav div {
 
 #conta:hover {
   background-color: #00796B;
+}
+
+#conta a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
 }
 
 .nuvem-topo {
@@ -230,16 +234,16 @@ nav div {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px){
   #btn-menu {
     display: none;
   }
 
   .dropbtn {
-    padding: 5px;
-    font-size: 14px;
-    height: 36px;
-    width: 110px;
+  padding: 5px;
+  font-size: 1.1em;
+  height: 40px;
+  width: 122px;
   }
 
   #conta {

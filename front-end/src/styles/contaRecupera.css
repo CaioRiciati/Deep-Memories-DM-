@@ -132,18 +132,21 @@ button:hover {
   }
 }
 
-@media (min-width: 750px) and (max-width:1000px){
-  .container {
-  width: 50%;
-  }
+  
+  @media (max-width: 1024px) {
+    .container{
+    width: 40%;
+    }
+    
+    .nuvem-topo {
+        bottom: 50%;
+        right: 30%;
+        width: 130%;
+    }
 
-  h1{
-    font-size: 25px;
-  }
-}
-
-@media  (max-width:1000px){
-  .container{
-  width: 40%;
-  }
+    .nuvem-baixo {
+        top: 50%;
+        left: 30%;
+        width: 130%;
+    }
 }

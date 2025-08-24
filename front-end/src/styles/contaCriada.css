@@ -125,47 +125,38 @@ p {
   pointer-events: none;
 }
 
-/* Telas médias (tablets) */
-@media (min-width: 768px) {
-  .nuvem-topo {
-  bottom: 70%;
-  right: 20%;
-  width: 120%;
-  }
-
-  .nuvem-baixo {
-  top: 70%;
-  left: 20%;
-  width: 120%;
-}
-
 /* Telas pequenas (celulares grandes) */
 @media (max-width: 768px) {
-  .nuvem-topo {
-  bottom: 70%;
-  right: 20%;
-  width: 120%;
+      .content {
+          width: 70vw;
+      }
+
+      .nuvem-topo {
+          bottom: 70%;
+          right: 46%;
+          width: 82%;
+      }
+
+      .nuvem-baixo {
+          top: 60%;
+          left: 30%;
+          width: 130%;
+      }
   }
 
-  .nuvem-baixo {
-  top: 70%;
-    left: 20%;
-    width: 120%;
-  }
-}
 
-/* Telas muito pequenas (celulares pequenos) */
-@media (max-width: 480px) {
+
+  @media (max-width: 1024px) {
+
     .nuvem-topo {
-      bottom: 35%;
-      right: 10%;
-      width: 140%;
+        bottom: 70%;
+        right: 46%;
+        width: 82%;
     }
 
     .nuvem-baixo {
-      top: 55%;
-      left: 5%;
-      width: 100%;
+        top: 60%;
+        left: 30%;
+        width: 130%;
     }
-  }
 }
