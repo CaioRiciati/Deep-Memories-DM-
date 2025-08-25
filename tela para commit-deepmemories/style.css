@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #5d1418;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* fundo esfumaçado */
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(255, 120, 80, 0.2), transparent 60%),
+    radial-gradient(circle at 80% 70%, rgba(255, 100, 50, 0.15), transparent 70%),
+    radial-gradient(circle at 50% 100%, rgba(255, 90, 40, 0.2), transparent 60%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  background-color: #e1cfd3;
+  padding: 50px;
+  border-radius: 50px;
+  width: 350;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.divider {
+  width: 1px;
+  height: 60px;
+  background-color: black;
+  margin: 0 15px;
+}
+
+.title-img {
+  height: 50px; /* ajusta o tamanho da imagem "Deep Memories" */
+}
+
+.input-field {
+  display: block;
+  width: 80%;            /* controla a largura do input */
+  margin: 12px auto;     /* auto centraliza horizontalmente */
+  padding: 12px;
+  border: 2px solid #5d1418;
+  border-radius: 25px;
+  outline: none;
+  font-size: 14px;
+}
+
+
+.btn {
+  background-color: #5d1418;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #7a1c20;
+}
+
+.link {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.link a {
+  color: #005c53;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
