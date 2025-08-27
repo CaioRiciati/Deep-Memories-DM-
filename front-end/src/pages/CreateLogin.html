@@ -27,14 +27,14 @@
         <input type="email" name="email" id="iemail" required>
         <label for="iusuario">Crie um nome de usuário</label>
         <input type="text" name="usuario" id="iusuario" required>
+        <div class="sla">
+          <button type="submit" class="confirmar">
+            <img src="../Imagens/seta direita.png" alt="confirmar">
+          </button>
+          <a href="Login.html">Já tem uma conta? Faça login aqui!</a>
+        </div>
       </form>
 
-      <div class="sla">
-        <button type="submit" class="confirmar">
-          <img src="../Imagens/seta direita.png" alt="confirmar">
-        </button>
-        <a href="Login.html">Já tem uma conta? Faça login aqui!</a>
-      </div>
 
       <div class="divisor-ou">
         <span></span>
@@ -42,9 +42,19 @@
         <span></span>
       </div>
 
-      <!--Falta colocar o bagulho de login com o google-->
+      <div id="g_id_onload" 
+          data-client_id="1016933372684-vbsdgu1m4fcj4atq50el9j5enk6i2evi.apps.googleusercontent.com"
+          data-login_uri="http://localhost:8080/google-login"
+          data-auto_prompt="false">
+      </div>
+
+      <div class="g_id_signin" data-type="standard"></div>
+
     </section>
   </main>
+
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
 </body>
 
 </html>
