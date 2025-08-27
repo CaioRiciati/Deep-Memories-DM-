@@ -47,13 +47,19 @@
     <!-- Card atrás -->
     <div class="card-behind"></div>
 
-    <!-- Card da frente -->
     <div class="card-front">
-      <label for="user">Novo nome do usuário</label>
-          <input type="text" id="user" name="user" placeholder="usuario" required>
-      <label for="user">Confirme o nome do usuario</label>
-          <input type="text" id="user" name="user" placeholder="usuario" required>
-    </div>
+  <div class="input-group">
+    <label for="new-user">Novo nome do usuário</label>
+    <input type="text" id="new-user" name="new-user" placeholder="" required>
+  </div>
+
+  <div class="input-group">
+    <label for="confirm-user">Confirme o nome do usuário</label>
+    <input type="text" id="confirm-user" name="confirm-user" placeholder="" required>
+  </div>
+
+  <button id="save">Confirmar</button>
+</div>
   </section>
 </body>
 </html>
