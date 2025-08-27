@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="../styles/InformacoesPerfil.css">
 </head>
 <body>
-    <div class="background">
-        <img src="../Imagens/nuvem-esquerda.png" class="nuvem-topo" alt="Nuvem topo esquerda">
-        <img src="../Imagens/nuvem-direita.png" class="nuvem-baixo" alt="Nuvem inferior direita">
-  </div>
+<div class="background">
+    <img src="../Imagens/nuvem-esquerda.png" class="nuvem-topo" alt="Nuvem topo esquerda">
+    <img src="../Imagens/nuvem-direita.png" class="nuvem-baixo" alt="Nuvem inferior direita">
+</div>
   
-  <main class="container">
+<main class="container">
     <div class="content">
         <div class="perfil">
             <img src="../Imagens/person.png" alt="foto de perfil">
@@ -22,22 +22,71 @@
         <form action="get">
             <div class="input-group">
                 <label for="email">Seu E-mail</label>
-                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                <div class="input-button">
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                    <button>modificar</button>
+                </div>
             </div>
 
             <div class="input-group">
                 <label for="user">Nome de usuário</label>
-                <input type="text" id="user" name="user" placeholder="usu_ario" required>
+                    <div class="input-button">
+                        <input type="text" id="user" name="user" placeholder="usu_ario" required>
+                        <button>modificar</button>
+                    </div>
             </div>
 
             <div class="input-group">
                 <label for="password">Senha</label>
+                <div class="input-button">
                 <input type="password" id="password" name="password" placeholder="123@Senha" required>
+                    <button>modificar</button>
+                </div>
             </div>
-
+        
             <button id="save">Salvar Alterações</button>
         </form>
     </div>
-  </main>
+</main>
+
+<section class="container2" id="modal" aria-hidden="true" role="dialog">
+    <div class="content2">
+      <button class="close" type="button" data-close>&times;</button>
+
+      <button class="escolhas">
+        <img src="../Imagens/galeria.png" alt="galeria">
+        <h2>Escolher na galeria</h2>
+      </button>
+
+      <button class="escolhas">
+        <img src="../Imagens/google.png" alt="google" class="google">
+        <h2>Importar do Google</h2>
+      </button>
+
+      <button class="escolhas">
+        <img src="../Imagens/lixeira.png" alt="excluir">
+        <h2 class="lixeira">Excluir</h2>
+      </button>
+    </div>
+</section>
+
+<section class="container3" id="modal2" aria-hidden="true" role="dialog">
+    <div class="content2">
+      <button class="close" type="button" data-close>&times;</button>
+
+      <button class="escolhas">
+            <div class="input-group">
+                <label for="email">Seu E-mail</label>
+                <div class="input-button">
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required class="new-email">
+                    <button>Enviar código para o novo E-mail</button>
+                </div>
+      </button>
+
+
+</section>
+
+
+  <script src="../scripts/InformacoesPerfil.js"></script>
 </body>
 </html>
