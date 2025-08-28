@@ -47,17 +47,36 @@ body {
 }
 
 .container2 {
-    display: none;
     position: fixed;
-    inset: 0;
-    background: rgba(255, 254, 254, 0.6);
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #374253;
+    display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+    background-color: #374253;
+    width: 60vw;
+    padding: 50px;
+    border-radius: 20px;
 }
 
-@keyframes slideUp {
-  from { transform: translateY(100%); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+.container2 .input-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.container2 .input-button input {
+    width: 20vw;
+    padding: 15px;
+    margin-right: 0;
+    margin-top: 10px;
+}
+
+.container2 .input-button button {
+    width: 70%;
 }
 
 .content2 {
@@ -74,7 +93,6 @@ body {
   align-items: center;
   flex-direction: column;
   animation: slideUp .28s ease;
-  position: relative;
 }
 
 
@@ -148,6 +166,12 @@ label {
     margin-bottom: 5px;
     align-self: flex-start;
     margin-left: 15%;
+    color: #128e75;
+    font-size: 16px;
+}
+
+.mail {
+    margin-left: 0;
 }
 
 input {
@@ -181,15 +205,16 @@ button:hover {
 }
 
 #modal { 
-  display: none;
-  position: fixed; inset: 0;
+
+  position: fixed; 
+  inset: 0;
   background: rgba(0,0,0,0.6);
   justify-content: center;
   align-items: flex-end;
   z-index: 1000;
   padding: 0 16px;
 }
-#modal.is-open { display: flex; }
+
 
 
 #modal .close {
@@ -234,21 +259,6 @@ button:hover {
   color: rgb(253, 67, 67);
   margin-left: 20%;
 }
-
-.container3 {
-    background-color: #374253;
-    width: 45vw;
-    height: 70vh;
-    border-radius: 20px 20px 0 0;
-    border: 2px solid #fff;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    animation: slideUp 0.3s ease;
-}
-
 .bla {
     background-color: #374253;
     padding: 30px 90px 0 90px;
@@ -264,11 +274,14 @@ hr {
 .new-email {
     width: 60%;
 }
-
 a {
-    text-decoration: none;
-    color: #fff;
-    margin-top: 10px;
+        text-decoration: none;
+        color: #128e75;
+        margin-top: 10px;
+}
+
+a:hover {
+        text-decoration: underline;
 }
 
 @media (max-width: 768px) {

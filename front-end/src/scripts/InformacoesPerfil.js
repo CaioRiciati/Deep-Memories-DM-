@@ -3,7 +3,7 @@
 
   openModal.addEventListener("click", (e) => {
     e.preventDefault();
-    modal.style.display = "flex"; // mostra o modal
+    modal.style.display = "flex";
   });
 
   // fechar clicando fora do content2

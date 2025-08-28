@@ -1,94 +1,162 @@
-body {
+* {
   margin: 0;
-  height: 100vh;
+  padding: 0;
   font-family: Arial, sans-serif;
-  background: #5d1418;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  box-sizing: border-box;
+}
 
-  /* fundo esfumaçado */
-  background-image: 
-    radial-gradient(circle at 20% 30%, rgba(255, 120, 80, 0.2), transparent 60%),
-    radial-gradient(circle at 80% 70%, rgba(255, 100, 50, 0.15), transparent 70%),
-    radial-gradient(circle at 50% 100%, rgba(255, 90, 40, 0.2), transparent 60%);
-  background-repeat: no-repeat;
-  background-size: cover;
+body {
+  background-color: #5a1419;
+  background-image: radial-gradient(circle at top left, rgba(255, 100, 60, 0.15), transparent),
+                    radial-gradient(circle at bottom right, rgba(255, 100, 60, 0.15), transparent);
+  width: 100vw;
+  height: 100vh;
+}
+
+.nuvem-topo {
+  position: absolute;
+  bottom: 51%;
+  right: 46%;
+  width: 82%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.nuvem-baixo {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  width: 130%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
 }
 
 .container {
-  background-color: #e1cfd3;
-  padding: 50px;
-  border-radius: 50px;
-  width: 350;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo {
+.card {
+  background-color: #e0d1d1;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+h1 {
+  color: #5a1419;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.logos {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logos img {
+  height: 100px;
+  margin: 0 10px;
+}
+
+.divisor {
+  width: 2px;
+  height: 70px;
+  background-color: #5a1419;
+}
+
+label {
+  font-size: 0.8rem;
+  color: #00785a;
+  display: block;
+  margin-bottom: 6px;
+  margin-left: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #5a1419;
+  border-radius: 25px;
+  font-size: 1rem;
   margin-bottom: 20px;
 }
 
-.logo-img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-}
-
-.divider {
-  width: 1px;
-  height: 60px;
-  background-color: black;
-  margin: 0 15px;
-}
-
-.title-img {
-  height: 50px; /* ajusta o tamanho da imagem "Deep Memories" */
-}
-
-.input-field {
-  display: block;
-  width: 80%;            /* controla a largura do input */
-  margin: 12px auto;     /* auto centraliza horizontalmente */
-  padding: 12px;
-  border: 2px solid #5d1418;
-  border-radius: 25px;
-  outline: none;
-  font-size: 14px;
-}
-
-
-.btn {
-  background-color: #5d1418;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
+button.confirmar {
+  background-color: #5a1419;
   border: none;
-  border-radius: 25px;
-  padding: 12px;
-  width: 100%;
+  border-radius: 20px;
+  padding: 8px;
   cursor: pointer;
-  transition: 0.3s;
+  display: block;
+  margin: 0 auto 15px auto;
 }
 
-.btn:hover {
-  background-color: #7a1c20;
+button.confirmar img {
+  height: 24px;
 }
 
-.link {
-  margin-top: 15px;
-  font-size: 13px;
-}
-
-.link a {
-  color: #005c53;
+a {
+  display: block;
+  font-size: 0.85rem;
+  color: #00785a;
   text-decoration: none;
-  font-weight: bold;
+  text-align: center;
 }
 
-.link a:hover {
+a:hover {
   text-decoration: underline;
+}
+
+.divisor-ou {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.divisor-ou span {
+  flex: 1;
+  border-top: 2px solid #5a1419;
+}
+
+.divisor-ou p {
+  margin: 0 10px;
+  font-weight: bold;
+  color: #5a1419;
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 70vw;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+    .nuvem-topo {
+        bottom: 70%;
+        right: 46%;
+        width: 82%;
+    }
+
+    .nuvem-baixo {
+        top: 60%;
+        left: 30%;
+        width: 130%;
+    }
 }

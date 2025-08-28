@@ -1,28 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deep Memories - Criar Conta</title>
-  <link rel="stylesheet" href="../styles/login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de conta</title>
+    <link rel="stylesheet" href="../styles/Login.css">
+  <title>Criação de Login - Deep Memories</title>
+
 </head>
 <body>
-  <div class="container">
-    <div class="logo">
-      <!-- Troque o src pelo caminho da imagem do OLHO -->
-      <img src="logo.png" alt="Logo Deep Memories" class="logo-img">
-      <div class="divider"></div>
-      <!-- Troque o src pelo caminho da imagem do TEXTO -->
-      <img src="name.png" alt="Deep Memories" class="title-img">
-    </div>
-    <form>
-      <input type="password" placeholder="Crie uma senha" class="input-field">
-      <input type="password" placeholder="Confirme a senha" class="input-field">
-      <button type="submit" class="btn">CRIAR CONTA</button>
-    </form>
-    <div class="link">
-      <a href="#">Já tem uma conta? Fazer login</a>
-    </div>
+  <div class="background">
+    <img src="../Imagens/nuvem-esquerda.png" class="nuvem-topo" alt="Nuvem topo esquerda">
+    <img src="../Imagens/nuvem-direita.png" class="nuvem-baixo" alt="Nuvem inferior direita">
   </div>
+
+  <main class="container">
+    <section class="card">
+      <h1>FAZER LOGIN</h1>
+      <div class="logos">
+        <img src="../imagens/deepmemories-logo.png" alt="Logo Simbiótica">
+        <div class="divisor"></div>
+        <img src="../imagens/1.png" alt="Deep Memories">
+      </div>
+      <form action="login" method="post">
+        <label for="iemail">DIGITE SEU E-MAIL OU NOME DE USUARIO</label>
+        <input type="email" name="email" id="iemail" required>
+        <label for="iusuario">DIGITE SUA SENHA</label>
+        <input type="text" name="usuario" id="iusuario" required>
+        <div class="sla">
+          <button type="submit" class="confirmar">
+            <img src="../Imagens/seta direita.png" alt="confirmar">
+          </button>
+          <a href="Login.html">ESQUECEU SUA SENHA? CLIQUE AQUI!</a>
+        </div>
+      </form>
+
+
+      <div class="divisor-ou">
+        <span></span>
+        <p>OU</p>
+        <span></span>
+      </div>
+
+      <div id="g_id_onload" 
+          data-client_id="1016933372684-vbsdgu1m4fcj4atq50el9j5enk6i2evi.apps.googleusercontent.com"
+          data-login_uri="http://localhost:8080/google-login"
+          data-auto_prompt="false">
+      </div>
+
+      <div class="g_id_signin" data-type="standard"></div>
+
+    </section>
+  </main>
+
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
 </body>
+
 </html>

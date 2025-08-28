@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informações de pefil</title>
-    <link rel="stylesheet" href="../styles/InformacoesPerfil.css">
+    <link rel="stylesheet" href="../styles/novoEmail.css">
 </head>
 <body>
 <div class="background">
@@ -24,7 +24,7 @@
                 <label for="email">Seu E-mail</label>
                 <div class="input-button">
                     <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
-                    <button><a href="novoEmail.html">modificar</a></button>
+                    <button type="button" class="open-modal">modificar</button>
                 </div>
             </div>
 
@@ -32,15 +32,15 @@
                 <label for="user">Nome de usuário</label>
                     <div class="input-button">
                         <input type="text" id="user" name="user" placeholder="usu_ario" required>
-                        <button><a href="codEmail.html">modificar</a></button>
+                        <button>modificar</button>
                     </div>
             </div>
 
             <div class="input-group">
                 <label for="password">Senha</label>
                 <div class="input-button">
-                  <input type="password" id="password" name="password" placeholder="123@Senha" required>
-                  <button><a href="modUser.html">modificar</a></button>
+                <input type="password" id="password" name="password" placeholder="123@Senha" required>
+                    <button>modificar</button>
                 </div>
             </div>
         
@@ -49,40 +49,16 @@
     </div>
 </main>
 
-<section class="container2" id="modal" aria-hidden="true" role="dialog">
-    <div class="bla">
-        <hr>
-        <div class="content2">
-          <button class="escolhas">
-            <img src="../Imagens/galeria.png" alt="galeria">
-            <h2>Escolher na galeria</h2>
-          </button>
-          <button class="escolhas">
-            <img src="../Imagens/google.png" alt="google" class="google">
-            <h2>Importar do Google</h2>
-          </button>
-          <button class="escolhas">
-            <img src="../Imagens/lixeira.png" alt="excluir">
-            <h2 class="lixeira">Excluir</h2>
-          </button>
-        </div>
-    </div>
-</section>
-
 <section class="container2" id="modal2" aria-hidden="true" role="dialog">
   <div class="content2">
     <div class="sla">
-      <label for="email">Novo E-mail</label>
+      <label for="email" class="mail">Novo E-mail</label>
       <div class="input-button">
-        <input type="email" id="email" name="email" placeholder="example@gmail.com" required class="new-email" class="new-email">
+        <input type="email" id="email" name="email" required class="new-email" class="new-email">
         <button>Enviar código para o novo E-mail</button>
       </div>
     </div>
   </div>
 </section>
-
-
-
-  <script src="../scripts/InformacoesPerfil.js"></script>
 </body>
 </html>
