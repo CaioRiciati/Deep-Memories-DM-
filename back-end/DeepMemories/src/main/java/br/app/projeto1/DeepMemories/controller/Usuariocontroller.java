@@ -11,9 +11,4 @@ public class Usuariocontroller {
 		
 	}
 	
-	@GetMapping("/carro")
-	public String texto2() {
-		return "katchaun";
-		
-	}
 }
