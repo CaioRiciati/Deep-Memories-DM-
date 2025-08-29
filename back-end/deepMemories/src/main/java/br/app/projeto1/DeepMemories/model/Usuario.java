@@ -16,20 +16,18 @@ public class Usuario {
 	@Column(name = "id")
 	private Integer id;
 	
-	@Column(name = "name", length= 140, nullable = false)
+	@Column(name = "nome_completo", length= 140, nullable = false)
 	private String name;
 	
 	@Column(name = "username", length= 20, nullable = false)	
 	private String username;
 	
-	@Column(name = "password", columnDefinition = "TEXT" , nullable = false)
+	@Column(name = "senha", columnDefinition = "TEXT" , nullable = false)
 	private String password;
 	
 	@Column(name = "email", length= 45, nullable = false)
 	private String email;
 	
-	@Column(name = "deepcoins", length= 10, nullable = false)
-	private Integer deepcoins;
 	
 	
 	public Integer getId() {
@@ -62,12 +60,7 @@ public class Usuario {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Integer getDeepcoins() {
-		return deepcoins;
-	}
-	public void setDeepcoins(Integer deepcoins) {
-		this.deepcoins = deepcoins;
-	}
+
 	
 	
 }
