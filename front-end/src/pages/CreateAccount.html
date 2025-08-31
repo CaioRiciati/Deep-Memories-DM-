@@ -22,19 +22,20 @@
         <div class="divisor"></div>
         <img src="../imagens/1.png" alt="Deep Memories">
       </div>
+      
       <form action="login" method="post">
         <label for="iemail">Digite seu E-mail</label>
-        <input type="email" name="email" id="iemail" required>
+        <input type="email" name="email" id="iemailC" required>
         <label for="iusuario">Crie um nome de usuário</label>
-        <input type="text" name="usuario" id="iusuario" required>
+        <input type="text" name="usuario" id="iusuarioC" required>
         <div class="sla">
-          <button type="submit" class="confirmar">
-            <img src="../Imagens/seta direita.png" alt="confirmar">
-          </button>
+        <button type="button" class="confirmar" onclick="window.location.href='criarSenha.html'">
+          <img src="../Imagens/seta direita.png" alt="confirmar">
+        </button>
+
           <a href="Login.html">Já tem uma conta? Faça login aqui!</a>
         </div>
       </form>
-
 
       <div class="divisor-ou">
         <span></span>
@@ -54,6 +55,7 @@
   </main>
 
   <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="../scripts/requisicaoCadastro.js"></script>
 
 </body>
 
