@@ -1,37 +1,40 @@
+/* -------------------- RESET -------------------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;    
 }
 
+/* -------------------- BODY -------------------- */
 body {
-  width: 100vw;
-  height: 100vh;
-    font-family: 'Arial', sans-serif;
-    background-image: linear-gradient(to right, #015258, #131e31);
-    color: #333;
-    transition: 0.5s ease;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  background-image: linear-gradient(to top, #015258, #131e31);
+  transition: 0.5s ease;
+  color: white;
 }
 
+/* -------------------- HEADER -------------------- */
 header {
-    background-color: gray;
-    display: flex;
-    align-items: center;
-    min-height: 15vh;
-    gap: 30px;
-    position: relative;
-    z-index: 2;
+  background-color: #374253;
+  display: flex;
+  align-items: center;
+  min-height: 15vh;
+  gap: 30px;
+  position: relative; /* header vai rolar junto com a página */
+  z-index: 100;
 }
 
 header img {
-    height: 13vh;
-    margin-left: 10px;
+  height: 13vh;
+  margin-left: 20px;
 }
 
+/* -------------------- NAV -------------------- */
 nav {
-    display: flex;
-    margin-right: 10px;
-    gap: 20px;
+  display: flex;
+  margin-right: 10px;
+  gap: 20px;
 }
 
 nav div {
@@ -40,6 +43,7 @@ nav div {
   gap: 20px;
 }
 
+/* -------------------- HAMBURGER MENU -------------------- */
 #btn-menu {
   width: 40px;
   height: 40px;
@@ -78,6 +82,7 @@ nav div {
   background-color: #015258;
 }
 
+/* -------------------- DROPDOWN -------------------- */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -124,7 +129,7 @@ nav div {
   display: block;
 }
 
-
+/* -------------------- BOTÃO CRIAR CONTA -------------------- */
 #conta {
   position: absolute;
   right: 20px; 
@@ -134,9 +139,8 @@ nav div {
   padding: 10px;
   border: none;
   border-radius: 10px;
-  font-size: 16px;
-  height: 50px;
   font-size: 1.1em;
+  height: 50px;
 }
 
 #conta:hover {
@@ -147,6 +151,13 @@ nav div {
   color: white;
   text-decoration: none;
   font-size: 15px;
+}
+
+/* -------------------- BACKGROUND -------------------- */
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
 }
 
 .nuvem-topo {
@@ -167,12 +178,76 @@ nav div {
   pointer-events: none;
 }
 
-.background {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
+/* -------------------- MAIN / CONTEÚDO -------------------- */
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
+.sla {
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 3;
+  margin-top: 5%;
+}
+
+.content {
+  background-color: #131e31;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.content h2 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.content p {
+  font-size: medium;
+  margin-bottom: 10px;
+}
+
+.content li { 
+  list-style: none;
+  text-align: center;
+}
+
+.logo {
+  margin: 20px 0;
+}
+
+/* -------------------- ILUSTRAÇÕES -------------------- */
+.ilustracoes_content2 {
+  background-color: #131e31;
+  border-radius: 10px;
+  width: 80%;
+  gap: 20px;
+  display: flex;
+  padding: 10px;
+}
+
+.ilustracoes_content2 img {
+  width: 30%;
+  border-radius: 10px;
+}
+
+.img_ilustracao {
+  width: 50%;
+  border-radius: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.imagens {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* -------------------- CAIXAS / CONTAINERS -------------------- */
 .container {
   display: flex;
   justify-content: center;
@@ -181,26 +256,25 @@ nav div {
   flex-wrap: wrap;
   align-content: flex-end;
   margin-top: 5%;
-  
+}
+
+.caixa-grande, .caixa-pequena {
+  background-color: #131e31;
+  border-radius: 20px;
+  z-index: 1;
 }
 
 .caixa-grande {
-  background-color: #131e31;
-  width: 40vw;
-  height: 20vh;
-  border-radius: 20px;
-  z-index: 1;
-} 
-
-.caixa-pequena {
-  background-color: #131e31;
-  width: 15vw;
-  height: 20vh;
-  border-radius: 15px;
-  z-index: 1;
-  
+  width: 70vw;
+  height: 70vh;
 }
 
+.caixa-pequena {
+  width: 15vw;
+  height: 20vh;
+}
+
+/* -------------------- RESPONSIVO -------------------- */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -222,7 +296,7 @@ nav div {
     position: absolute;
   }
 
-    .dropdown,
+  .dropdown,
   .conta {
     width: 100%;
   }
@@ -234,24 +308,22 @@ nav div {
   }
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
   #btn-menu {
     display: none;
   }
 
   .dropbtn {
-  padding: 5px;
-  font-size: 1.1em;
-  height: 40px;
-  width: 122px;
+    padding: 5px;
+    font-size: 1.1em;
+    height: 40px;
+    width: 122px;
   }
 
   #conta {
     padding: 5px;
-    font-size: 16px;
+    font-size: 14px;
     height: 40px;
     width: 110px;
-    font-size: 14px;
   }
-
 }

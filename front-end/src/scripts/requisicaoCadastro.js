@@ -9,6 +9,10 @@ fetch("http://localhost:8080/usuarios", {
     },
     body: JSON.stringify(dados)
 })
-.then(res => res.json())
-.then(data => console.log("Resposta:", data))
-.catch(err => console.error("Erro:", err));
+    .then(res => res.json())
+    .then(data => {
+        console.log("Resposta:", data)
+    })
+    .catch(err => {
+        console.error("Erro na conexão:", err);
+    })
