@@ -239,7 +239,7 @@ h1 {
   margin: 20px 0;
 }
 
-/* -------------------- ILUSTRAÇÕES -------------------- */
+/* -------------------- ILUSTRAÇÕES E IMAGENS -------------------- */
 .imagens {
   display: flex;
   justify-content: center;
@@ -257,27 +257,28 @@ h1 {
   justify-content: center;
   align-items: center;
   width: 25%;
-  height: 440px;
+  height: 320px;
 }
 
 .ilustracoes_content2 img {
-  width: 90%;
+  width: 100%;
   border-radius: 10px;
   object-fit: contain;
+  border-radius: 20px;
 }
 
 .img_ilustracao {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10%;
-    margin-top: 20px;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  margin-top: 20px;
+  width: 100%;
 }
 
 .img_ilustracao img {
   width: 20%;
-  border-radius: 10px;
+  border-radius: 20px;
   object-fit: cover;
 }
 
@@ -296,12 +297,66 @@ h1 {
   padding: 0%;
 }
 
+.personagens {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.conteudo_personagens {
+  background-color: #131e31;
+  border-radius: 20px;
+  width: 60%;
+  height: 300px;
+  padding: 25px 15px;
+  line-height: 35px;
+  font-size: large;;
+}
+
+.ilustracao_personagem{
+  background-color: #131e31;
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.ilustracao_personagem img {
+  width: 180px;
+}
+
+.viloes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.conteudo_viloes {
+  background-color: #131e31;
+  border-radius: 20px;
+  width: 60%;
+  height: 100px;
+  padding: 25px 15px;
+  font-size: large;
+  text-align: center;
+}
+
+.ilustracao_viloes {
+  background-color: #131e31;
+  width: 500px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+
 
 /* -------------------- Animação -------------------- */
 
 .animar {
   display: block;
-  margin: 16% auto;
+  margin: 10% auto;
   width: 200px;
   animation: flutuar 3s ease-in-out infinite;
 }

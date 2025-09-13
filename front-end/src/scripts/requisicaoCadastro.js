@@ -5,7 +5,7 @@ const dados = {email, usuario};
 fetch("http://localhost:8080/usuarios", {
     method: "POST",
     headers: {
-        contentType: "application/json"
+        "ContentType": "application/json"
     },
     body: JSON.stringify(dados)
 })
