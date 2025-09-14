@@ -375,7 +375,7 @@ h2 {
 }
 
 
-/* -------------------- JOGO E ANFINS -------------------- */
+/* -------------------- DOWNLOAD, ATUALIZAÇÕES E VERSÕES DO JOGO -------------------- */
 .Download {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -416,6 +416,42 @@ h2 {
   width: 40%;
   margin-left: 30%;
 }
+
+.versoes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.versoes > div {
+  background-color: #131e31;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  height: 100px;
+  padding: 20px;
+}
+
+.versoes > button {
+  background-color: #131e31;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 30px;
+  font-size: large;
+  cursor: pointer;
+  width: 50%;
+  height: 100px;
+  margin-left: 30%;
+}
+
+
+
 
 /* -------------------- RESPONSIVIDADE -------------------- */
 @media (max-width: 768px) {
