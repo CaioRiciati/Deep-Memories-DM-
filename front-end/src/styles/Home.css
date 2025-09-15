@@ -9,7 +9,7 @@
 body {
   width: 100%;
   font-family: 'Arial', sans-serif;
-  background-image: linear-gradient(to bottom, #015258, #131e31);
+  background-color:  #015258;
   transition: 0.5s ease;
   color: white;
 }
@@ -183,7 +183,7 @@ nav div {
 main {
   position: relative;
   width: 100%;
-  margin-top: 2%;
+  margin-top: 5%;
 }
 
 h1 {
@@ -211,6 +211,7 @@ h2 {
   padding: 10px 20px;
   border-radius: 20px;
   width: 60vw;
+  height: 95%;
   font-size: 1.3em;
   line-height: 40px;
   text-align: justify;
@@ -218,11 +219,13 @@ h2 {
 
 .informacoes-sobre {
   background-color: #131e31;
-  padding: 20px;
+  padding: 20px 0px 30px 20px;
   border-radius: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 100%;
+  width: 90%;
+  line-height: 20px;
+  height: 95%;
 }
 
 .informacoes-sobre > ul {
@@ -235,7 +238,7 @@ h2 {
 .content {
   background-color: #131e31;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 30px;
   font-size: 1.1em;
   margin-bottom: 20px;
   line-height: 30px;
@@ -274,7 +277,8 @@ h2 {
   margin-bottom: 50px;
 }
 .logo {
-  margin: 20px 0;
+  margin: 30px -124px 10px -124px;
+  width: 230px;
 }
 
 /* -------------------- ILUSTRAÇÕES E IMAGENS -------------------- */
@@ -429,6 +433,57 @@ h2 {
   width: 40%;
   margin-left: 30%;
 }
+
+
+.versoes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.versoes > div {
+  background-color: #131e31;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  height: 100px;
+  padding: 20px;
+}
+
+.versoes > button {
+  background-color: #131e31;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 30px;
+  font-size: large;
+  cursor: pointer;
+  width: 50%;
+  height: 100px;
+  margin-left: 30%;
+}
+
+/* -------------------- Animação -------------------- */
+
+.animar {
+  display: block;
+  margin: 10% auto;
+  width: 200px;
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+  0%   { transform: rotate(0px); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+
 
 /* -------------------- RESPONSIVIDADE -------------------- */
 @media (max-width: 768px) {
