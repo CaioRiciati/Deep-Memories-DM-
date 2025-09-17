@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criação de conta</title>
     <link rel="stylesheet" href="../styles/CreateAccount.css">
-  <title>Criação de Login - Deep Memories</title>
-
+    <title>Criação de Login - Deep Memories</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="server.js"></script>
+    <script src="criarConta.js"></script>
+    
 </head>
 <body>
   <div class="background">
@@ -23,14 +26,15 @@
         <img src="../imagens/1.png" alt="Deep Memories">
       </div>
       
-      <form action="login" method="post">
+      <form onsubmit="criarConta()">
         <label for="iemail">Digite seu E-mail</label>
-        <input type="email" name="email" id="iemailC" required>
+        <input type="email" name="email" id="iemail" required>
         <label for="iusuario">Crie um nome de usuário</label>
-        <input type="text" name="usuario" id="iusuarioC" required>
+        <input type="text" name="usuario" id="iusuario" required>
         <div class="sla">
-        <button type="button" class="confirmar" onclick="window.location.href='criarSenha.html'">
-          <img src="../Imagens/seta direita.png" alt="confirmar">
+        
+        <button type="submit" class="confirmar" onclick="window.location.href='criarSenha.html'">
+          <img src="../Imagens/seta direita.png" alt="confirmar" >
         </button>
 
           <a href="Login.html">Já tem uma conta? Faça login aqui!</a>
@@ -54,8 +58,6 @@
     </section>
   </main>
 
-  <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <script src="../scripts/requisicaoCadastro.js"></script>
 
 </body>
 

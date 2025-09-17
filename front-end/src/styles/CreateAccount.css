@@ -48,6 +48,7 @@ body {
 .card {
   background-color: #e0d1d1;
   padding: 40px;
+  height: 100%;
   border-radius: 25px;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
   z-index: 2;

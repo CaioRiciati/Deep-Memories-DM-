@@ -1,0 +1,23 @@
+{
+  "name": "deep-memories-dm-",
+  "version": "1.0.0",
+  "description": "[![PAG-DE-ABERTURA-DO-SITE.png](https://i.postimg.cc/gjrsgSqV/PAG-DE-ABERTURA-DO-SITE.png)](https://postimg.cc/sGd5XJLx) <!-- Substitua por seu banner real -->",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaioRiciati/Deep-Memories-DM-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CaioRiciati/Deep-Memories-DM-/issues"
+  },
+  "homepage": "https://github.com/CaioRiciati/Deep-Memories-DM-#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
