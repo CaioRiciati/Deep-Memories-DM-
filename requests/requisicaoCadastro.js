@@ -2,7 +2,7 @@ const email = document.querySelector("#iemailC").value;
 const usuario = document.querySelector("#iusuarioC").value;
 const dados = {email, usuario};
 
-fetch("http://localhost:8080/usuarios", {
+fetch("http://localhost:7070/usuarios", {
     method: "POST",
     headers: {
         "ContentType": "application/json"
