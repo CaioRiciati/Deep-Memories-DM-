@@ -259,8 +259,7 @@ h2 {
 }
 
 .content li { 
-  list-style: none;
-  text-align: center;
+  margin-left: 10px;
 }
 
 .sla2 {
@@ -519,7 +518,7 @@ h2 {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1067px) {
   #btn-menu {
     display: none;
   }
@@ -537,5 +536,8 @@ h2 {
     height: 40px;
     width: 110px;
   }
-}
 
+  .ilustracoes_content2 {
+    width: 15%;
+  }
+}
