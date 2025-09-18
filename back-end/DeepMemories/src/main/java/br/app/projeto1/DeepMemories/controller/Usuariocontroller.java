@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,13 +16,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.app.projeto1.DeepMemories.DAO.IUsuario;
 import br.app.projeto1.DeepMemories.model.Usuario;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletResponse;
 
 @RestController
 @RequestMapping("/usuario")
-public class Usuariocontroller {
+public abstract class Usuariocontroller {
 	
 	@Autowired
 	private IUsuario dao;
+	
+	@Autowired
+	private Usuario ur;
 	
 	@GetMapping
 	public List<Usuario> listaUsuarios () {
@@ -47,5 +53,36 @@ public class Usuariocontroller {
 		dao.deleteById(id);
 		return usuario;
 	}
+	
+	
+	@GetMapping("/")
+	public String dashboard() {
+		return "index";
+	}
+	
+	
+	@GetMapping("/login")
+	public String login() {
+		return "login";
+	}
+	
+	
+	
+	@PostMapping("/logar")
+	public String loginUsuario(Usuario usuario, Model model, HttpServletResponse response) {
+		Usuario usuarioLogado =  this.dao.login(usuario.getEmail(), usuario.getPassword());
+		if(usuarioLogado =! null) {
+			return "redirect:/";
+			
+			
+		}
+		
+		model.addAttribute("erro","Usuario invalido");
+		return("login/login");
+	}
+
+	
+	
+	
 		
  }
