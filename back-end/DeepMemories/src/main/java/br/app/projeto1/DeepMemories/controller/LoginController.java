@@ -1,4 +1,4 @@
-package br.app.projeto1.DeepMemories.controller;
+       package br.app.projeto1.DeepMemories.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +11,11 @@ public class LoginController {
 	public String login() {
 		return"login";
 		
+	}
+	
+	@GetMapping("/CreateAccount")
+	public String CreateAccount() {
+		return "CreateAccount";
 	}
 
 }

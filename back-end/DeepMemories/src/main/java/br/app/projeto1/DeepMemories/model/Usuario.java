@@ -1,10 +1,11 @@
 package br.app.projeto1.DeepMemories.model;
 
+import java.sql.Date;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotEmpty;
 
 @Entity
@@ -25,6 +26,12 @@ public class Usuario {
 	
 	@NotEmpty
 	private String senha;
+	
+	@NotEmpty
+	private Integer DeepCoins;
+	
+	@NotEmpty
+	private Date data ;
 	
 
 }
