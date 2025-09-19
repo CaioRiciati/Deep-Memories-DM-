@@ -11,14 +11,11 @@ body {
                     radial-gradient(circle at bottom right, rgba(255, 100, 60, 0.15), transparent);
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .nuvem-topo {
   position: absolute;
-  bottom: 51%;
+  bottom: 70%;
   right: 46%;
   width: 82%;
   z-index: 0;
@@ -40,14 +37,17 @@ body {
   z-index: 0;
 }
 
-main {
+.container {
+  height: 100vh;
   z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
   background-color: #e0d1d1;
   padding: 40px;
-  height: 100%;
   border-radius: 25px;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
   z-index: 2;
@@ -89,15 +89,10 @@ label {
 input {
   width: 100%;
   padding: 10px;
-  border: 3px solid #5a1419;
+  border: 2px solid #5a1419;
   border-radius: 25px;
   font-size: 1rem;
   margin-bottom: 20px;
-}
-
-input::placeholder {
-  color: #128e75;
-  font-size: 12px;
 }
 
 button.confirmar {
@@ -111,8 +106,7 @@ button.confirmar {
 }
 
 button.confirmar img {
-  height: 20px;
-  width: 25px;
+  height: 24px;
 }
 
 a {
