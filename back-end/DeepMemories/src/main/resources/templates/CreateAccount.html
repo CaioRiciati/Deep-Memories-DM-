@@ -1,230 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criação de conta</title>
-    <link rel="stylesheet" href="CreateAccount.css">
-    <title>Criação de Login - Deep Memories</title>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script src="server.js"></script>
-    <script src="criarConta.js"></script>
-    <style>
-      * {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #5a1419;
-  background-image: radial-gradient(circle at top left, rgba(255, 100, 60, 0.15), transparent),
-                    radial-gradient(circle at bottom right, rgba(255, 100, 60, 0.15), transparent);
-  width: 100vw;
-  height: 100vh;
-}
-
-.nuvem-topo {
-  position: absolute;
-  bottom: 51%;
-  right: 46%;
-  width: 82%;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.nuvem-baixo {
-  position: absolute;
-  top: 40%;
-  left: 30%;
-  width: 130%;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.background {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-}
-
-.container {
-  height: 100vh;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card {
-  background-color: #e0d1d1;
-  padding: 40px;
-  border-radius: 25px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
-  z-index: 2;
-}
-
-h1 {
-  color: #5a1419;
-  font-weight: bold;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.logos img {
-  height: 100px;
-  margin: 0 10px;
-}
-
-.divisor {
-  width: 2px;
-  height: 70px;
-  background-color: #5a1419;
-}
-
-label {
-  font-size: 0.8rem;
-  color: #00785a;
-  display: block;
-  margin-bottom: 6px;
-  margin-left: 20px;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  border: 3px solid #5a1419;
-  border-radius: 25px;
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-button.confirmar {
-  background-color: #5a1419;
-  border: none;
-  border-radius: 20px;
-  padding: 8px;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto 15px auto;
-}
-
-button.confirmar img {
-  height: 20px;
-  width: 25px;
-}
-
-a {
-  display: block;
-  font-size: 0.85rem;
-  color: #00785a;
-  text-decoration: none;
-  text-align: center;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.divisor-ou {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin: 20px 0;
-}
-
-.divisor-ou span {
-  flex: 1;
-  border-top: 2px solid #5a1419;
-}
-
-.divisor-ou p {
-  margin: 0 10px;
-  font-weight: bold;
-  color: #5a1419;
-}
-
-@media (max-width: 600px) {
-  .card {
-    width: 70vw;
-    padding: 20px;
-  }
-}
-
-@media (max-width: 1024px) {
-
-    .nuvem-topo {
-        bottom: 70%;
-        right: 46%;
-        width: 82%;
-    }
-
-    .nuvem-baixo {
-        top: 60%;
-        left: 30%;
-        width: 130%;
-    }
-}
-
-    </style>
-    
+    <title>Cadastro de Usuário</title>
 </head>
 <body>
-  <div class="background">
-    <img src="../Imagens/nuvem-esquerda.png" class="nuvem-topo" alt="Nuvem topo esquerda">
-    <img src="../Imagens/nuvem-direita.png" class="nuvem-baixo" alt="Nuvem inferior direita">
-  </div>
-
-  <main class="container">
-    <section class="card">
-      <h1>Criar conta</h1>
-      <div class="logos">
-        <img src="../imagens/deepmemories-logo.png" alt="Logo Simbiótica">
-        <div class="divisor"></div>
-        <img src="../imagens/1.png" alt="Deep Memories">
-      </div>
-      
-      <form onsubmit="criarConta()">
-        <label for="iemail">Digite seu E-mail</label>
-        <input type="email" name="email" id="iemail" required>
-        <label for="iusuario">Crie um nome de usuário</label>
-        <input type="text" name="usuario" id="iusuario" required>
-        <div class="sla">
-        
-        <button type="submit" class="confirmar" onclick="window.location.href='criarSenha.html'">
-          <img src="../Imagens/seta direita.png" alt="confirmar">
-        </button>
-
-          <a href="Login.html">Já tem uma conta? Faça login aqui!</a>
-        </div>
-      </form>
-
-      <div class="divisor-ou">
-        <span></span>
-        <p>OU</p>
-        <span></span>
-      </div>
-
-      <div id="g_id_onload" 
-          data-client_id="1016933372684-vbsdgu1m4fcj4atq50el9j5enk6i2evi.apps.googleusercontent.com"
-          data-login_uri="http://localhost:8080/google-login"
-          data-auto_prompt="false">
-      </div>
-
-      <div class="g_id_signin" data-type="standard"></div>
-
-    </section>
-  </main>
-
-
+    <h1>Cadastro de Usuário</h1>
+    <form action="/cadastroUsuario" method="post">
+        <label for="email">Email:</label>
+		
+		
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="nome">Nome:</label>
+		
+		
+        <input type="text" id="nome" name="nome" required><br><br>
+        <label for="username">Username:</label>
+		
+		
+        <input type="text" id="username" name="usuario" required><br><br>
+        <label for="senha">Senha:</label>
+		
+		
+        <input type="password" id="senha" name="senha" required><br><br>
+        <input type="submit" value="Cadastrar">
+    </form>
 </body>
-
 </html>

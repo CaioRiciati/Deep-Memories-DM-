@@ -15,7 +15,7 @@ body {
 
 .nuvem-topo {
   position: absolute;
-  bottom: 51%;
+  bottom: 70%;
   right: 46%;
   width: 82%;
   z-index: 0;
@@ -53,13 +53,6 @@ body {
   z-index: 2;
 }
 
-h1 {
-  color: #5a1419;
-  font-weight: bold;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
 .logos {
   display: flex;
   justify-content: center;
@@ -73,7 +66,7 @@ h1 {
 }
 
 .divisor {
-  width: 2px;
+  width: 2.5px;
   height: 70px;
   background-color: #5a1419;
 }
@@ -95,19 +88,22 @@ input {
   margin-bottom: 20px;
 }
 
-button.confirmar {
-  background-color: #5a1419;
-  border: none;
-  border-radius: 20px;
-  padding: 8px;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto 15px auto;
+.criar {
+    background-color: #5a1419;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto 15px auto;
+    color: #fff;
+    padding: 10px 20px;
+    width: 220px;
+    height: 50px;
+    font-size: 1.2em;
 }
 
-button.confirmar img {
-  height: 20px;
-  width: 25px;
+.criar:hover {
+    text-decoration: underline;
 }
 
 a {
@@ -120,24 +116,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-.divisor-ou {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin: 20px 0;
-}
-
-.divisor-ou span {
-  flex: 1;
-  border-top: 2px solid #5a1419;
-}
-
-.divisor-ou p {
-  margin: 0 10px;
-  font-weight: bold;
-  color: #5a1419;
 }
 
 @media (max-width: 600px) {

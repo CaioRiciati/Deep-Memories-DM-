@@ -55,16 +55,18 @@ public class LoginController {
 		return "CreateAccount";
 	}
 	
-	@RequestMapping(value = "/cadastroUsuario", method = RequestMethod.POST)
-	public String cadastroUsuario(@Valid Usuario usuario, BindingResult result) {
-		
-		if(result.hasErrors()) {
-			return "redirect:cadastroUsuario";
-		}
-		
-		ur.save(usuario);
-
-		return "redirect:/login";
-		
+	@PostMapping("/CreateAccount")
+	public String cadastroUsuario(@Valid Usuario usuario, BindingResult result, Model model) {
+	    if(result.hasErrors()) {
+	        model.addAttribute("erro", "Erro ao cadastrar usuário");
+	        return "CreateAccount";
+	    }
+	    try {
+	        ur.save(usuario);
+	    } catch (Exception e) {
+	        model.addAttribute("erro", "Erro ao salvar usuário");
+	        return "CreateAccount";
+	    }
+	    return "redirect:/login";
 	}
 }
