@@ -9,6 +9,8 @@
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="server.js"></script>
     <script src="criarConta.js"></script>
+    <script src="post.js"></script>
+    <script src="get.js"></script>
     
 </head>
 <body>
@@ -26,7 +28,7 @@
         <img src="../imagens/1.png" alt="Deep Memories">
       </div>
       
-      <form onsubmit="criarConta()">
+      <form onsubmit="criarConta()" id="formulario">
         <label for="iemail">Digite seu E-mail</label>
         <input type="email" name="email" id="iemail" required>
         <label for="iusuario">Crie um nome de usuário</label>
@@ -49,7 +51,7 @@
 
       <div id="g_id_onload" 
           data-client_id="1016933372684-vbsdgu1m4fcj4atq50el9j5enk6i2evi.apps.googleusercontent.com"
-          data-login_uri="http://localhost:8080/google-login"
+          data-login_uri="http://localhost:8082/google-login"
           data-auto_prompt="false">
       </div>
 
