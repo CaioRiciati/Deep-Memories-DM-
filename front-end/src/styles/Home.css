@@ -216,7 +216,7 @@ h2 {
 
 p {
   font-size: 1.4em;
-  line-height: 45px;
+  line-height: 30px;
 }
 .conteudo-principal {
   padding: 10px;
@@ -269,6 +269,7 @@ p {
 }
 
 .content h3 {
+    margin-top: 15px;
   margin-bottom: 15px;
   font-size: 2.3em;
 }
@@ -394,11 +395,12 @@ p {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
+  gap: 20px;
 }
 
 .conteudo_mostros {
   background-color: #131e31;
-  border-radius: 50px;
+  border-radius: 20px;
   width: 60%;
   padding: 25px 15px;
   font-size: large;
@@ -485,7 +487,6 @@ p {
   padding: 15px 30px;
   cursor: pointer;
   width: 50%;
-  height: 100px;
   margin-left: 30%;
   font-size: 1.2em;
 }
@@ -512,7 +513,79 @@ p {
 
 
 /* -------------------- RESPONSIVIDADE -------------------- */
+
 @media (max-width: 768px) {
+  nav .menu {
+    flex-direction: column;
+    display: none;
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 8px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+  }
+
+  nav .menu.active {
+    display: flex;
+  }
+
+  .mundo,.personagens,.monstros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .mundo .fundo_mundo,.personagens,
+  .conteudo_personagens,  .monstros,
+  .conteudo_mostros,.video {
+    flex: 1 1 300px;
+
+  }
+
+  .planeta, .ilustracao_personagem, .ilustracao_monstros {
+    width: 100%;
+  }
+
+  .img_ilustracao img {
+    width: 25%;}
+
+  .sobre {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .sobre > * {
+    flex: 1 1 300px;
+  }
+
+  .Download {
+    margin-left: 0%;
+    gap: 20px;
+  }
+
+  .Download > div {
+    font-size: 16px;
+    height: 50px;
+  }
+
+  .Download > button {
+    font-size: 16px;
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  .versoes > div {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .versoes > button {
+    width: 70%;
+    font-size: 1rem;
+  }
+
   .hamburger {
     display: block;
   }
@@ -542,6 +615,10 @@ p {
   .conta {
     width: 100%;
     text-align: center;
+  }
+
+  p {
+    font-size: 1em;
   }
 }
 
