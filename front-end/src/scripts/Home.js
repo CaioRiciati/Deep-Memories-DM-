@@ -1,10 +1,10 @@
-    const btn = document.getElementById('btn-menu');
-    const menu = document.querySelector('.menu');
+const btn = document.getElementById('btn-menu');
+const menu = document.querySelector('.menu');
 
 
-    btn.addEventListener('click', () => {
-        btn.classList.toggle('active');
-        menu.classList.toggle('show');
+btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    menu.classList.toggle('show');
 });
 
 window.addEventListener('scroll', function() {
@@ -15,4 +15,18 @@ window.addEventListener('scroll', function() {
     } else {
         header.classList.remove('scrolled');
     }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      cards.forEach(c => {
+        c.classList.remove('expanded');
+      });
+
+      card.classList.add('expanded');
+    });
+  });
 });

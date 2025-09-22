@@ -90,6 +90,10 @@ nav div {
 }
 
 /* -------------------- DROPDOWN -------------------- */
+    #btn-menu {
+    display: none;
+  }
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -121,6 +125,7 @@ nav div {
   padding: 5px;
   border-radius: 10px;
   z-index: 1;
+  margin-left: 100%;
 }
 
 .dropdown-content > img {
@@ -196,6 +201,9 @@ nav div {
   pointer-events: none;
 }
 
+.nuvem-baixo, .nuvem-topo {
+  max-width: 100%;
+}
 /* -------------------- MAIN / CONTEÚDO -------------------- */
 main {
   position: relative;
@@ -234,7 +242,7 @@ p {
   background-color: #131e31;
   padding: 20px;
   border-radius: 20px;
-  width: 70vw;
+  width: 60vw;
   height: 95%;
   line-height: 40px;
   text-align: justify;
@@ -257,7 +265,7 @@ p {
 }
 
 .informacoes-sobre li {
-  margin-left: 60%;
+  margin-left: 45%;
 }
 
 .content {
@@ -324,6 +332,7 @@ p {
   align-items: center;
   width: 100%;
 }
+
 
 .ilustracoes_content2 img {
   width: 100%;
@@ -459,6 +468,47 @@ p {
 }
 
 
+.cards-container {
+  display: flex;
+  gap: 15px;
+  width: 80%;
+  margin: auto;
+}
+
+.card {
+  background-color: #131e31;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-grow: 1;
+  flex-basis: 0;
+  transition: all 0.5s ease;
+}
+
+.card.expanded {
+  flex-grow: 2; 
+}
+
+.card:not(.expanded) {
+  flex-grow: 1;
+}
+
+.card.expanded p {
+  display: block;
+  animation: fadeIn 0.8s;
+}
+
+.card p {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {transform: translateY(10px); }
+  to {transform: translateY(0); }
+}
+
+
 .versoes {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -515,19 +565,49 @@ p {
 /* -------------------- RESPONSIVIDADE -------------------- */
 
 @media (max-width: 768px) {
+  html, body {
+  overflow-x: hidden;
+  }
+
+  #btn-menu {
+    display: flex;
+  }
+  
   nav .menu {
     flex-direction: column;
     display: none;
-    background: #1a1a1a;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 10px;
     position: absolute;
     top: 60px;
-    right: 10px;
+    background-color: #2f4c5f;
+    margin-top: 10px;
+    margin-left: 40px;
   }
 
   nav .menu.active {
     display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+
+  .menu.show {
+    display: flex;
+    position: absolute;
+  }
+
+  .dropdown,
+  .conta {
+    width: 100%;
+  }
+
+  .dropbtn,
+  .conta {
+    width: 100%;
+    text-align: center;
   }
 
   .mundo,.personagens,.monstros {
@@ -551,14 +631,18 @@ p {
     width: 25%;
   }
 
+  .logo{
+    margin: 0 35%;
+  }
+  
+  .texto-sobre {
+    width: 100%;
+  }
+
   .sobre {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-  }
-
-  .sobre > * {
-    flex: 1 1 300px;
   }
 
   .Download {
@@ -587,62 +671,96 @@ p {
     font-size: 1rem;
   }
 
-  .hamburger {
-    display: block;
-  }
-
-  .menu {
-    display: none;
-    flex-direction: column;
-    width: 30%;
-    background-color: #2f4c5f;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-left: 40px;
-  }
-
-  .menu.show {
-    display: flex;
-    position: absolute;
-  }
-
-  .dropdown,
-  .conta {
-    width: 100%;
-  }
-
-  .dropbtn,
-  .conta {
-    width: 100%;
-    text-align: center;
-  }
-
   p {
     font-size: 1em;
   }
 }
 
-@media (max-width: 1067px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   #btn-menu {
     display: none;
   }
 
   .dropbtn {
-    padding: 5px;
-    font-size: 1.1em;
-    height: 40px;
-    width: 122px;
+    width: 100%;
   }
 
-  #conta {
-    padding: 5px;
-    font-size: 14px;
-    height: 40px;
-    width: 110px;
+  .planeta,
+  .ilustracao_personagem,
+  .ilustracao_monstros {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .informacoes-sobre li {
+    margin-left: 35%;
+  }
+
+  .Download {
+    gap: 20px 20%;
+  }
+
+  .Download > div {
+    font-size: 1rem;
+  }
+
+  .Download > button {
+    width: 100%;
+    margin-left: 0;
+    height: 60px;
+  }
+
+
+  .versoes > div {
+    width: 60vw;
+    font-size: 17px;
+  }
+
+    .versoes > button {
+      width: 60%;
+      font-size: 1rem;
+    }
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.4em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  .content h3 {
+    font-size: 1.5em;
+  }
+
+  .logo {
+    margin: 0 auto;
+  }
+
+  .img_ilustracao img {
+    width: 30%;
   }
 
   .ilustracoes_content2 {
     width: 100%;
+  }
+
+  .ilustracoes_content2 img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .ilustracao_personagem {
+    width: 29vw;
+  }
+
+  .ilustracao_monstros {
+    width: 29vw;
   }
 }
