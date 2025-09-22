@@ -209,7 +209,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -234,7 +234,7 @@ p {
   background-color: #131e31;
   padding: 20px;
   border-radius: 20px;
-  width: 75vw;
+  width: 70vw;
   height: 95%;
   line-height: 40px;
   text-align: justify;
@@ -244,7 +244,7 @@ p {
   background-color: #131e31;
   padding: 20px 0px 45px 20px;
   border-radius: 20px;
-  width: 90%;
+  width: 100%;
   line-height: 20px;
   height: 95%;
 }
@@ -269,7 +269,7 @@ p {
 }
 
 .content h3 {
-    margin-top: 15px;
+  margin-top: 15px;
   margin-bottom: 15px;
   font-size: 2.3em;
 }
@@ -395,7 +395,7 @@ p {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
-  gap: 20px;
+  gap: 40px;
 }
 
 .conteudo_mostros {
@@ -548,7 +548,8 @@ p {
   }
 
   .img_ilustracao img {
-    width: 25%;}
+    width: 25%;
+  }
 
   .sobre {
     display: flex;
@@ -622,7 +623,7 @@ p {
   }
 }
 
-@media (min-width: 1067px) {
+@media (max-width: 1067px) {
   #btn-menu {
     display: none;
   }
