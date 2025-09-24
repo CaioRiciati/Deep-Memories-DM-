@@ -18,6 +18,78 @@ body {
   color: white;
 }
 
+/* -------------------- inicio -------------------- */
+.inicio {
+  background-image: linear-gradient(to top, #015258, #131e31);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999999999999;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+
+.nuvem_inicial-topo {
+  position: absolute;
+  bottom: 50%;
+  right: 0;
+}
+
+.Nuvem-central {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nuvem_inicial-baixo {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  
+}
+
+.inicio > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inicio > .principal > img {
+  position: relative;
+  width: 50%;
+}
+
+.inicio > div > button {
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background: linear-gradient(to top, #015258, #131e31) padding-box, 
+              linear-gradient(to right, #621e23, #df5e1f) border-box;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+.inicio > .principal > h1 {
+  box-shadow: 2px 2px red;
+}
+
+
+
+
+
 /* -------------------- HEADER -------------------- */
 header {
   background-color: #959393;
@@ -799,6 +871,6 @@ p {
   }
  
   .ilustracao_personagem {
-    width: 30vw;
+    width: 25.5vw;
   }
 }
