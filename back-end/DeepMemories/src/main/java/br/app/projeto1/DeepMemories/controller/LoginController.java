@@ -30,7 +30,7 @@ public class LoginController {
 		
 	}
 	
-	//mapping da pagina de homire ( trocar o index)
+	//mapping da pagina de homire (trocar o index)
 	@GetMapping("/")
 	public String dashboard() {
 		return "index";

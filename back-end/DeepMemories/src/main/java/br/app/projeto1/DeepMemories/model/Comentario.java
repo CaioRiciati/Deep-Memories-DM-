@@ -12,7 +12,7 @@ public class Comentario {
 
     private String texto;
 
-    private String nomeUsuario; // Ou você pode usar relação com Usuario, se quiser
+    private String nomeUsuario;
 
     private LocalDateTime dataHora;
 
@@ -24,5 +24,33 @@ public class Comentario {
         this.dataHora = LocalDateTime.now();
     }
 
-    // Getters e setters
+    // GETTERS E SETTERS
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getTexto() {
+        return texto;
+    }
+
+    public void setTexto(String texto) {
+        this.texto = texto;
+    }
+
+    public String getNomeUsuario() {
+        return nomeUsuario;
+    }
+
+    public void setNomeUsuario(String nomeUsuario) {
+        this.nomeUsuario = nomeUsuario;
+    }
+
+    public LocalDateTime getDataHora() {
+        return dataHora;
+    }
+
+    public void setDataHora(LocalDateTime dataHora) {
+        this.dataHora = dataHora;
+    }
 }
