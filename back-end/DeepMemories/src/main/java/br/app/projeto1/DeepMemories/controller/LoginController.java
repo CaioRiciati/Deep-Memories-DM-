@@ -1,5 +1,7 @@
        package br.app.projeto1.DeepMemories.controller;
 
+import java.io.UnsupportedEncodingException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import br.app.projeto1.DeepMemories.model.Usuario;
 import br.app.projeto1.DeepMemories.repository.UsuarioRepository;
+import br.app.projeto1.DeepMemories.service.CookieService;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 
@@ -34,9 +37,11 @@ public class LoginController {
 	
 	@PostMapping("/logar")
 	
-	public String loginUsuario(Usuario usuario, Model model, HttpServletResponse response) {
+	public String loginUsuario(Usuario usuario, Model model, HttpServletResponse response) throws UnsupportedEncodingException {
 		Usuario usuarioLogado = this.ur.login(usuario.getEmail(), usuario.getSenha());
 		if(usuarioLogado != null) {
+			CookieService.setCookie(response, "usuarioId", String.valueOf(usuarioLogado.getId()), 10000);
+			CookieService.setCookie(response, "nomeUsuario", String.valueOf(usuarioLogado.getNome()), 10000);
 			return "redirect:/";
 		}
 		

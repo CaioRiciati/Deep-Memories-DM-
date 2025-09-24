@@ -2,29 +2,28 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Usuário</title>
+    <title>Criar Conta - Deep Memories</title>
 </head>
 <body>
-    <h1>Cadastro de Usuário</h1>
-    <form action="/cadastroUsuario" method="post">
-        <label for="email">Email:</label>
-		
-		
-        <input type="email" id="email" name="email" required><br><br>
-        <label for="nome">Nome:</label>
-		
-		
+    <h2>Criar Conta</h2>
+
+    <form method="POST" action="/cadastroUsuario">
+        <label for="nome">Nome:</label><br>
         <input type="text" id="nome" name="nome" required><br><br>
-        <label for="username">Username:</label>
-		
-		
-        <input type="text" id="username" name="usuario" required><br><br>
-        <label for="senha">Senha:</label>
-		
-		
+
+        <label for="username">Usuário:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="senha">Senha:</label><br>
         <input type="password" id="senha" name="senha" required><br><br>
-        <input type="submit" value="Cadastrar">
+
+
+        <button type="submit">Criar Conta</button>
     </form>
+
+    <p>Já tem uma conta? <a href="/login">Faça login</a></p>
 </body>
 </html>

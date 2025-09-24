@@ -27,8 +27,8 @@ public class Usuario {
 	@NotEmpty
 	private String senha;
 	
-	@NotEmpty
-	private Integer DeepCoins;
+	
+	private Integer DeepCoins = 0;
 
 	public String getNome() {
 		return nome;
@@ -69,6 +69,16 @@ public class Usuario {
 	public void setDeepCoins(Integer deepCoins) {
 		DeepCoins = deepCoins;
 	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+	
+	
 	
 
 

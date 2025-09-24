@@ -12,7 +12,7 @@ document.getElementById('form-cadastro').addEventListener('submit', function(eve
 
     const dados = { email, usuario, senha };
 
-    fetch('http://localhost:7070/api/usuario', {
+    fetch('http://localhost:8082/cadastroUsuario', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
