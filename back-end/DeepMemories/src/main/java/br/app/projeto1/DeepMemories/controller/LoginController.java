@@ -30,10 +30,12 @@ public class LoginController {
 		
 	}
 	
+	//mapping da pagina de homire ( trocar o index)
 	@GetMapping("/")
 	public String dashboard() {
 		return "index";
 	}
+	
 	
 	@PostMapping("/logar")
 	
@@ -53,17 +55,16 @@ public class LoginController {
 	
 	
 	
-	
-	//aki é o cadastro de usuario mas eu coloquei create account p ficar mais intuitivo
+
 	@GetMapping("/CreateAccount")
 	public String CreateAccount() {
 		return "CreateAccount";
 	}
 	
-	@RequestMapping(value = "/cadastroUsuario", method = RequestMethod.POST)
+	@RequestMapping(value = "/CreateAccount", method = RequestMethod.POST)
 	public String cadastroUsuario(@Valid Usuario usuario, BindingResult result) {	
 		if(result.hasErrors()) {
-			return "redirect:cadastroUsuario";
+			return "redirect:CreateAccount";
 		}
 
 		ur.save(usuario);

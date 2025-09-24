@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Comentários</title>
+</head>
+<body>
+    <h1>Comentários</h1>
+
+    <form action="/comentarios" method="post">
+        <textarea name="texto" placeholder="Escreva seu comentário aqui..." required></textarea><br>
+        <button type="submit">Comentar</button>
+    </form>
+
+    <hr>
+    <div th:each="comentario : ${comentarios}">
+        <p><strong th:text="${comentario.nomeUsuario}">Nome</strong> disse em 
+        <span th:text="${#temporals.format(comentario.dataHora, 'dd/MM/yyyy HH:mm')}">data</span>:</p>
+        <p th:text="${comentario.texto}"></p>
+        <hr>
+    </div>
+
+    <a href="/">Voltar ao início</a>
+</body>
+</html>
