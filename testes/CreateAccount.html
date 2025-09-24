@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criação de conta</title>
-    <link rel="stylesheet" href="../styles/Login.css">
-  <title>Criação de Login - Deep Memories</title>
-
+    <link rel="stylesheet" href="CreateAccount.css">
+    <title>Criação de Login - Deep Memories</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="../scripts/server.js"></script>
 </head>
+
 <body>
   <div class="background">
     <img src="../Imagens/nuvem-esquerda.png" class="nuvem-topo" alt="Nuvem topo esquerda">
@@ -16,22 +18,32 @@
 
   <main class="container">
     <section class="card">
-      <h1>FAZER LOGIN</h1>
+      <h1>Criar conta</h1>
       <div class="logos">
         <img src="../imagens/deepmemories-logo.png" alt="Logo Simbiótica">
         <div class="divisor"></div>
         <img src="../imagens/1.png" alt="Deep Memories">
       </div>
-      <form action="login" method="post">
-        <label for="iemail">Digite seu E-mail ou nome de usuário</label>
-        <input type="email" name="email" id="iemail" required>
-        <label for="iusuario">Digite sua senha</label>
-        <input type="password" name="usuario" id="iusuario" required>
+            
+      <form method="post" onsubmit="return criarConta()">
+        <label for="email"></label>
+        <input type="email" name="email" id="email" required placeholder="DIGITE SEU E-MAIL">
+        
+        <label for="nome"></label>
+        <input type="text" name="nome" id="nome" required placeholder="DIGITE SEU NOME">
+        
+        <label for="usuario"></label>
+        <input type="text" name="usuario" id="usuario" required placeholder="CRIE SEU NOME DE USUÁRIO">
+        
+        <label for="senha"></label>
+        <input type="password" name="senha" id="senha" required placeholder="CRIE UMA SENHA">
+
         <div class="sla">
-          <button type="submit" class="confirmar" onclick="window.location.href='home.html'">
+          <button type="submit" class="confirmar">
             <img src="../Imagens/seta direita.png" alt="confirmar">
           </button>
-          <a href="RecuperarConta.HTML">ESQUECEU SUA SENHA? CLIQUE AQUI!</a>
+
+          <a href="Login.html">Já tem uma conta? Faça login aqui!</a>
         </div>
       </form>
 
@@ -53,8 +65,6 @@
     </section>
   </main>
 
-  <script src="https://accounts.google.com/gsi/client" async defer></script>
-
+    <script src="../scripts/requisicaoCadastro.js"></script>
 </body>
-
 </html>

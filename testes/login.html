@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criação de conta</title>
-    <link rel="stylesheet" href="CreateAccount.css">
-    <title>Criação de Login - Deep Memories</title>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script src="server.js"></script>
-    <script src="criarConta.js"></script>
-    <script src="post.js"></script>
-    <script src="get.js"></script>
-    
+    <link rel="stylesheet" href="Login.css">
+  <title>Criação de Login - Deep Memories</title>
+
 </head>
 <body>
   <div class="background">
@@ -21,27 +16,30 @@
 
   <main class="container">
     <section class="card">
-      <h1>Criar conta</h1>
+      <h1>FAZER LOGIN</h1>
+
       <div class="logos">
         <img src="../imagens/deepmemories-logo.png" alt="Logo Simbiótica">
         <div class="divisor"></div>
         <img src="../imagens/1.png" alt="Deep Memories">
       </div>
-      
-      <form onsubmit="criarConta()" id="formulario">
-        <label for="iemail">Digite seu E-mail</label>
-        <input type="email" name="email" id="iemail" required>
-        <label for="iusuario">Crie um nome de usuário</label>
-        <input type="text" name="usuario" id="iusuario" required>
-        <div class="sla">
-        
-        <button type="submit" class="confirmar" onclick="window.location.href='criarSenha.html'">
-          <img src="../Imagens/seta direita.png" alt="confirmar">
-        </button>
 
-          <a href="Login.html">Já tem uma conta? Faça login aqui!</a>
+      <form action="login" method="post">
+        <label for="iemail">Digite seu E-mail ou nome de usuário</label>
+        <input type="email" name="email" id="iemail" required>
+
+        <label for="iusuario">Digite sua senha</label>
+        <input type="password" name="usuario" id="iusuario" required>
+
+        <div class="sla">
+          <button type="submit" class="confirmar" onclick="window.location.href='home.html'">
+            <img src="../Imagens/seta direita.png" alt="confirmar">
+          </button>
+          <a href="RecuperarConta.HTML">ESQUECEU SUA SENHA? CLIQUE AQUI!</a>
         </div>
+        
       </form>
+
 
       <div class="divisor-ou">
         <span></span>
@@ -51,7 +49,7 @@
 
       <div id="g_id_onload" 
           data-client_id="1016933372684-vbsdgu1m4fcj4atq50el9j5enk6i2evi.apps.googleusercontent.com"
-          data-login_uri="http://localhost:8082/google-login"
+          data-login_uri="http://localhost:8080/google-login"
           data-auto_prompt="false">
       </div>
 
@@ -60,6 +58,7 @@
     </section>
   </main>
 
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
 
 </body>
 

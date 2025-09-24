@@ -1,34 +1,43 @@
-import express from "express";
+  document.querySelector('form').addEventListener('submit', async function (event) {
+    event.preventDefault(); // Impede envio padrão do form
 
-const express = require("express");
-const cors = require("cors");
-const porta = process.env.porta || 7070;
+    // Pegando valores dos campos
+    const email = document.querySelector('#email').value;
+    const nome = document.querySelector('#nome').value;
+    const usuario = document.querySelector('#usuario').value;
+    const senha = document.querySelector('#senha').value;
 
-const app = express();
-app.use(cors());
-app.use(express.json());
-
-let usuarios = [];
-
-app.get("/api/usuario", (req, res) => {
-    res.json(usuarios);
-});
-
-app.post("/api/usuario", (req, res) => {
-    const {email, usuario, senha} = req.body;
-
-    if (!email || !usuario || !senha) {
-        return res.status(400).json({ erro: "email, usuario e senha são obrigatorios"})
+    // Validação básica
+    if (!email || !nome || !usuario || !senha) {
+      alert("Por favor, preencha todos os campos.");
+      return;
     }
 
-    const novoUsuario = {
-        id: usuarios.length + 1,
-        email,
-        usuario,
-        senha
-    };
+    const dados = { email, nome, usuario, senha };
 
-    usuarios.push(novoUsuario);
+    try {
+      const response = await fetch('http://localhost:7070/api/usuario', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dados),
+      });
 
-    res.status(201).json(novoUsuario);
-})
+      if (!response.ok) {
+        const erro = await response.json();
+        throw erro;
+      }
+
+      const data = await response.json();
+      console.log('Sucesso:', data);
+      alert('Usuário criado com sucesso');
+
+      // Redireciona após sucesso
+      window.location.href = "criarSenha.html";
+
+    } catch (error) {
+      console.error('Erro:', error);
+      alert(`Erro ao criar usuário: ${error.erro || error.message}`);
+    }
+  });

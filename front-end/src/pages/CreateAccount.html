@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="../styles/CreateAccount.css">
     <title>Criação de Login - Deep Memories</title>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script src="server.js"></script>
-    <script src="criarConta.js"></script>
-    
+    <script src="../scripts/server.js"></script>
 </head>
+
 <body>
   <div class="background">
     <img src="../Imagens/nuvem-esquerda.png" class="nuvem-topo" alt="Nuvem topo esquerda">
@@ -25,26 +24,29 @@
         <div class="divisor"></div>
         <img src="../imagens/1.png" alt="Deep Memories">
       </div>
-      
-      <form method="post" onsubmit ="criarConta()">
+            
+      <form method="post" onsubmit="return criarConta()">
         <label for="email"></label>
         <input type="email" name="email" id="email" required placeholder="DIGITE SEU E-MAIL">
-        <label for="usuario"></label>
-        <input type="text" name="nome" required placeholder="DIGITE SEU NOME">
+        
+        <label for="nome"></label>
+        <input type="text" name="nome" id="nome" required placeholder="DIGITE SEU NOME">
+        
         <label for="usuario"></label>
         <input type="text" name="usuario" id="usuario" required placeholder="CRIE SEU NOME DE USUÁRIO">
+        
         <label for="senha"></label>
         <input type="password" name="senha" id="senha" required placeholder="CRIE UMA SENHA">
 
         <div class="sla">
-        
-        <button type="submit" class="confirmar" onclick="window.location.href='criarSenha.html'">
-          <img src="../Imagens/seta direita.png" alt="confirmar" >
-        </button>
+          <button type="submit" class="confirmar">
+            <img src="../Imagens/seta direita.png" alt="confirmar">
+          </button>
 
           <a href="Login.html">Já tem uma conta? Faça login aqui!</a>
         </div>
       </form>
+
 
       <div class="divisor-ou">
         <span></span>
@@ -63,7 +65,6 @@
     </section>
   </main>
 
-
+    <script src="../scripts/requisicaoCadastro.js"></script>
 </body>
-
 </html>

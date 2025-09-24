@@ -1,31 +1,17 @@
-document.getElementById('form-cadastro').addEventListener('submit', function(event) {
-    event.preventDefault();
+async function criarConta() {
+    const email = document.getElementById("email").value;
+    const nome = document.getElementById("nome").value;
+    const usuario = document.getElementById("usuario").value;
+    const senha = document.getElementById("senha").value;
 
-    const email = document.querySelector('#iemail').value;
-    const usuario = document.querySelector('#iusuario').value;
-    const senha = document.querySelector('#isenha').value;
+    console.log(email, nome, usuario, senha); // Para teste
 
-    const dados = {email, usuario, senha};
+    if (!email || !nome || !usuario || !senha) {
+      alert("Por favor, preencha todos os campos.");
+      return false;
+    }
 
-    fetch('http://localhost:7070/api/usuario', {
-        method: 'POST',
-        headers:{
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(dados),
-    })
-    .then(response => {
-        if (!response.ok) {
-            return response.json().then(err => Promise.reject(err));
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log('Sucesso:', data);
-        alert('Usuário criado com sucesso');
-    })
-    .catch(error => {
-        console.error('Erro:', error);
-        alert(`Erro ao criar usuário: ${error.erro || error.message}`);
-    });
-});
+    // Redireciona
+    window.location.href = "criarSenha.html";
+    return false; // Impede o envio real do formulário
+  }

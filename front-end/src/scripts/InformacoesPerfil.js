@@ -6,7 +6,6 @@
     modal.style.display = "flex";
   });
 
-  // fechar clicando fora do content2
   modal.addEventListener("click", (e) => {
     if (e.target === modal) {
       modal.style.display = "none";
