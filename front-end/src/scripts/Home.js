@@ -55,3 +55,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+
+  let scrollAutomatico = false;
+
+  window.addEventListener('wheel', (e) => {
+    const scrollAtual = window.scrollY;
+
+    // Scroll automático para BAIXO
+    if (!scrollAutomatico && scrollAtual < 10 && e.deltaY > 0) {
+      scrollAutomatico = true;
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: 'smooth'
+      });
+
+      setTimeout(() => {
+        scrollAutomatico = false;
+      }, 1000);
+    }
+
+    if (!scrollAutomatico && scrollAtual < window.innerHeight + 100 && e.deltaY < 0) {
+      scrollAutomatico = true;
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+
+      setTimeout(() => {
+        scrollAutomatico = false;
+      }, 1000);
+    }
+  });
