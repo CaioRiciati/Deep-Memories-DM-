@@ -30,3 +30,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+  window.addEventListener('load', function () {
+    const inicio = document.querySelector('.inicio');
+    if (inicio) {
+      setTimeout(() => {
+        inicio.classList.add('animado');
+      }, 100);
+    }
+    animarAoScroll();
+  });
+
+  window.addEventListener('scroll', animarAoScroll);
+
+  function animarAoScroll() {
+    const elementos = document.querySelectorAll('.scroll-animado');
+    const alturaTela = window.innerHeight;
+
+    elementos.forEach(el => {
+      const posicao = el.getBoundingClientRect().top;
+      if (posicao < alturaTela - 100) {
+        el.classList.add('apareceu');
+      }
+    });
+  }

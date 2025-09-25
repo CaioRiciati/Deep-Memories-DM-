@@ -6,12 +6,10 @@
 }
 
 /* -------------------- BODY -------------------- */
-html, body {
-  overflow-x: hidden;
-}
+
 
 body {
-  background-color:  #015258;
+  background-color:  #003c41;
   width: 100%;
   font-family: 'Arial', sans-serif;
   transition: 0.5s ease;
@@ -19,8 +17,36 @@ body {
 }
 
 /* -------------------- inicio -------------------- */
+
+
+.inicio.animado {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.inicio.animado .nuvem_inicial {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.inicio.animado .principal {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.scroll-animado {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-animado.apareceu {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .inicio {
-  background-image: linear-gradient(to top, #015258, #131e31);
+  background-image: linear-gradient(to bottom, #015258, #131e31);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,12 +57,16 @@ body {
   flex-direction: column;
   text-align: center;
   color: white;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 1s ease-out;
 }
 
 .nuvem_inicial-topo {
   position: absolute;
   bottom: 50%;
-  right: 0;
+  right: 40%;
 }
 
 .Nuvem-central {
@@ -50,8 +80,20 @@ body {
 .nuvem_inicial-baixo {
   position: absolute;
   top: 50%;
-  left: 0;
-  
+  left: 40%;
+}
+
+.nuvem_inicial {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 1s ease-out;
+}
+
+.principal {
+  opacity: 0;
+  transform: translateY(-20px) scale(0.95);
+  transition: all 1s ease-out;
+  z-index: 99999;
 }
 
 .inicio > div {
@@ -70,8 +112,7 @@ body {
   padding: 10px;
   font-size: 16px;
   color: white;
-  background: linear-gradient(to top, #015258, #131e31) padding-box, 
-              linear-gradient(to right, #621e23, #df5e1f) border-box;
+  background: linear-gradient(to top, #015258, #131e31) padding-box, linear-gradient(to right, #621e23, #df5e1f) border-box;
   border: 3px solid transparent;
   border-radius: 10px;
   background-origin: border-box;
@@ -83,9 +124,21 @@ body {
 }
 
 .inicio > .principal > h1 {
-  box-shadow: 2px 2px red;
+  color: black;
+  font-weight: bold;
+  font-size: 2em;
+  text-transform: uppercase;
+
+  text-shadow:
+    4px 4px 0 rgb(94, 61, 0),
+    1px -1px 0 #db630d,
+    1px  3px 0 #db630d,
+    4px  4px 0 rgb(125, 81, 0),
+     0   -1px 0 rgb(92, 60, 0),
+     0    1px 0 rgb(103, 67, 0),
+    -1px  0   0 #db630d,
+     1px  0   0 rgb(125, 82, 1);
 }
-aaaaa
 
 
 
