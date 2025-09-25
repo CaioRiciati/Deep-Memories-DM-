@@ -33,12 +33,11 @@ public class LoginController {
 	//mapping da pagina de homire (trocar o index)
 	@GetMapping("/")
 	public String dashboard() {
-		return "index";
+		return "home";
 	}
 	
 	
 	@PostMapping("/logar")
-	
 	public String loginUsuario(Usuario usuario, Model model, HttpServletResponse response) throws UnsupportedEncodingException {
 		Usuario usuarioLogado = this.ur.login(usuario.getEmail(), usuario.getSenha());
 		if(usuarioLogado != null) {
