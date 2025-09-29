@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial</title>
+  <link rel="stylesheet" href="../statics/css/Home.css">
+  <script src="../statics/js/requisicaoAPI.js"></script>
+  <script src="../statics/js/Home.js"></script>
+  
+</head>
+<body> 
+
+  <section class="inicio">
+    <div class="nuvem_inicial">
+      <img src="../statics/images/nuvem-esquerda.png" class="nuvem_inicial-topo" alt="Nuvem topo esquerda">
+      <img src="../statics/images/nuvem-esquerda.png" class="Nuvem-central" alt="Nuvem central">
+      <img src="../statics/images/nuvem-direita.png" class="nuvem_inicial-baixo" alt="Nuvem inferior direita">
+    </div>
+    <div class="principal">
+      <img src="../statics/images/2.png" alt="Logo DeepMemories">
+      <h1>EXPLORE UM MUNDO DESCONHECIDO</h1>
+      <button onclick="window.location.href='../CreateAccount.html'">CRIE SUA CONTA!</button>
+    </div>
+  </section>
+
+  <header>
+    <img src="../statics/images/deepmemories-logoAzul.png" alt="logo">
+    <nav>
+      <button id="btn-menu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+
+      <div class="menu">
+        <div class="dropdown">
+          <button class="dropbtn">JOGO</button>
+          <div class="dropdown-content">
+            <a href="#GERAL">GERAL</a>
+            <a href="#INICIANTES">INICIANTES</a>
+            <a href="#PERSONAGENS">PERSONAGENS</a>
+            <a href="#VILÕES">VILÕES</a>
+            <a href="#SISTEMAS">SISTEMAS</a>
+            <a href="#INTERFACE">INTERFACE</a>
+            <a href="#INVENTÁRIO">INVENTÁRIO</a>
+            <a href="#RECURSOS">RECURSOS</a>
+            <a href="#FAC.E REP.">FAC.E REP.</a>
+            <a href="#PROG.E ARMAS">PROG.E ARMAS</a>
+            <a href="#LOJA ORGANICA">LOJA ORGANICA</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Sobre</button>
+          <div class="dropdown-content">
+            <a href="#BAIXAR">BAIXAR</a>
+            <a href="#ATUALIZAÇÕES">ATUALIZAÇÕES</a>
+            <a href="#VERSOES">VERSÕES</a>
+            <a href="#SEGURANÇA DA CONTA">SEGURANÇA DA CONTA</a>
+            <a href="#POLITICA DO JOGO">POLÍTICA DO JOGO</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Comunidade</button>
+          <div class="dropdown-content">
+            <a href="#REDES SOCIAIS">REDES SOCIAIS</a>
+            <a href="#FAÇA PARTE">FAÇA PARTE</a>
+            <a href="#SUPORTE">SUPORTE</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <button type="button" class="confirmar" onclick="window.location.href='CreateAccount.html'" id="conta">CRIAR CONTA</button>
+  </header>
+
+  <div class="background">
+    <img src="../statics/images/nuvem-esquerda.png" class="nuvem-topo" alt="Nuvem topo esquerda">
+    <img src="../statics/images/nuvem-direita.png" class="nuvem-baixo" alt="Nuvem inferior direita">
+  </div>
+
+  <main>
+    <h1>Deep Memories</h1>
+    <section class="conteudo-principal">
+
+      <div class="sobre">
+        <section class="texto-sobre">
+          <p>Deep Memories é um RPG 2D de ação e exploração com mapa aberto,
+          ambientado em um futuro distorcido onde a Terra foi destruída pela própria
+          humanidade. Restaram apenas memórias fragmentadas de um passado sombrio.
+          Criaturas monstruosas, criadas a partir de experimentos esquecidos, são agora os únicos seres capazes de sobreviver nos planetas abandonados do sistema solar. Você controla uma dessas entidades - um “resquício profundo” - em uma
+          jornada para recuperar a verdade sobre a extinção humana e enfrentar as
+          abominações que restaram. Cada planeta é uma área livremente explorável do mapa, com ambientes únicos, segredos enterrados, e mutações brutais da raça humana.
+          Prepare-se para descobrir memórias corrompidas, vestígios de civilizações extintas e a fúria grotesca do que restou da humanidade.</p>
+        </section>
+
+        <section class="informacoes-sobre">
+          <h2>Deep Memories</h2>
+          <img src="../statics/images/deepmemories-logoAzul.png" alt="Logo Deep Memories" class="logo">
+          <div>
+            <h3>Desenvolvedores:</h3>
+              <li>Bruce, Caio, Gabriela, Italo, Yohan, Wennes</li>
+
+            <h3>Designer:</h3>
+              <li>Yohan</li>
+
+            <h3>Plataformas:</h3>
+              <li>Windows, MacOS, Linux</li>
+
+            <h3>Gênero:</h3>
+              <li>Simulação, ação, exploração</li>
+
+            <h3>Modo:</h3>
+              <li>Um jogador</li>
+
+          </div>
+        </section>
+      </div>
+
+      <h1>GERAL</h1>
+      <section class="content" id="GERAL">
+        <p>DeepMemories é um RPG de ficção científica sombria onde o jogador controla um ser simbiótico em um futuro devastado. A progressão acontece através da absorção de memórias, desbloqueando mutações, habilidades e armas orgânicas que moldam o corpo do personagem. A exploração é livre pelos planetas do Sistema Solar, cada um com biomas, inimigos e recursos únicos, exigindo constante adaptação. O combate é estratégico e brutal, com criaturas mutantes detalhadas em um bestiário vivo, cada qual com fraquezas e resistências próprias. A narrativa se molda às escolhas do jogador, influenciando alianças, reputação e finais possíveis. Em uma atmosfera sombria e melancólica, o jogo mergulha o jogador na busca por identidade em meio ao caos de um universo em ruínas.</p>
+      </section>
+
+      <h1>INICIANTES</h1>
+      <section class="content" id="INICIANTES">
+        <h2>Exploração</h2>
+        <p>O jogador explora planetas com biomas únicos, recursos e inimigos próprios, descobrindo segredos e rotas alternativas. Em vez de níveis tradicionais, evolui absorvendo memórias de inimigos, aliados e artefatos, desbloqueando poderes e mutações.</p>
+
+        <h2>Combate</h2>
+        <p>O combate é simbiótico, misturando ataques corpo a corpo, habilidades mutantes e armas orgânicas que evoluem em diferentes caminhos, alterando estratégias. O universo possui inimigos mutantes variados, cada um com fraquezas e resistências.</p>
+
+        <h2>História</h2>
+        <p>A narrativa é dinâmica: escolhas, alianças e formas de exploração afetam reputação e finais possíveis, tornando cada jornada única.</p>
+      </section>
+
+      <div class="imagens">
+        <div class="ilustracoes_content2">
+          <img src="../statics/images/planetas-monstros/ilustracao-1.jpg" alt="Floresta">
+        </div>
+          <div class="ilustracoes_content2">
+            <img src="../statics/images/planetas-monstros/ilustracao-2.jpg" alt="Ferreiro">
+          </div>
+          <div class="ilustracoes_content2">
+            <img src="../statics/images/planetas-monstros/ilustracao-3.jpg" alt="Castelo">
+          </div>
+      </div>
+
+      <!----------------------- Planetas ------------------------>
+      <h1>NÍVEIS</h1>
+      <section id="NIVEIS">
+        <article class="mundo">
+          <div class="fundo_mundo">
+            <h2>1. Marte - O Ossário de Cinzas</h2>
+            <p><strong>Bioma:</strong> deserto escarlate com tempestades de ossos.</p>
+            <p><strong>Inimigos:</strong> desqueletos metálicos, vermes simbióticos.</p>
+            <p><strong>Boss:</strong> Haemogor, mutante com sangue fervente que explode ao ser ferido.</p>
+            <!-- bloco das imagens -->
+            <section class="wiki">
+              <div class="img_ilustracao">
+                <img src="../statics/images/planetas-monstros/marte-1.jpg" alt="Ilustração de Marte">
+                <img src="../statics/images/planetas-monstros/marte-2.jpg" alt="Ilustração de Marte">
+                <img src="../statics/images/planetas-monstros/marte-3.jpg" alt="Ilustração de Marte">
+              </div>
+            </section>
+          </div>
+          <div class="video">
+        
+            <!-- bloco do vídeo -->
+            <section class="planeta">
+              <img src="../statics/images/planetas-monstros/marte-removebg-preview.png" alt="Planeta girando" class="animar">
+            </section>
+          </div>
+        </article>
+          <article class="mundo">
+            <div class="fundo_mundo">
+              <h2>2. Júpiter – Flutuação da Mente Plasmática</h2>
+              <p><strong>Bioma:</strong> atmosfera flutuante com ilhas e criaturas gasosas.</p>
+              <p><strong>Inimigos:</strong> seres sem forma fixa, ilusórios.</p>
+              <p><strong>Boss:</strong> Synirra, um cérebro gigante com olhos nas veias, usa ilusões mentais.</p>
+              <!-- bloco das imagens -->
+              <section class="wiki">
+                <div class="img_ilustracao">
+                  <img src="../statics/images/planetas-monstros/jupiter-1.jpg" alt="Ilustração de Jupiter">
+                  <img src="../statics/images/planetas-monstros/jupiter-2.jpg" alt="Ilustração de Jupiter">
+                </div>
+              </section>
+            </div>
+          <div class="video">
+        
+            <!-- bloco do vídeo -->
+            <section class="planeta">
+              <img src="../statics/images/planetas-monstros/jupiter-removebg-preview.png" alt="Planeta girando" class="animar">
+            </section>
+          </div>
+        </article>
+          <article class="mundo">
+            <div class="fundo_mundo">
+              <h2>3. Saturno – A Catedral do Vazio Vivo</h2>
+              <p><strong>Bioma:</strong> anéis infestados de carne petrificada.</p>
+              <p><strong>Inimigos:</strong> parasitas cristalinos.</p>
+              <p><strong>Boss:</strong> Lamborath, uma amalgama de fé mutante e tentáculos.</p>
+              <!-- bloco das imagens -->
+              <section class="wiki">
+                <div class="img_ilustracao">
+                  <img src="../statics/images/planetas-monstros/saturno-1.jpg" alt="Ilustração de Saturno">
+                  <img src="../statics/images/planetas-monstros/saturno-2.jpg" alt="Ilustração de Saturno">
+                </div>
+              </section>
+            </div>
+            <div class="video">
+        
+            <!-- bloco do vídeo -->
+              <section class="planeta">
+                <img src="../statics/images/planetas-monstros/saturno-removebg-preview.png" alt="Planeta girando" class="animar">
+              </section>
+            </div>
+          </article>
+          <article class="mundo">
+            <div class="fundo_mundo">
+              <h2>4. Netuno – Ossuário Submerso</h2>
+              <p><strong>Bioma:</strong> oceano congelado onde criaturas nadam entre ossadas.</p>
+              <p><strong>Inimigos:</strong> larvas geladas, seres abissais.</p>
+              <p><strong>Boss:</strong> Kalunth, uma leviatã-coral com voz hipnótica.</p>
+              <!-- bloco das imagens -->
+              <section class="wiki">
+                <div class="img_ilustracao">
+                  <img src="../statics/images/planetas-monstros/netuno-1.jpg" alt="Ilustração de Netuno">
+                  <img src="../statics/images/planetas-monstros/netuno-2.jpg" alt="Ilustração de Netuno">
+                </div>
+              </section>
+            </div>
+            <div class="video">
+        
+              <!-- bloco do vídeo -->
+              <section class="planeta">
+                <img src="../statics/images/planetas-monstros/netuno-removebg-preview.png" alt="Planeta girando" class="animar">
+              </section>
+            </div>
+          </article>
+          <article class="mundo">
+            <div class="fundo_mundo">
+              <h2>5. Vênus – Jardim da Carne e Pus</h2>
+              <p><strong>Bioma:</strong> floresta de carne viva, fúngica e respirante.</p>
+              <p><strong>Inimigos:</strong> flores explosivas, colossos com espinhos vivos.</p>
+              <p><strong>Boss:</strong> Yllum, planta feminina que digere suas vítimas lentamente.</p>
+              <!-- bloco das imagens -->
+              <section class="wiki">
+                <div class="img_ilustracao">
+                  <img src="../statics/images/planetas-monstros/venus-1.jpg" alt="Ilustração de Venus">
+                  <img src="../statics/images/planetas-monstros/venus-2.jpg" alt="Ilustração de Venus">
+                </div>
+              </section>
+            </div>
+            <div class="video">
+        
+              <!-- bloco do vídeo -->
+              <section class="planeta">
+                <img src="../statics/images/planetas-monstros/venus-removebg-preview.png" alt="Planeta girando" class="animar">
+              </section>
+            </div>
+          </article>
+          <article class="mundo">
+            <div class="fundo_mundo">
+              <h2>6. Mercúrio – Berço do Som Derretido</h2>
+              <p><strong>Bioma:</strong> planícies de metal líquido.</p>
+              <p><strong>Inimigos:</strong> autômatos vivos, bestas sonoras.</p>
+              <p><strong>Boss:</strong> Orrhuan, mutante que grita tão alto que derrete o cenário.</p>
+              <!-- bloco das imagens -->
+              <section class="wiki">
+                <div class="img_ilustracao">
+                  <img src="../statics/images/planetas-monstros/mercurio-1.jpg" alt="Ilustração de Mercurio">
+                  <img src="../statics/images/planetas-monstros/mercurio-2.jpg" alt="Ilustração de Mercurio">
+                </div>
+              </section>
+            </div>
+            <div class="video">
+        
+              <!-- bloco do vídeo -->
+              <section class="planeta">
+                <img src="../statics/images/planetas-monstros/mercurio-removebg-preview.png" alt="Planeta girando" class="animar">
+              </section>
+            </div>
+          </article>
+      </section>
+
+      <!----------------------- Personagens ------------------------>
+
+      <h1>Personagem</h1>
+      <section  id="PERSONAGENS">
+        <article class="personagens">
+          <div class="conteudo_personagens">
+            <h2>Vorthis – O Construto de Ossos Vibrantes</h2>
+            <p>Criatura óssea que usa ressonâncias destrutivas.</p>
+            <p><strong>Despertar:</strong> Sinfonia do Caos - desintegra tudo ao redor com vibrações.</p>
+          </div>
+          <div class="video">
+            <!-- bloco do vídeo -->
+            <section class="ilustracao_personagem">
+              <img src="../statics/images/planetas-monstros/vorthis-removebg-preview.png" alt="Ilustração de vorthis" class="animar">
+            </section>
+          </div>
+        </article>
+        <article class="personagens">
+          <div class="conteudo_personagens">
+            <h2>Vex – O Ciclone Transparente</h2>
+            <p>Ser de vento condensado, quase invisível.</p>
+            <p><strong>Despertar:</strong> Tempestade Vivente - transforma-se em ciclone gigante.</p>
+          </div>
+          <div class="video">
+            <!-- bloco do vídeo -->
+            <section class="ilustracao_personagem">
+              <img src="../statics/images/planetas-monstros/vex-removebg-preview.png" alt="Ilustração de vex" class="animar">
+            </section>
+          </div>
+        </article>
+        <article class="personagens">
+          <div class="conteudo_personagens">
+            <h2>Kryxx – Parasita Esférico das Entranhas</h2>
+            <p>Parasita translúcido que ataca com tentáculos.</p>
+            <p><strong>Despertar:</strong> Explosão Parasitária — implode liberando ácido e regenerando-se.<p>
+          </div>
+          <div class="video">
+            <!-- bloco do vídeo -->
+            <section class="ilustracao_personagem">
+              <img src="../statics/images/planetas-monstros/kryxx-removebg-preview.png" alt="Ilustração de kryxx" class="animar" id="bixo">
+            </section>
+          </div>
+        </article>
+      </section>
+
+      <h1>Vilões</h1>
+      <section>
+        <article class="monstros" id="VILÕES">
+          <div class="conteudo_mostros">
+            <p><strong>Flegnor – O Derretido:</strong> carne líquida ácida.</p>
+          </div>
+          <div class="video">
+            <!-- bloco do vídeo -->
+            <section class="ilustracao_monstros">
+              <img src="../statics/images/planetas-monstros/flegnor-removebg-preview.png" alt="Ilustração de flegnor" class="animar">
+            </section>
+          </div>
+        </article>
+        
+        <article class="monstros">
+          <div class="conteudo_mostros">
+            <p><strong>Cylth – O Empalador de Ossos:</strong> esqueleto com ossos como armas.</p>
+          </div>
+          <div class="video">
+            <!-- bloco do vídeo -->
+            <section class="ilustracao_monstros">
+              <img src="../statics/images/planetas-monstros/cylth-removebg-preview.png" alt="Ilustração de Cylth" class="animar">
+            </section>
+          </div>
+        </article>
+        
+        <article class="monstros">
+          <div class="conteudo_mostros">
+            <p><strong>Blugh – O Tumor Pensante: carne inchada e venenosa.</strong> carne inchada e venenosa</p>
+          </div>
+          <div class="video">
+            <!-- bloco do vídeo -->
+            <section class="ilustracao_monstros">
+              <img src="../statics/images/planetas-monstros/Blugh-removebg-preview.png" alt="Ilustração de Blugh" class="animar">
+            </section>
+          </div>
+        </article>
+        
+        <article class="monstros">
+          <div class="conteudo_mostros">
+            <p><strong>Thrynn – O Andarilho Sem Sangue: sangue negro corrosivo.</strong> sangue negro corrosivo.</p>
+          </div>
+          <div class="video">
+            <!-- bloco do vídeo -->
+            <section class="ilustracao_monstros">
+              <img src="../statics/images/planetas-monstros/Thrynn-removebg-preview.png" alt="Ilustração de Thrynn" class="animar">
+            </section>
+          </div>
+        </article>
+        
+        <article class="monstros">
+          <div class="conteudo_mostros">
+            <p><strong>Mohrak – O Multiplicador: massa de corpos que se divide.</strong> massa de corpos que se divide.</p>
+          </div>
+          <div class="video">
+            <!-- bloco do vídeo -->
+            <section class="ilustracao_monstros">
+              <img src="../statics/images/planetas-monstros/Mohrak-removebg-preview.png" alt="Ilustração de Mohrak" class="animar">
+            </section>
+          </div>
+        </article>
+
+        <article class="monstros">
+          <div class="conteudo_mostros">
+            <p><strong>Venkris – O Crânio Exposto:</strong> maxilares móveis e gritos ultrassônicos.</p>
+          </div>
+          <div class="video">
+            <!-- bloco do vídeo -->
+            <section class="ilustracao_monstros">
+              <img src="../statics/images/planetas-monstros/Venkris -removebg-preview.png" alt="Ilustração de Venkris" class="animar">
+            </section>
+          </div>
+        </article>
+        
+        <article class="monstros">
+          <div class="conteudo_mostros">
+            <p><strong>Boss Final:</strong> NEMESIS, o Coração Corrompido da Humanidade, fusão grotesca de milhares de corpos.</p>
+          </div>
+          <div class="video">
+            <!-- bloco do vídeo -->
+            <section class="ilustracao_monstros">
+              <img src="../statics/images/planetas-monstros/nemesis-removebg-preview.png" alt="Ilustração de nemesis" class="animar">
+            </section>
+          </div>
+        </article>
+      </section>
+    
+      <!----------------------- SISTEMA DO JOGO ------------------------>
+
+      <h1>Sistemas</h1>
+      <section class="content" id="SISTEMAS">
+        <h3>Progressão</h3>
+        <p>Os personagens não sobem de nível com XP, mas absorvendo Fragmentos de Memória.</p>
+        <p>Estados de Consciência vão do Fragmentado (apenas ataques básicos) até a Raiz da Memória Profunda, onde o personagem decifra ruínas, abre portais e libera seu verdadeiro poder.</p>
+      </section>
+
+      <section class="content">
+        <h3>Combate</h3>
+        <p><strong>Ataque básico:</strong> combos físicos. <strong>Especiais:</strong> 3 habilidades únicas por personagem. <strong>Esquiva mutante:</strong> rastejo, salto ou teleporte. <strong>Despertar:</strong> forma devastadora temporária. <strong>Tipos de dano:</strong> corte, pulsação etérica, perfuração térmica, contaminação viral.
+        </p>
+      </section>
+
+      <section class="content">
+        <h3>Missões</h3>
+        <p><strong>Principal:</strong> derrotar os seis humanos mutantes e absorver suas memórias.</p>
+        <p><strong>Secundárias:</strong> ajudar simbiontes perdidos, restaurar ruínas da Terra, caçar mutações raras.</p>
+      </section>
+
+      <section class="content">
+        <h3>Mapa Livre</h3>
+        <p>A Terra é o ponto inicial.</p>
+        <p>Cada planeta é uma zona aberta, não linear, com requisitos de habilidades mutantes para avançar.</p>
+      </section>
+
+      <!----------------------- OUTRAS INFORMAÇÕES ------------------------>
+
+      <h1>INTERFACE</h1>
+      <section class="content" id="INTERFACE">
+        <p>Interface orgânica e viva; Barra de Vida: tubo pulsante; Medidor de Mutação: núcleo de olhos; Slots de Habilidades: orifícios orgânicos; Minimapa Neural: órgão flutuante com veias; Reputação de Facções: símbolos vivos que mudam de forma.</p>
+      </section>
+
+      <h1>INVENTÁRIO</h1>
+      <section class="content" id="INVENTÁRIO">
+        <p>Tudo coletado é biológico (tecidos, ossos, fluidos, memórias). Feito em Ninhos Simbióticos, que criam armas e itens. O corpo pode ser modificado: trocar membros por órgãos parasitas.</p>
+      </section>
+
+      <h1>RECURSOS</h1>
+      <section class="content" id="RECURSOS">
+        <p>Tecidos vivos → armaduras. Essência de Memória → evoluir habilidades. Órgãos parasitas → buffs. Resíduos mecanoides → armas de fogo/próteses.</p>
+      </section>
+
+      <h1>FACÇOES E REPUTAÇOÕES</h1>
+      <section class="content" id="FAC.E REP.">
+        <p>A Horda Sussurrante – mente coletiva. Os Cegos do Núcleo – vendem segredos por silêncio. Os Desflorados – dor como purificação. Ventrílocos do Vazio – falam línguas enlouquecedoras.</p>
+        <p>O alinhamento com uma facção muda a aparência e habilidades do personagem e pode gerar inimizades.</p>
+      </section>
+
+      <h1>PROGRAMAÇÃO E ARMAS</h1>
+      <section class="content" id="PROG.E ARMAS">
+        <p>As armas são organismos vivos que evoluem junto com o jogador: Primária – instável (ex: Lança Dentária). Crescida – escolha de caminho: Sanguínea, Aberrante, Destrutiva. Estável – adquire consciência, comunica-se. Final – Convergente (controle) ou Caótica (instável, poderosa).</p>
+      </section>
+
+      <h1>LOJA ORGÂNICA</h1>
+      <section class="content" id="LOJA ORGANICA">
+        <p>Uma criatura viva com olhos e bocas que vende: Armas e órgãos simbióticos. Memórias roubadas. Melhorias em troca de partes do próprio corpo. Moeda: Fragmentos de Consciência.</p>
+      </section>
+
+      <!----------------------- DOWNLOAD, ATUALIZAÇÕES E VERSÕES DO JOGO ------------------------>
+
+      <h1>Baixar DeepMemories</h1>
+      <section class="Download" id="BAIXAR">
+        <div>Baixar para Windows</div>
+        <button>Windows(EXE)</button>
+        <div>Baixar para Android</div>
+        <button>APK Android</button>
+        <div>Baixar para MacOS</div>
+        <button>DMG</button>
+      </section>
+
+      <h1>Atualizações</h1>
+
+      <section class="updates-section" id="ATUALIZAÇÕES">
+        <div class="cards-container">
+          <article class="card">
+            <section>
+              <h3>Patch 1.2 – Novos Inimigos</h3>
+            </section>
+            <p>Adicionamos mutantes inéditos e ajustes no sistema de combate simbiótico.</p>
+          </article>
+          <article class="card">
+            <section>
+              <h3>Balanceamento de Armas</h3>
+            </section>
+            <p>Revisamos o dano de armas simbióticas e melhoramos a progressão de evolução.</p>
+          </article>
+          <article class="card">
+            <section>
+              <h3>Nova Área: As Ruínas de Marte</h3>
+            </section>
+            <p>Um novo bioma repleto de segredos e criaturas hostis foi liberado para exploração.</p>
+          </article>
+        </div>
+     </section>
+
+      <h1>Versões</h1>
+      <section class="versoes" id="VERSOES">
+        <div>Primeira versão jogável; Implementação básica de exploração em mapa livre; Introdução ao sistema de memórias para evolução; HUD inicial e inventário experimental.
+        </div>
+        <button>Versão 0.1 –<p> Protótipo (2025)</p></button>
+        <div>Adição do sistema de crafting simbiótico; Inclusão dos primeiros biomas (Mercúrio e Marte); Criação do bestiário inicial com inimigos comuns e elites; Loja simbiótica funcionando com protótipo de reputação.</div>
+        <button>Versão 0.5 –<p>Alpha (2025)</p>
+        </button>
+        <div>Expansão para novos planetas: Vênus e Europa; Sistema de progressão de armas com ramificações; Implementação de fraquezas e resistências nos inimigos; Primeiros eventos narrativos dinâmicos baseados em decisões.
+        </div>
+        <button>Versão 0.8 –<p> Beta (2026)</p>
+        </button>
+        <div>Todo o sistema de evolução e reputação balanceado; Campanha completa com narrativa ramificada; Modo coop simbiótico para 2 jogadores; Polimento de interface, HUD e mecânicas principais.</div>
+        <button>Versão 1.0 – <p>Lançamento Oficial (2026)</p>
+        </button>
+      </section>
+
+      <h1>Segurança da conta</h1>
+      <section class="content" id="SEGURANÇA DA CONTA">
+        <p>Mantenha sua conta sempre protegida e aproveite DeepMemories com tranquilidade.</p>
+        <h2>1. Alterar Senha</h2>
+        <p>Recomendamos trocar sua senha periodicamente. Use senhas fortes, com letras maiúsculas, minúsculas, números e símbolos.</p>
+        <h2>Autentificação em Duas Etapas (2FA)</h2>
+        <p>Ative a verificação em duas etapas para adicionar uma camada extra de proteção. Receba um código de segurança por e-mail ou aplicativo autenticador.</p>
+        <h2>3. Atividade de Login</h2>
+        <p>Veja os últimos acessos realizados na sua conta. Caso identifique algo suspeito, altere sua senha imediatamente.</p>
+        <h2>4. Gerenciar Dispositivos</h2>
+        <p>Liste e desconecte dispositivos nos quais sua conta foi acessada. Ideal se você jogou em um computador público ou compartilhou o acesso.</p>
+        <h2>5. Recuperação de Conta</h2>
+        <p>Configure um e-mail e/ou número de telefone de recuperação. Facilita a recuperação caso você esqueça sua senha.</p>
+      </section>
+
+      <h1>Política do Jogo</h1>
+      <section class="content" id="POLITICA DO JOGO">
+        <ul>
+          <li>Respeito à Comunidade: não é permitido ofender, discriminar ou assediar outros jogadores.</li>
+          <li>Uso Justo: qualquer forma de trapaça, hack ou exploit é proibida.</li>
+          <li>Conta Pessoal: cada conta é de uso individual. Não compartilhe suas credenciais.</li>
+          <li>Conteúdo Inadequado: não publique material ofensivo, ilegal ou prejudicial.</li>
+          <li>Sanções: violar as regras pode resultar em suspensão ou banimento da conta.</li>
+        </ul>
+      </section>
+
+      <h1>Redes Sociais</h1>
+      <section class="content" id="REDES SOCIAIS">
+        <h2>Discord - Deep Memories Hub</h2>  
+        <p>Nosso servidor oficial é o ponto de encontro da comunidade. Lá você pode conversar com outros jogadores, compartilhar dicas, participar de eventos e ficar por dentro das novidades do jogo.</p>
+        <h3>Instagram - @DeepMemoriesOficial</h3>
+        <p>Acompanhe artes conceituais, novidades de desenvolvimento e curiosidades sobre a lore do jogo. É também o espaço para divulgar fanarts e interagir com posts da comunidade.</p>
+      </section>
+
+      <h1>Faça Parte</h1>
+      <section class="content" id="FAÇA PARTE">
+        <h2>Quer se juntar à jornada do DeepMemories?</h2>
+        <p><strong>Comunidade:</strong> participe do nosso Discord e acompanhe as redes sociais para entrar em eventos, trocar experiências e descobrir segredos do jogo. <strong>Equipe:</strong> buscamos sempre talentos apaixonados por arte, programação, design e testes para ajudar a expandir esse universo. <strong>Contribuições:</strong> sua voz importa! Envie feedbacks, relate bugs e compartilhe ideias que podem moldar o futuro do projeto. Deep Memories é um universo vivo, construído junto da comunidade. Venha fazer parte e deixe sua marca nessa história.</p>
+      </section>
+
+      <h1>Suporter</h1>
+      <section class="content" id="SUPORTE">
+        <ul>
+          <li><strong>Central de Ajuda:</strong> consulte guias e perguntas frequentes (FAQ).</li>
+          <li><strong>Problemas de Conta:</strong> redefinição de senha, segurança e login.</li>
+          <li><strong>Reportar Bugs:</strong> envie detalhes de falhas ou erros encontrados no jogo.</li>
+          <li><strong>Feedback:</strong> compartilhe sugestões para melhorar sua experiência.</li>
+          <li><strong>Contato:</strong> suporte@deepmemories.com</li>
+        </ul>
+      </section>
+
+  </main>
+
+</body>
+</html>
