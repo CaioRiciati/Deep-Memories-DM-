@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criação de conta</title>
+    <script src="../statics/js/cadastro.js"></script>
     <link rel="stylesheet" href="../statics/css/CreateAccount.css">
     <title>Criação de Login - Deep Memories</title>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script src="../scripts/server.js"></script>
-    <script src="../scripts/requisicaoCadastro.js"></script>
   </head>
 
 <body>
@@ -26,7 +25,7 @@
         <img src="../statics/images/1.png" alt="Deep Memories">
       </div>
             
-      <form method="post" onsubmit="return criarConta()">
+      <form id="#formCadastro">
         <label for="email"></label>
         <input type="email" name="email" id="email" required placeholder="DIGITE SEU E-MAIL">
         

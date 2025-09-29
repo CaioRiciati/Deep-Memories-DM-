@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criação de conta</title>
     <link rel="stylesheet" href="../statics/css/login.css">
+    <script src="../statics/js/login.js"></script>
     <title>Criação de Login - Deep Memories</title>
     
     <script src="https://accounts.google.com/gsi/client" async defer></script>
@@ -23,11 +24,11 @@
         <div class="divisor"></div>
         <img src="../statics/images/1.png" alt="Deep Memories">
       </div>
-      <form action="login" method="post">
-        <label for="iemail">Digite seu E-mail ou nome de usuário</label>
-        <input type="email" name="email" id="iemail" required>
+      <form id="#formCadastro1">
+        <label for="email">Digite seu E-mail ou nome de usuário</label>
+        <input type="email" name="email" id="email" required>
         <label for="iusuario">Digite sua senha</label>
-        <input type="password" name="usuario" id="iusuario" required>
+        <input type="password" name="senha" id="senha" required>
         <div class="sla">
           <button type="submit" class="confirmar" onclick="window.location.href='home.html'">
             <img src="../statics/images/seta direita.png" alt="confirmar">
