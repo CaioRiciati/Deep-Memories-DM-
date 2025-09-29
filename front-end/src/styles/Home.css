@@ -56,8 +56,6 @@ body {
   background-image: linear-gradient(to bottom, #015258, #131e31);
   overflow: hidden;
   z-index: 10;
-
-  /* Animação de transição suave */
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -137,8 +135,11 @@ body {
   background-clip: padding-box, border-box;
   cursor: pointer;
   transition: 0.3s;
-  text-decoration: underline;
   font-weight: bolder;
+}
+
+.inicio > div > button:hover {
+  text-decoration: underline;
 }
 
 .inicio > .principal > h1 {
@@ -237,9 +238,9 @@ nav div {
 }
 
 /* -------------------- DROPDOWN -------------------- */
-    #btn-menu {
-    display: none;
-  }
+  #btn-menu {
+  display: none;
+}
 
 .dropdown {
   position: relative;
@@ -272,12 +273,10 @@ nav div {
   padding: 5px;
   border-radius: 10px;
   z-index: 1;
-  margin-left: 100%;
 }
 
 .dropdown-content > img {
   width: 50px;
-  /* falta terminar */
 }
 
 
@@ -438,6 +437,7 @@ p {
   margin-top: 15px;
   margin-bottom: 15px;
   font-size: 2.3em;
+  line-height: 40px;
 }
 
 
@@ -520,10 +520,6 @@ p {
   border-radius: 20px;
 }
 
-.planeta img {
-  width: 300px;
-}
-
 .video {
   display: flex;
   padding: 0%;
@@ -532,6 +528,7 @@ p {
 .personagens {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 30px;
   margin-bottom: 50px;
 }
@@ -582,7 +579,7 @@ p {
 }
 
 #bixo {
-  margin-top: 20%;
+  margin-top: 15%;
 }
 
 /* -------------------- DOWNLOAD, ATUALIZAÇÕES E VERSÕES DO JOGO -------------------- */
@@ -683,7 +680,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60vw;
+  width: 50vw;
   padding: 20px;
   font-size: 1.5em;
 }
@@ -695,13 +692,13 @@ p {
   border-radius: 25px;
   padding: 15px 30px;
   cursor: pointer;
-  width: 50%;
-  margin-left: 30%;
-  font-size: 1.2em;
+  width: 85%;
+  margin-left: 10%;
+  font-size: 20px;
 }
 
 .versoes > button > p {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 /* -------------------- Animação -------------------- */
@@ -751,8 +748,6 @@ p {
   .hamburger {
     display: block;
   }
-
-
   .menu.show {
     display: flex;
     position: absolute;
@@ -769,20 +764,29 @@ p {
     text-align: center;
   }
 
-  .mundo,.personagens,.monstros {
-    display: flex;
+  .mundo,.personagens {
+    display: grid;
     flex-wrap: wrap;
     gap: 20px;
   }
 
+  .monstros {
+    display: flex;
+  }
+
   .mundo .fundo_mundo,.personagens,
-  .conteudo_personagens,  .monstros,
+  .conteudo_personagens, .monstros,
   .conteudo_mostros,.video {
     flex: 1 1 300px;
   }
 
   .planeta, .ilustracao_monstros {
     width: 100%;
+  }
+
+  }
+  .planeta img {
+    width: 90%;
   }
 
   .ilustracao_personagem {
@@ -801,7 +805,8 @@ p {
   }
 
   .logo{
-    margin: 0 35%;
+    margin: 0 30vw;
+    width: 200px;
   }
   
   .texto-sobre {
@@ -830,28 +835,37 @@ p {
     margin-left: 0%;
   }
 
+  .cards-container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 65%;
+  }
+
   .versoes > div {
-    width: 100%;
-    font-size: 16px;
+    width: 50vw;
+    font-size: 20px;
   }
 
   .versoes > button {
-    width: 70%;
+    width: 80%;
     font-size: 1rem;
+    height: 20vh;
   }
 
   p {
-    font-size: 1em;
-  }
-
-  #bixo {
-    margin-top: 35%;
+    font-size: 1.3em;
+    line-height: 30px;
   }
 
   #bixo > .ilustracao_personagem img {
     width: 220px;
-}
-}
+  }
+
+  .inicio > div > button {
+    margin-top: 5%;
+  }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   #btn-menu {
@@ -865,7 +879,7 @@ p {
   .planeta,
   .ilustracao_personagem,
   .ilustracao_monstros {
-    width: 100%;
+    width: 40vw;
     max-width: 100%;
     height: auto;
   }
@@ -894,13 +908,13 @@ p {
   }
 
   .versoes > button {
-    width: 60%;
+    width: 80%;
     font-size: 1rem;
   }
 
   p {
-    font-size: 1em;
-    line-height: 25px;
+    font-size: 1.3em;
+    line-height: 30px;
   }
 
   h1 {
@@ -916,14 +930,14 @@ p {
   }
 
   .logo {
-    width: 120px;
-    margin: 0px 25% 0 30%;
+    width: 200px;
+    margin: 0px 35%;
   }
 
   .texto-sobre {
-    width: 54vw;
+    width: 100%;
     line-height: 40px;
-}
+  }
 
   .img_ilustracao img {
     width: 25%;

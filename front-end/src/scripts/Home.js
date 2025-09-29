@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('wheel', (e) => {
     const scrollAtual = window.scrollY;
 
-    // Scroll automático para BAIXO
     if (!scrollAutomatico && scrollAtual < 10 && e.deltaY > 0) {
       scrollAutomatico = true;
       window.scrollTo({
@@ -72,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       setTimeout(() => {
         scrollAutomatico = false;
-      }, 1000);
+      }, 100);
     }
 
     if (!scrollAutomatico && scrollAtual < window.innerHeight + 100 && e.deltaY < 0) {
@@ -84,6 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       setTimeout(() => {
         scrollAutomatico = false;
-      }, 1000);
+      }, 100);
     }
   });
