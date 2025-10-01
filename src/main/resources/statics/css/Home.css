@@ -52,24 +52,16 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: linear-gradient(to bottom, #015258, #131e31);
+  text-align: center;
+  background: linear-gradient(to bottom, #015258, #131e31);
   overflow: hidden;
-  z-index: 10;
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 200;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
   pointer-events: auto;
 }
 
-.inicio {
-  height: 100vh;
-  width: 100%;
-  background: linear-gradient(to bottom, #015258, #131e31);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
 .conteudo {
   min-height: 100vh;
