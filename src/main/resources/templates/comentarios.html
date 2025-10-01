@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comentários</title>
-    <link rel="stylesheet" href="../styles/comentarios.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comentários</title>
+  <link rel="stylesheet" href="../statics/css/comentarios.css">
 </head>
 <body>
-    <main>
-        <h1>Comentários</h1>
-        <section>
-            <form action="/comentarios" method="post">
-                <textarea name="texto" placeholder="Escreva seu comentário aqui..." required></textarea>
-                <button type="submit">Comentar</button>
-            </form>
-            <hr>
-            <div th:each="comentario : ${comentarios}">
-                <p><strong th:text="${comentario.nomeUsuario}">Nome</strong> disse em
-                <span th:text="${#temporals.format(comentario.dataHora, 'dd/MM/yyyy HH:mm')}">data</span>:</p>
-                <p th:text="${comentario.texto}"></p>
-            </div>
-            <hr>
-            <a href="/">Voltar ao início</a>
-        </section>
-    </main>
+  <header>
+    <div class="logo">
+      <img src="../statics/images/2.png" alt="Logo">
+      <span>DeepMemories</span>
+    </div>
+    <a href="/" class="btn-voltar">← Voltar</a>
+  </header>
+
+  <main>
+    <h1>Comentários</h1>
+    <section>
+      <form action="/comentarios" method="post">
+        <textarea name="texto" placeholder="Escreva seu comentário aqui..." required></textarea>
+        <button type="submit">💬 Comentar</button>
+      </form>
+
+      <hr>
+
+      <!-- Mostrar comentários com limite -->
+      <div th:if="${#lists.isEmpty(comentarios)}" class="sem-comentarios">
+        Nenhum comentário ainda.
+      </div>
+
+      <div th:each="comentario, iterStat : ${comentarios}" 
+           th:if="${iterStat.index < 5}" 
+           class="comentario">
+        <p>
+          <strong th:text="${comentario.nomeUsuario}">Nome</strong> 
+          <small>em <span th:text="${#temporals.format(comentario.dataHora, 'dd/MM/yyyy HH:mm')}">data</span></small>
+        </p>
+        <p th:text="${comentario.texto}">Texto do comentário</p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

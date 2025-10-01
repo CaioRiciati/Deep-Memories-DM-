@@ -19,28 +19,23 @@ body {
 
 
 .inicio.animado {
-  opacity: 1;
   transform: translateY(0);
 }
 
 .inicio.animado .nuvem_inicial {
-  opacity: 1;
   transform: translateY(0);
 }
 
 .inicio.animado .principal {
-  opacity: 1;
   transform: translateY(0) scale(1);
 }
 
 .scroll-animado {
-  opacity: 0;
   transform: translateY(50px);
   transition: all 0.8s ease-out;
 }
 
 .scroll-animado.apareceu {
-  opacity: 1;
   transform: translateY(0);
 }
 
@@ -55,9 +50,7 @@ body {
   background-image: linear-gradient(to bottom, #015258, #131e31);
   overflow: hidden;
   z-index: 10;
-  opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: auto;
 }
 
@@ -80,8 +73,7 @@ body {
 
 .nuvem_inicial-topo {
   position: absolute;
-  bottom: 50%;
-  right: 40%;
+  right: 0%;
 }
 
 .Nuvem-central {
@@ -94,18 +86,16 @@ body {
 
 .nuvem_inicial-baixo {
   position: absolute;
-  top: 50%;
+  top: 30vh;
   left: 40%;
 }
 
 .nuvem_inicial {
-  opacity: 0;
   transform: translateY(-20px);
   transition: all 1s ease-out;
 }
 
 .principal {
-  opacity: 0;
   transform: translateY(-20px) scale(0.95);
   transition: all 1s ease-out;
   z-index: 99999;
@@ -152,10 +142,10 @@ body {
     1px -1px 0 #db630d,
     1px  3px 0 #db630d,
     4px  4px 0 rgb(125, 81, 0),
-     0   -1px 0 rgb(92, 60, 0),
-     0    1px 0 rgb(103, 67, 0),
+    0   -1px 0 rgb(92, 60, 0),
+    0    1px 0 rgb(103, 67, 0),
     -1px  0   0 #db630d,
-     1px  0   0 rgb(125, 82, 1);
+    1px  0   0 rgb(125, 82, 1);
 }
 
 
@@ -321,13 +311,11 @@ nav div {
 }
 
 .inicio {
-  opacity: 0;
   transform: translateY(-50px);
   transition: all 0.2s ease-out; /* QUASE INSTANTÂNEO */
 }
 
 .inicio.visivel {
-  opacity: 1;
   transform: translateY(0);
 }
 
@@ -391,7 +379,7 @@ p {
 .sobre {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 20px;
 }
 
 .texto-sobre {
@@ -884,7 +872,7 @@ p {
   }
 
   .informacoes-sobre li {
-    margin-left: 35%;
+    margin-left: 55%;
   }
 
   .Download {
@@ -931,6 +919,11 @@ p {
   .logo {
     width: 200px;
     margin: 0px 35%;
+  }
+
+  .sobre {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .texto-sobre {
