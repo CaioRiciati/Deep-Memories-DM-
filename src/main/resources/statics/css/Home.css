@@ -1,7 +1,6 @@
 /* -------------------- RESET -------------------- */
 * {
-  margin: 0;
-  padding: 0;
+
   box-sizing: border-box;    
 }
 
@@ -13,6 +12,8 @@ body {
   width: 100%;
   transition: 0.5s ease;
   color: white;
+  margin: 0;
+  padding: 0;
 }
 
 /* -------------------- inicio -------------------- */
@@ -276,8 +277,8 @@ nav div {
   display: block;
 }
 
-/* -------------------- BOTÃO CRIAR CONTA -------------------- */
-#conta {
+/* -------------------- BOTÃO CRIAR E LOGAR CONTA -------------------- */
+.criar {
   position: absolute;
   right: 20px; 
   background-image: linear-gradient(to top, #015258, #131e31);
@@ -288,13 +289,28 @@ nav div {
   border-radius: 10px;
   font-size: 14px;
   height: 50px;
+  top: 45px;
 }
 
-#conta:hover {
+.login {
+  position: absolute;
+  right: 150px; 
+  background-image: linear-gradient(to top, #015258, #131e31);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  height: 50px;
+  top: 45px;
+}
+
+.criar, .login:hover {
   background-color: #00796B;
 }
 
-#conta a {
+.criar a {
   color: white;
   text-decoration: none;
   font-size: 15px;
