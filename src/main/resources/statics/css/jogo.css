@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+body {
+    background-color:  #003c41;
+    width: 100%;
+    transition: 0.5s ease;
+    color: white;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+main {
+  background-image: linear-gradient(to top, #131e31, #02364b);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+@keyframes glitch-effect {
+    0% { transform: translate(1px, 1px); }
+    25% { transform: translate(-1px, -1px); }
+    50% { transform: translate(1px, -1px); }
+    75% { transform: translate(-1px, 1px); }
+    100% { transform: translate(1px, 1px); }
+}
+
+.glitch-text {
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 2px #00796B, -2px -2px #015258;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+.Download {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.download-card {
+    background-color: #004f57;
+    border: 1px solid #015258;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    flex: 1 1 300px;
+    box-sizing: border-box;
+}
+
+.download-card:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.download-card h2 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.download-card p {
+    color: #f0f0f0;
+    font-size: 14px;
+}
+
+.download-btn {
+    background-color: #015258; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #00796B;
+}
+
+.download-btn.downloading {
+    background-color: #009863;
+    color: #333;
+    cursor: wait;
+    animation: pulse 1s infinite alternate;
+}
+
+.download-btn.download-complete {
+    background-color: #002721;
+    color: #ffffff;
+}
+
+.updates-section {
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.cards-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin: auto;
+}
+
+.card {
+    background-color: #003c41;
+    border: 1px solid #015258;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    flex-grow: 1;
+    flex-basis: 0;
+    transition: all 0.5s ease;
+}
+
+.card.expanded {
+    flex-grow: 2; 
+}
+
+.card.expanded p {
+    display: block;
+    animation: fadeIn 0.8s;
+}
+
+.card p {
+    display: none;
+}
+
+.versoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.versao-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #003c41;
+    border-radius: 5px;
+    padding: 15px;
+    border: 1px solid #015258;
+}
+
+.versao-item button {
+    background-color: #015258;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.versao-item button p {
+    font-size: 1em;
+}
+
+.versao-item p {
+    color: #f0f0f0;
+}

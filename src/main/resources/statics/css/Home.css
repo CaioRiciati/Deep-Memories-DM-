@@ -1,7 +1,6 @@
 /* -------------------- RESET -------------------- */
 * {
-  margin: 0;
-  padding: 0;
+
   box-sizing: border-box;    
 }
 
@@ -13,34 +12,31 @@ body {
   width: 100%;
   transition: 0.5s ease;
   color: white;
+  margin: 0;
+  padding: 0;
 }
 
 /* -------------------- inicio -------------------- */
 
 
 .inicio.animado {
-  opacity: 1;
   transform: translateY(0);
 }
 
 .inicio.animado .nuvem_inicial {
-  opacity: 1;
   transform: translateY(0);
 }
 
 .inicio.animado .principal {
-  opacity: 1;
   transform: translateY(0) scale(1);
 }
 
 .scroll-animado {
-  opacity: 0;
   transform: translateY(50px);
   transition: all 0.8s ease-out;
 }
 
 .scroll-animado.apareceu {
-  opacity: 1;
   transform: translateY(0);
 }
 
@@ -72,8 +68,7 @@ body {
 
 .nuvem_inicial-topo {
   position: absolute;
-  bottom: 50%;
-  right: 40%;
+  right: 0%;
 }
 
 .Nuvem-central {
@@ -81,23 +76,21 @@ body {
   width: 100%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+
 }
 
 .nuvem_inicial-baixo {
   position: absolute;
-  top: 50%;
+  top: 30vh;
   left: 40%;
 }
 
 .nuvem_inicial {
-  opacity: 0;
   transform: translateY(-20px);
   transition: all 1s ease-out;
 }
 
 .principal {
-  opacity: 0;
   transform: translateY(-20px) scale(0.95);
   transition: all 1s ease-out;
   z-index: 99999;
@@ -144,10 +137,10 @@ body {
     1px -1px 0 #db630d,
     1px  3px 0 #db630d,
     4px  4px 0 rgb(125, 81, 0),
-     0   -1px 0 rgb(92, 60, 0),
-     0    1px 0 rgb(103, 67, 0),
+    0   -1px 0 rgb(92, 60, 0),
+    0    1px 0 rgb(103, 67, 0),
     -1px  0   0 #db630d,
-     1px  0   0 rgb(125, 82, 1);
+    1px  0   0 rgb(125, 82, 1);
 }
 
 
@@ -288,8 +281,8 @@ nav div {
   display: block;
 }
 
-/* -------------------- BOTÃO CRIAR CONTA -------------------- */
-#conta {
+/* -------------------- BOTÃO CRIAR E LOGAR CONTA -------------------- */
+.criar {
   position: absolute;
   right: 20px; 
   background-image: linear-gradient(to top, #015258, #131e31);
@@ -300,26 +293,39 @@ nav div {
   border-radius: 10px;
   font-size: 14px;
   height: 50px;
+  top: 45px;
 }
 
-#conta:hover {
+.login {
+  position: absolute;
+  right: 150px; 
+  background-image: linear-gradient(to top, #015258, #131e31);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  height: 50px;
+  top: 45px;
+}
+
+.criar, .login:hover {
   background-color: #00796B;
 }
 
-#conta a {
+.criar a {
   color: white;
   text-decoration: none;
   font-size: 15px;
 }
 
 .inicio {
-  opacity: 0;
   transform: translateY(-50px);
   transition: all 0.2s ease-out; /* QUASE INSTANTÂNEO */
 }
 
 .inicio.visivel {
-  opacity: 1;
   transform: translateY(0);
 }
 
@@ -383,7 +389,7 @@ p {
 .sobre {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 20px;
 }
 
 .texto-sobre {
@@ -391,7 +397,7 @@ p {
   padding: 20px;
   border-radius: 20px;
   width: 70vw;
-  height: 95%;
+
   line-height: 40px;
   text-align: justify;
 }
@@ -400,9 +406,8 @@ p {
   background-color: #131e31;
   padding: 20px 0px 45px 20px;
   border-radius: 20px;
-  width: 100%;
+  width: 50%;
   line-height: 20px;
-  height: 95%;
 }
 
 .informacoes-sobre > ul {
@@ -459,7 +464,7 @@ p {
 }
 
 .logo {
-  margin: 0 0 0 35%;
+  margin: 15%;
   width: 160px;
 }
 
@@ -574,123 +579,7 @@ p {
 }
 
 /* -------------------- DOWNLOAD, ATUALIZAÇÕES E VERSÕES DO JOGO -------------------- */
-.Download {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 100px);
-  align-items: center;
-  margin-left: 10%;
-}
 
-.Download a {
-  text-decoration: underline;
-  color: white;
-}
-.Download a:hover {
-  color: #00796B;
-}
-
-.Download > div {
-  background-color: #131e31;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: large;
-  height: 60px;
-}
-
-.Download > button {
-  background-color: #131e31;
-  color: white;
-  border: none;
-  border-radius: 50px;
-  padding: 15px 30px;
-  text-decoration: underline;
-  font-size: large;
-  cursor: pointer;
-  width: 40%;
-  margin-left: 30%;
-}
-
-
-.cards-container {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  width: 100%;
-  margin: auto;
-}
-
-.card {
-  background-color: #131e31;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  flex-grow: 1;
-  flex-basis: 0;
-  transition: all 0.5s ease;
-}
-
-.card.expanded {
-  flex-grow: 2; 
-}
-
-.card:not(.expanded) {
-  flex-grow: 1;
-}
-
-.card.expanded p {
-  display: block;
-  animation: fadeIn 0.8s;
-}
-
-.card p {
-  display: none;
-}
-
-@keyframes fadeIn {
-  from {transform: translateY(10px); }
-  to {transform: translateY(0); }
-}
-
-
-.versoes {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 20px;
-  align-items: center;
-  margin-bottom: 50px;
-}
-
-.versoes > div {
-  background-color: #131e31;
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50vw;
-  padding: 20px;
-  font-size: 1.5em;
-}
-
-.versoes > button {
-  background-color: #131e31;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  padding: 15px 30px;
-  cursor: pointer;
-  width: 85%;
-  margin-left: 10%;
-  font-size: 20px;
-}
-
-.versoes > button > p {
-  font-size: 1.2em;
-}
 
 /* -------------------- Animação -------------------- */
 
@@ -775,6 +664,11 @@ p {
     width: 100%;
   }
 
+  .sobre {
+    display: flex;
+    flex-direction: column;
+  }
+
   }
   .planeta img {
     width: 90%;
@@ -796,18 +690,17 @@ p {
   }
 
   .logo{
-    margin: 0 30vw;
+    margin: auto 0 0 20%;
     width: 200px;
   }
   
   .texto-sobre {
-    width: 100%;
+    width: 60vw;
   }
 
-  .sobre {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+  .informacoes-sobre {
+    width: 80%;
+    margin-left: 15%;
   }
 
   .Download {
@@ -876,7 +769,7 @@ p {
   }
 
   .informacoes-sobre li {
-    margin-left: 35%;
+    margin-left: 55%;
   }
 
   .Download {
@@ -925,9 +818,19 @@ p {
     margin: 0px 35%;
   }
 
+  .sobre {
+    display: flex;
+    flex-direction: column;
+  }
+
   .texto-sobre {
     width: 100%;
     line-height: 40px;
+  }
+
+  .informacoes-sobre {
+    width: 100%;
+    margin-left: 0%;
   }
 
   .img_ilustracao img {
