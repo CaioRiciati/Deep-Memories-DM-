@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comentários</title>
+    <link rel="stylesheet" href="../styles/comentarios.css">
 </head>
 <body>
-    <h1>Comentários</h1>
-
-    <form action="/comentarios" method="post">
-        <textarea name="texto" placeholder="Escreva seu comentário aqui..." required></textarea><br>
-        <button type="submit">Comentar</button>
-    </form>
-
-    <hr>
-    <div th:each="comentario : ${comentarios}">
-        <p><strong th:text="${comentario.nomeUsuario}">Nome</strong> disse em 
-        <span th:text="${#temporals.format(comentario.dataHora, 'dd/MM/yyyy HH:mm')}">data</span>:</p>
-        <p th:text="${comentario.texto}"></p>
-        <hr>
-    </div>
-
-    <a href="/">Voltar ao início</a>
+    <main>
+        <h1>Comentários</h1>
+        <section>
+            <form action="/comentarios" method="post">
+                <textarea name="texto" placeholder="Escreva seu comentário aqui..." required></textarea>
+                <button type="submit">Comentar</button>
+            </form>
+            <hr>
+            <div th:each="comentario : ${comentarios}">
+                <p><strong th:text="${comentario.nomeUsuario}">Nome</strong> disse em
+                <span th:text="${#temporals.format(comentario.dataHora, 'dd/MM/yyyy HH:mm')}">data</span>:</p>
+                <p th:text="${comentario.texto}"></p>
+            </div>
+            <hr>
+            <a href="/">Voltar ao início</a>
+        </section>
+    </main>
 </body>
 </html>
