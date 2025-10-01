@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Informações de perfil</title>
+  <link rel="stylesheet" href="../styles/alterarFoto.css">
+</head>
+<body>
+  <div class="background">
+    <img src="../Imagens/nuvem-esquerda.png" class="nuvem-topo" alt="Nuvem topo esquerda">
+    <img src="../Imagens/nuvem-direita.png" class="nuvem-baixo" alt="Nuvem inferior direita">
+  </div>
+
+  <main class="container">
+    <section class="content">
+      <div class="perfil">
+        <img src="../Imagens/person.png" alt="foto de perfil">
+        <a href="#" id="openModal">Alterar foto de perfil</a>
+      </div>
+
+      <form method="get">
+        <div class="input-group">
+          <label for="email">Seu E-mail</label>
+          <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+        </div>
+
+        <div class="input-group">
+          <label for="user">Nome de usuário</label>
+          <input type="text" id="user" name="user" placeholder="usu_ario" required>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" placeholder="123@Senha" required>
+        </div>
+
+        <button id="save" type="submit">Salvar Alterações</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <section class="container2" id="modal" aria-hidden="true" role="dialog">
+    <div class="content2">
+      <button class="close" type="button" data-close>&times;</button>
+
+      <button class="escolhas">
+        <img src="../Imagens/galeria.png" alt="galeria">
+        <h2>Escolher na galeria</h2>
+      </button>
+
+      <button class="escolhas">
+        <img src="../Imagens/google.png" alt="google" class="google">
+        <h2>Importar do Google</h2>
+      </button>
+
+      <button class="escolhas">
+        <img src="../Imagens/lixeira.png" alt="excluir">
+        <h2 class="lixeira">Excluir</h2>
+      </button>
+    </div>
+  </section>
+
+  <script src="../scripts/alterarFoto.js"></script>
+</body>
+</html>

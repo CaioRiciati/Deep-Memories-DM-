@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #621e23;
+  background-image: radial-gradient(circle at top left, rgba(255, 100, 60, 0.15), transparent),
+                    radial-gradient(circle at bottom right, rgba(139, 118, 112, 0.15), transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.recuperar {
+  color: #5a1419;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.nuvem-topo {
+  position: absolute;
+  bottom: 51%;
+  right: 46%;
+  width: 82%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.nuvem-baixo {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  width: 130%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 2;
+}
+
+.card {
+  background-color: #e0d1d1;
+  padding: 40px;
+  border-radius: 25px;
+  width: 360px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  z-index: 2;
+  margin: auto;
+}
+
+h2 {
+  color: #5a1419;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logos img {
+  height: 80px;
+  margin: 0 10px;
+}
+
+.divisor {
+    width: 4px;
+    height: 100px;
+    background-color: #5a1419;
+}
+
+.label-codigo {
+  font-size: 0.8rem;
+  color: #00785a;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #5a1419;
+  border-radius: 25px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #5a1419;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.link-reenvio {
+  display: block;
+  font-size: 0.8rem;
+  color: #00785a;
+  text-align: center;
+}
+
+.link-reenvio:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    .content {
+        width: 70vw;
+    }
+
+    .nuvem-topo {
+        bottom: 70%;
+        right: 46%;
+        width: 82%;
+    }
+
+    .nuvem-baixo {
+        top: 60%;
+        left: 30%;
+        width: 130%;
+    }
+}

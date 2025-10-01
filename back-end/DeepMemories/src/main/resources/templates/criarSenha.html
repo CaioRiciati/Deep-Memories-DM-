@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de conta</title>
+    <link rel="stylesheet" href="../styles/criarSenha.css">
+    <title>Criação de Login - Deep Memories</title>
+    <script src="server.js"></script>
+    <script src="criarConta.js"></script>
+
+</head>
+<body>
+  <div class="background">
+    <img src="../Imagens/nuvem-esquerda.png" class="nuvem-topo" alt="Nuvem topo esquerda">
+    <img src="../Imagens/nuvem-direita.png" class="nuvem-baixo" alt="Nuvem inferior direita">
+  </div>
+
+  <main class="container">
+    <section class="card">
+      <div class="logos">
+        <img src="../imagens/deepmemories-logo.png" alt="Logo Simbiótica">
+        <div class="divisor"></div>
+        <img src="../imagens/1.png" alt="Deep Memories">
+      </div>
+      <form action="login" method="post">
+        <label for="isenha">CRIE UMA SENHA</label>
+        <input type="password" name="senha" id="isenha" required>
+        <label for="isenha">CONFIRME A SENHA</label>
+        <input type="password" name="senha" id="isenha" required>
+        <!-- Falta colocar o olhinho -->
+        <div class="sla">
+          <button type="submit" class="criar" onclick="window.location.href='home.html'">CRIAR CONTA
+          </button>
+          <a href="CreateAccount.html">JÁ TEM UMA CONTA? FAZER LOGIN</a>
+        </div>
+      </form>
+</body>
+</html>
