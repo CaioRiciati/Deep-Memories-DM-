@@ -1,27 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <title>Login - Deep Memories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Deep Memories</title> <!-- Título mais claro -->
+    <!-- Referências corrigidas para arquivos estáticos -->
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="/js/login.js"></script>
+    
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
-    <h2>Login</h2>
+  <div class="background">
+    <!-- Referências corrigidas para imagens -->
+    <img src="/images/-esquerda.png" class="nuvem-topo" alt="Nuvem topo esquerda">
+    <img src="/images/nuvem-direita.png" class="nuvem-baixo" alt="Nuvem inferior direita">
+  </div>
 
-    <!-- Mostra erro, se existir -->
-    <div style="color: red;">
-        <p th:text="${erro}"></p>
-    </div>
+  <main class="container">
+    <section class="card">
+      <h1>FAZER LOGIN</h1>
+      <div class="logos">
+        <img src="/images/deepmemories-logo.png" alt="Logo Simbiótica">
+        <div class="divisor"></div>
+        <img src="/images/1.png" alt="Deep Memories">
+      </div>
+     <form method="POST" action="/logar" id="#formCadastro1">
+        <label for="email">Digite seu E-mail ou nome de usuário</label>
+        <input type="email" name="email" id="email" required>
+        <label for="iusuario">Digite sua senha</label>
+        <input type="password" name="senha" id="senha" required>
+        <div class="sla">
+          <!-- Certifique-se de que a imagem seta direita.png existe -->
+          <button type="submit" class="confirmar" onclick="window.location.href='home.html'">
+            <img src="/images/seta direita.png" alt="confirmar">
+          </button>
+          <!-- Caminho do link corrigido, supondo que RecuperarConta.HTML está na pasta templates -->
+          <a href="/RecuperarConta.HTML">ESQUECEU SUA SENHA? CLIQUE AQUI!</a>
+        </div>
+      </form>
 
-    <form method="POST" action="/logar">
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+      <div class="divisor-ou">
+        <span></span>
+        <p>OU</p>
+        <span></span>
+      </div>
 
-        <label for="senha">Senha:</label><br>
-        <input type="password" id="senha" name="senha" required><br><br>
+      <div id="g_id_onload" 
+          data-client_id="1016933372684-vbsdgu1m4fcj4atq50el9j5enk6i2evi.apps.googleusercontent.com"
+          data-login_uri="http://localhost:8080/google-login"
+          data-auto_prompt="false">
+      </div>
 
-        <button type="submit">Entrar</button>
-    </form>
+      <div class="g_id_signin" data-type="standard"></div>
 
-    <p>Não tem uma conta? <a href="/CreateAccount">Crie aqui</a></p>
+    </section>
+  </main>
 </body>
 </html>
