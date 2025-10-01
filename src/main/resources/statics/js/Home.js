@@ -63,21 +63,3 @@ window.addEventListener('load', () => {
   }
 });
 
-
-  let scrollAutomatico = false;
-
-  window.addEventListener('wheel', (e) => {
-    const scrollAtual = window.scrollY;
-
-    if (!scrollAutomatico && scrollAtual < 10 && e.deltaY > 0) {
-      scrollAutomatico = true;
-      window.scrollTo({
-        top: window.innerHeight,
-        behavior: 'smooth'
-      });
-
-      setTimeout(() => {
-        scrollAutomatico = false;
-      }, 100);
-    }
-  });

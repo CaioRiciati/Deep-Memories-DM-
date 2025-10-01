@@ -1,6 +1,5 @@
 /* -------------------- RESET -------------------- */
 * {
-
   box-sizing: border-box;    
 }
 
@@ -19,27 +18,6 @@ body {
 /* -------------------- inicio -------------------- */
 
 
-.inicio.animado {
-  transform: translateY(0);
-}
-
-.inicio.animado .nuvem_inicial {
-  transform: translateY(0);
-}
-
-.inicio.animado .principal {
-  transform: translateY(0) scale(1);
-}
-
-.scroll-animado {
-  transform: translateY(50px);
-  transition: all 0.8s ease-out;
-}
-
-.scroll-animado.apareceu {
-  transform: translateY(0);
-}
-
 .inicio {
   height: 100vh;
   width: 100%;
@@ -52,15 +30,11 @@ body {
   background: linear-gradient(to bottom, #015258, #131e31);
   overflow: hidden;
   z-index: 200;
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
   pointer-events: auto;
 }
 
 
 .conteudo {
-  min-height: 100vh;
   background-color: white;
   color: black;
   padding: 50px;
@@ -68,7 +42,8 @@ body {
 
 .nuvem_inicial-topo {
   position: absolute;
-  right: 0%;
+  right: 30%;
+  animation: flutuar 3s ease-in-out infinite;
 }
 
 .Nuvem-central {
@@ -83,15 +58,16 @@ body {
   position: absolute;
   top: 30vh;
   left: 40%;
+  animation: flutuar 3s 
+ease-in-out infinite;
 }
 
 .nuvem_inicial {
-  transform: translateY(-20px);
   transition: all 1s ease-out;
+  
 }
 
 .principal {
-  transform: translateY(-20px) scale(0.95);
   transition: all 1s ease-out;
   z-index: 99999;
 }
@@ -106,6 +82,8 @@ body {
 .inicio > .principal > img {
   position: relative;
   width: 50%;
+  margin: 20px auto;
+  animation: flutuar 3s ease-in-out infinite;
 }
 
 .inicio > div > button {
@@ -115,8 +93,6 @@ body {
   background: linear-gradient(to top, #015258, #131e31) padding-box, linear-gradient(to right, #621e23, #df5e1f) border-box;
   border: 3px solid transparent;
   border-radius: 10px;
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
   cursor: pointer;
   transition: 0.3s;
   font-weight: bolder;
@@ -159,10 +135,6 @@ header {
   transition: 0.5s ease;
 }
 
-header.scrolled {
-  background-color: #374253d0;
-  transition: 0.5s ease;
-}
 
 header img {
   height: 13vh;
@@ -262,7 +234,6 @@ nav div {
 .dropdown-content > img {
   width: 50px;
 }
-
 
 .dropdown-content a {
   color: white;
@@ -667,9 +638,22 @@ p {
   .sobre {
     display: flex;
     flex-direction: column;
+    gap: 20px;
   }
 
+  .texto-sobre {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 28px;
   }
+
+  .informacoes-sobre {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+  }
+
   .planeta img {
     width: 90%;
   }
@@ -690,17 +674,10 @@ p {
   }
 
   .logo{
-    margin: auto 0 0 20%;
-    width: 200px;
-  }
-  
-  .texto-sobre {
-    width: 60vw;
-  }
-
-  .informacoes-sobre {
-    width: 80%;
-    margin-left: 15%;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
   }
 
   .Download {
@@ -750,6 +727,7 @@ p {
   .inicio > div > button {
     margin-top: 5%;
   }
+}
 
 @media (min-width: 769px) and (max-width: 1024px) {
   #btn-menu {
@@ -820,7 +798,7 @@ p {
 
   .sobre {
     display: flex;
-    flex-direction: column;
+    gap: 20px;
   }
 
   .texto-sobre {
