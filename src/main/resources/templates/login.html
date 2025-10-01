@@ -5,26 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criação de conta</title>
     <link rel="stylesheet" href="../statics/css/login.css">
-    <script src="../statics/js/login.js"></script>
     <title>Criação de Login - Deep Memories</title>
     
     <script src="https://accounts.google.com/gsi/client" async defer></script>
-</head>
-<body>
-  <div class="background">
-    <img src="../statics/images/nuvem-esquerda.png" class="nuvem-topo" alt="Nuvem topo esquerda">
-    <img src="../statics/images/nuvem-direita.png" class="nuvem-baixo" alt="Nuvem inferior direita">
-  </div>
-
-  <main class="container">
-    <section class="card">
-      <h1>FAZER LOGIN</h1>
-      <div class="logos">
-        <img src="../statics/images/deepmemories-logo.png" alt="Logo Simbiótica">
-        <div class="divisor"></div>
-        <img src="../statics/images/1.png" alt="Deep Memories">
-      </div>
-      <form id="#formCadastro1">
+  </head>
+  <body>
+    <div class="background">
+      <img src="../statics/images/nuvem-esquerda.png" class="nuvem-topo" alt="Nuvem topo esquerda">
+      <img src="../statics/images/nuvem-direita.png" class="nuvem-baixo" alt="Nuvem inferior direita">
+    </div>
+    
+    <main class="container">
+      <section class="card">
+        <h1>FAZER LOGIN</h1>
+        <div class="logos">
+          <img src="../statics/images/deepmemories-logo.png" alt="Logo Simbiótica">
+          <div class="divisor"></div>
+          <img src="../statics/images/1.png" alt="Deep Memories">
+        </div>
+        <form id="#formCadastro1">
         <label for="email">Digite seu E-mail ou nome de usuário</label>
         <input type="email" name="email" id="email" required>
         <label for="iusuario">Digite sua senha</label>
@@ -36,25 +35,26 @@
           <a href="RecuperarConta.HTML">ESQUECEU SUA SENHA? CLIQUE AQUI!</a>
         </div>
       </form>
-
-
+      
+      
       <div class="divisor-ou">
         <span></span>
         <p>OU</p>
         <span></span>
       </div>
-
+      
       <div id="g_id_onload" 
-          data-client_id="1016933372684-vbsdgu1m4fcj4atq50el9j5enk6i2evi.apps.googleusercontent.com"
-          data-login_uri="http://localhost:8080/google-login"
-          data-auto_prompt="false">
-      </div>
+      data-client_id="1016933372684-vbsdgu1m4fcj4atq50el9j5enk6i2evi.apps.googleusercontent.com"
+      data-login_uri="http://localhost:8080/google-login"
+      data-auto_prompt="false">
+    </div>
+    
+    <div class="g_id_signin" data-type="standard"></div>
+    
+  </section>
+</main>
 
-      <div class="g_id_signin" data-type="standard"></div>
-
-    </section>
-  </main>
-
+<script src="../statics/js/login.js"></script>
 
 </body>
 

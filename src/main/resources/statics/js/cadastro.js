@@ -1,18 +1,12 @@
-const API_BASE_URL = "http://localhost:8082";
+import { apiGet } from "./api.js";
 
-document.querySelector("#formCadastro").addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const nome = document.getElementById("nome").value;
-  const email = document.getElementById("email").value;
-  const senha = document.getElementById("senha").value;
-  const usuario = document.getElementById("usuario").value;
-
+async function carregarUsuarios() {
   try {
-    await api.cadastrar({ nome, email, senha, usuario });
-    alert("Cadastro realizado com sucesso!");
-    window.location.href = "CreateAccount.html";
+    const usuarios = await apiGet("/usuarios");
+    console.log("Lista de usuários:", usuarios);
   } catch (error) {
-    alert("Erro ao cadastrar usuário.");
+    console.error(error);
   }
-});
+}
+
+carregarUsuarios();
