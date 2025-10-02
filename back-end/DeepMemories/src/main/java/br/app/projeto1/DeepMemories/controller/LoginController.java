@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import br.app.projeto1.DeepMemories.model.Usuario;
 import br.app.projeto1.DeepMemories.repository.UsuarioRepository;
 import br.app.projeto1.DeepMemories.service.CookieService;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 
@@ -30,11 +31,14 @@ public class LoginController {
 		
 	}
 	
-	//mapping da pagina de homire (trocar o index)
-	@GetMapping("/")
-	public String dashboard() {
-		return "Home";
-	}
+    @GetMapping("/")
+    public String dashboard(Model model, HttpServletRequest request) throws UnsupportedEncodingException {
+        String nomeUsuario = CookieService.getCookie(request, "nomeUsuario");
+        if (nomeUsuario != null) {
+            model.addAttribute("nomeUsuario", nomeUsuario);
+        }
+        return "Home";
+    }
 	
 	
 	@PostMapping("/logar")
@@ -63,7 +67,7 @@ public class LoginController {
 	@RequestMapping(value = "/CreateAccount", method = RequestMethod.POST)
 	public String cadastroUsuario(@Valid Usuario usuario, BindingResult result) {	
 		if(result.hasErrors()) {
-			return "redirect:createAccount";
+			return "CreateAccount";
 		}
 
 		ur.save(usuario);

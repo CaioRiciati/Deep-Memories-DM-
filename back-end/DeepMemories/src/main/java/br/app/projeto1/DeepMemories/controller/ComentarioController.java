@@ -21,7 +21,14 @@ public class ComentarioController {
     private ComentarioRepository comentarioRepository;
 
     @GetMapping("/comentarios")
-    public String verComentarios(Model model) {
+    public String verComentarios(Model model, HttpServletRequest request) throws UnsupportedEncodingException {
+    	
+        // tentandopegar o nome p colocar no header( acho q vai dar erro)
+        String nomeUsuario = CookieService.getCookie(request, "nomeUsuario");
+        if (nomeUsuario != null) {
+            model.addAttribute("nomeUsuario", nomeUsuario);
+        }
+
         List<Comentario> comentarios = comentarioRepository.findAll();
         model.addAttribute("comentarios", comentarios);
         return "comentarios";
