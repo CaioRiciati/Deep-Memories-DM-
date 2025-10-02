@@ -21,7 +21,7 @@
       <a th:unless="${nomeUsuario}" href="/login">Login</a>
     </div>
 
-    <a href="/home" class="btn-voltar">← Voltar</a> 
+    <a href="/" class="btn-voltar">← Voltar</a> 
   </header>
 
   <main>
@@ -40,7 +40,7 @@
       </div>
 
       <div th:each="comentario, iterStat : ${comentarios}" 
-           th:if="${iterStat.index < 5}" 
+           th:if="${iterStat.index < 5}"
            class="comentario">
         <p>
           <strong th:text="${comentario.nomeUsuario}">Nome</strong> 

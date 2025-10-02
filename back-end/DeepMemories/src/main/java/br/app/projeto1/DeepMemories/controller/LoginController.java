@@ -31,6 +31,12 @@ public class LoginController {
 		
 	}
 	
+	@GetMapping("/jogo")
+	public String jogos() {
+		return"jogo";
+		
+	}
+	
     @GetMapping("/")
     public String dashboard(Model model, HttpServletRequest request) throws UnsupportedEncodingException {
         String nomeUsuario = CookieService.getCookie(request, "nomeUsuario");

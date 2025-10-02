@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baixar DeepMemories</title> <!-- Título já estava correto e único -->
-    <link rel="stylesheet" href="/css/jogo.css"> <!-- Caminho corrigido para recursos estáticos -->
-    <!-- Removido o <script src="/js/jogo.js"></script> daqui, pois foi movido para o final do body -->
+    <link rel="stylesheet" href="/css/jogo.css">
+    <title>Baixar DeepMemories</title>
 </head>
 <body>
     <main>
@@ -79,7 +78,21 @@
                 <p>A memória completa. Todos os sistemas balanceados, campanha completa, modo cooperativo e o polimento final da experiência. Prepare-se para o lançamento.</p>
             </div>
         </section>
+
+        <!-- Formulário de exemplo com action="/jogo" -->
+        <section class="feedback-jogo">
+            <h2>Nos envie seu feedback sobre o jogo!</h2>
+            <form action="/jogo" method="post">
+                <label for="nome">Seu nome:</label>
+                <input type="text" id="nome" name="nome">
+                
+                <label for="feedback">Seu feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4"></textarea>
+
+                <button type="submit">Enviar Feedback</button>
+            </form>
+        </section>
     </main>
-    <script src="/js/jogo.js"></script> <!-- Caminho corrigido e agora é o único script de jogo.js -->
+    <script src="/js/jogo.js"></script>
 </body>
 </html>
