@@ -14,6 +14,26 @@ body {
     padding: 20px;
 }
 
+.login {
+  margin: 20px;
+  right: 150px;
+  background-image: linear-gradient(to top, #015258, #131e31);
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2em;
+  height: 50px;
+  top: 45px;
+}
+
+.login:hover {
+  background-color: #00796B;
+  transition: all 0.3s ease;
+  transform: scale(1.05); 
+}
+
 main {
   background-image: linear-gradient(to top, #131e31, #02364b);
   padding: 20px;
