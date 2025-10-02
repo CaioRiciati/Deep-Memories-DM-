@@ -1,22 +1,19 @@
 /* -------------------- RESET -------------------- */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 /* -------------------- BODY -------------------- */
-
-
 body {
   background-color: #003c41;
-  width: 100%;
   transition: 0.5s ease;
   color: white;
-  margin: 0;
-  padding: 0;
+  overflow-x: hidden;
 }
 
 /* -------------------- inicio -------------------- */
-
 
 .inicio {
   width: 100%;
@@ -34,7 +31,6 @@ body {
   transition: all 0.2s ease-out;
 }
 
-
 .conteudo {
   background-color: white;
   color: black;
@@ -43,7 +39,7 @@ body {
 
 .nuvem_inicial-topo {
   position: absolute;
-  right: 30%;
+  right: 50%;
   animation: flutuar 2s ease-in-out infinite;
 }
 
@@ -57,14 +53,15 @@ body {
 
 .nuvem_inicial-baixo {
   position: absolute;
-  top: 30vh;
-  left: 40%;
+  top: 40vh;
+  left: 50%;
   animation: flutuar 2s ease-in-out infinite;
 }
 
 .principal {
   transition: all 1s ease-out;
   z-index: 99999;
+  animation-name: animar-principal;
 }
 
 .inicio>div {
@@ -113,22 +110,24 @@ body {
     1px 0 0 rgb(125, 82, 1);
 }
 
-
-
-
 /* -------------------- HEADER -------------------- */
 header {
-  background-color: #959393;
+  background-color: #374253;
   display: flex;
   align-items: center;
   min-height: 15vh;
-  gap: 30px;
+  gap: 15px;
   position: sticky;
+  width: 100%;
   top: 0;
   z-index: 100;
-  transition: 0.5s ease;
+  transition: background-color 0.5s ease;
 }
 
+header.scrolled {
+  background-color: #374253ca;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
 
 header img {
   height: 13vh;
@@ -239,7 +238,9 @@ nav div {
 }
 
 .dropdown-content a:hover {
-  background-color: #556270;
+  background-image: linear-gradient(to bottom, #005d64, #1f304d); 
+  transition: all 0.3s ease;
+  transform: scale(1.05); 
 }
 
 .dropdown:hover .dropdown-content {
@@ -275,9 +276,11 @@ nav div {
   top: 45px;
 }
 
-.criar,
+.criar:hover,
 .login:hover {
   background-color: #00796B;
+  transition: all 0.3s ease;
+  transform: scale(1.05); 
 }
 
 .criar a {
@@ -336,7 +339,7 @@ h2 {
 }
 
 p {
-  font-size: 1.4em;
+  font-size: 1.1em;
   line-height: 50px;
 }
 
@@ -356,7 +359,7 @@ p {
   background-color: #131e31;
   padding: 20px;
   border-radius: 20px;
-  width: 70vw;
+  width: 65vw;
 
   line-height: 40px;
   text-align: justify;
@@ -367,7 +370,7 @@ p {
   padding: 20px 0px 45px 20px;
   border-radius: 20px;
   width: 50%;
-  line-height: 20px;
+  line-height: 40px;
 }
 
 .informacoes-sobre>ul {
@@ -378,7 +381,13 @@ p {
 }
 
 .informacoes-sobre li {
-  margin-left: 45%;
+  margin-left: 25%;
+}
+
+.image-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
@@ -424,7 +433,6 @@ p {
 }
 
 .logo {
-  margin: 15%;
   width: 160px;
 }
 
@@ -533,21 +541,19 @@ p {
   width: 500px;
   height: 200px;
   border-radius: 20px;
+  animation: flutuar 3s ease-in-out infinite;
 }
 
-#bixo {
-  margin-top: 15%;
+.monstrinho {
+  margin-top: 20%;
 }
-
-/* -------------------- DOWNLOAD, ATUALIZAÇÕES E VERSÕES DO JOGO -------------------- */
-
 
 /* -------------------- Animação -------------------- */
 
 .animar {
   display: block;
   margin: 10% auto;
-  width: 200px;
+  width: 290px;
   animation: flutuar 3s ease-in-out infinite;
 }
 
@@ -770,8 +776,13 @@ p {
     height: auto;
   }
 
+  .informacoes-sobre {
+    line-height: 32px;
+  }
+
   .informacoes-sobre li {
     margin-left: 55%;
+    font-size: 1.2rem;
   }
 
   .Download {
@@ -799,7 +810,7 @@ p {
   }
 
   p {
-    font-size: 1.3em;
+    font-size: 1em;
     line-height: 30px;
   }
 
@@ -816,8 +827,8 @@ p {
   }
 
   .logo {
-    width: 200px;
-    margin: 0px 35%;
+    width: 150px;
+    margin: 0px 20%;
   }
 
   .sobre {
@@ -826,7 +837,7 @@ p {
   }
 
   .texto-sobre {
-    width: 100%;
+    width: 180%;
     line-height: 40px;
   }
 
@@ -867,12 +878,15 @@ p {
   }
 
   .logo {
-    margin: 0% 0% 0 25%;
-    width: 260px
+    margin: 0%;
+    width: 230px
   }
 
   .informacoes-sobre {
     width: 100%;
   }
 
+  .planeta>.animar {
+    width: 80%;
+  }
 }

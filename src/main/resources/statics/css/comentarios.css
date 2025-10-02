@@ -39,7 +39,7 @@ header {
 }
 
 .btn-voltar {
-  background-color: #0097e6;
+  background-color: #00464b;
   color: white;
   padding: 0.5rem 1rem;
   border: none;
@@ -95,18 +95,19 @@ textarea:focus {
 
 button[type="submit"] {
   align-self: flex-end;
-  background-color: #0097e6;
+  background-color: #00464b;
   color: white;
   padding: 0.6rem 1.2rem;
   border: none;
   border-radius: 8px;
+  border: 1px #00464b solid;
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.2s ease-in-out;
 }
 
 button[type="submit"]:hover {
-  background-color: #40739e;
+  background-color: #015258;
 }
 
 /* ========== COMENTÁRIOS ========== */
@@ -165,10 +166,11 @@ hr {
   }
 
   .btn-voltar {
-    background-color: #00a8ff;
+    background-color: #00464b;
+    border: 1px #01363a solid;
   }
 
   .btn-voltar:hover {
-    background-color: #0097e6;
+    background-color: #015258;
   }
 }
