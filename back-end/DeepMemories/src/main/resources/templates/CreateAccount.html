@@ -3,69 +3,67 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criação de conta</title>
-    <!-- Referências corrigidas para arquivos estáticos -->
-    <link rel="stylesheet" href="/css/CreateAccount.css">
-    <title>Criação de Login - Deep Memories</title>
+    <title>Criação de Login - Deep Memories</title> <!-- Título unificado e corrigido -->
+    <link rel="stylesheet" href="/css/CreateAccount.css"> <!-- Caminho corrigido para recursos estáticos -->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script src="/scripts/server.js"></script>
-    <script src="/scripts/requisicaoCadastro.js"></script>
   </head>
-
+  
 <body>
   <div class="background">
-    <!-- Referências corrigidas para imagens -->
-    <img src="/images/nuvem-direita.png" class="nuvem-topo" alt="Nuvem topo esquerda">
-    <img src="/images/nuvem-direita.png" class="nuvem-baixo" alt="Nuvem inferior direita">
+    <img src="/images/nuvem-direita.png" class="nuvem-topo" alt="Nuvem topo esquerda"> <!-- Caminho corrigido -->
+    <img src="/images/nuvem-direita.png" class="nuvem-baixo" alt="Nuvem inferior direita"> <!-- Caminho corrigido -->
   </div>
 
   <main class="container">
     <section class="card">
       <h1>Criar conta</h1>
       <div class="logos">
-        <img src="/images/deepmemories-logo.png" alt="Logo Simbiótica">
+        <img src="/images/deepmemories-logo.png" alt="Logo Simbiótica"> <!-- Caminho corrigido -->
         <div class="divisor"></div>
-        <img src="/images/1.png" alt="Deep Memories">
+        <img src="/images/1.png" alt="Deep Memories"> <!-- Caminho corrigido -->
       </div>
-            
-      <form method="POST" action="/CreateAccount">
-        <label for="email"></label>
+      
+      <form action="/CreateAccount" method="post" id="formCadastro">
+        <label for="email" class="sr-only">E-mail</label> <!-- Adicionado label para acessibilidade -->
         <input type="email" name="email" id="email" required placeholder="DIGITE SEU E-MAIL">
         
-        <label for="nome"></label>
+        <label for="nome" class="sr-only">Nome</label> <!-- Adicionado label para acessibilidade -->
         <input type="text" name="nome" id="nome" required placeholder="DIGITE SEU NOME">
         
-        <label for="usuario"></label>
+        <label for="usuario" class="sr-only">Nome de Usuário</label> <!-- Adicionado label para acessibilidade -->
         <input type="text" name="usuario" id="usuario" required placeholder="CRIE SEU NOME DE USUÁRIO">
         
-        <label for="senha"></label>
+        <label for="senha" class="sr-only">Senha</label> <!-- Adicionado label para acessibilidade -->
         <input type="password" name="senha" id="senha" required placeholder="CRIE UMA SENHA">
-
+        
         <div class="sla">
-          <button type="submit" class="confirmar">
-            <img src="/images/seta direita.png" alt="confirmar">
-          </button>
-
-          <a href="login">Já tem uma conta? Faça login aqui!</a>
+          <!-- Se o objetivo é *apenas* redirecionar, manter o onclick é aceitável.
+               Se o botão faz parte do formulário de envio, é melhor que o JS em cadastro.js lide com o submit. -->
+		  <button type="submit" class="confirmar">
+		    <img src="/images/seta direita.png" alt="Confirmar">
+			  </button>
+          
+          <a href="/login">Já tem uma conta? Faça login aqui!</a> <!-- Adicionado '/' para caminho absoluto -->
         </div>
       </form>
-
+      
+      
       <div class="divisor-ou">
         <span></span>
         <p>OU</p>
         <span></span>
       </div>
-
+      
       <div id="g_id_onload" 
-          data-client_id="1016933372684-vbsdgu1m4fcj4atq50el9j5enk6i2evi.apps.googleusercontent.com"
-          data-login_uri="http://localhost:8080/google-login"
-          data-auto_prompt="false">
+           data-client_id="1016933372684-vbsdgu1m4fcj4atq50el9j5enk6i2evi.apps.googleusercontent.com"
+           data-login_uri="http://localhost:8082/google-login"
+           data-auto_prompt="false">
       </div>
-
+      
       <div class="g_id_signin" data-type="standard"></div>
-
     </section>
   </main>
 
+  <script src="/js/cadastro.js"></script> <!-- Caminho corrigido -->
 </body>
 </html>

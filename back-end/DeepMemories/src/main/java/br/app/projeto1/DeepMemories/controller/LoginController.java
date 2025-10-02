@@ -33,7 +33,7 @@ public class LoginController {
 	//mapping da pagina de homire (trocar o index)
 	@GetMapping("/")
 	public String dashboard() {
-		return "home";
+		return "Home";
 	}
 	
 	
@@ -63,7 +63,7 @@ public class LoginController {
 	@RequestMapping(value = "/CreateAccount", method = RequestMethod.POST)
 	public String cadastroUsuario(@Valid Usuario usuario, BindingResult result) {	
 		if(result.hasErrors()) {
-			return "redirect:CreateAccount";
+			return "redirect:createAccount";
 		}
 
 		ur.save(usuario);

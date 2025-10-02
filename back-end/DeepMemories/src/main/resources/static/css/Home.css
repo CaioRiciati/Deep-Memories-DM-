@@ -1,78 +1,41 @@
 /* -------------------- RESET -------------------- */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;    
+  box-sizing: border-box;
 }
 
 /* -------------------- BODY -------------------- */
 
 
 body {
-  background-color:  #003c41;
+  background-color: #003c41;
   width: 100%;
   transition: 0.5s ease;
   color: white;
+  margin: 0;
+  padding: 0;
 }
 
 /* -------------------- inicio -------------------- */
 
 
-.inicio.animado {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.inicio.animado .nuvem_inicial {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.inicio.animado .principal {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-.scroll-animado {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.8s ease-out;
-}
-
-.scroll-animado.apareceu {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .inicio {
-  height: 100vh;
   width: 100%;
+  height: 100vh;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: linear-gradient(to bottom, #015258, #131e31);
+  text-align: center;
+  background: linear-gradient(to bottom, #015258, #131e31);
   overflow: hidden;
-  z-index: 10;
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 200;
   pointer-events: auto;
+  transition: all 0.2s ease-out;
 }
 
-.inicio {
-  height: 100vh;
-  width: 100%;
-  background: linear-gradient(to bottom, #015258, #131e31);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
 .conteudo {
-  min-height: 100vh;
   background-color: white;
   color: black;
   padding: 50px;
@@ -80,8 +43,8 @@ body {
 
 .nuvem_inicial-topo {
   position: absolute;
-  bottom: 50%;
-  right: 40%;
+  right: 30%;
+  animation: flutuar 2s ease-in-out infinite;
 }
 
 .Nuvem-central {
@@ -89,73 +52,65 @@ body {
   width: 100%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+
 }
 
 .nuvem_inicial-baixo {
   position: absolute;
-  top: 50%;
+  top: 30vh;
   left: 40%;
-}
-
-.nuvem_inicial {
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: all 1s ease-out;
+  animation: flutuar 2s ease-in-out infinite;
 }
 
 .principal {
-  opacity: 0;
-  transform: translateY(-20px) scale(0.95);
   transition: all 1s ease-out;
   z-index: 99999;
 }
 
-.inicio > div {
+.inicio>div {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.inicio > .principal > img {
+.inicio>.principal>img {
   position: relative;
   width: 50%;
+  margin: 20px auto;
+  animation: flutuar 3s ease-in-out infinite;
 }
 
-.inicio > div > button {
+.inicio>div>button {
   padding: 10px;
   font-size: 16px;
   color: white;
   background: linear-gradient(to top, #015258, #131e31) padding-box, linear-gradient(to right, #621e23, #df5e1f) border-box;
   border: 3px solid transparent;
   border-radius: 10px;
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
   cursor: pointer;
   transition: 0.3s;
   font-weight: bolder;
 }
 
-.inicio > div > button:hover {
+.inicio>div>button:hover {
   text-decoration: underline;
 }
 
-.inicio > .principal > h1 {
+.inicio>.principal>h1 {
   color: black;
   font-weight: bold;
   font-size: 2em;
   text-transform: uppercase;
-
   text-shadow:
     4px 4px 0 rgb(94, 61, 0),
     1px -1px 0 #db630d,
-    1px  3px 0 #db630d,
-    4px  4px 0 rgb(125, 81, 0),
-     0   -1px 0 rgb(92, 60, 0),
-     0    1px 0 rgb(103, 67, 0),
-    -1px  0   0 #db630d,
-     1px  0   0 rgb(125, 82, 1);
+    1px 3px 0 #db630d,
+    4px 4px 0 rgb(125, 81, 0),
+    0 -1px 0 rgb(92, 60, 0),
+    0 1px 0 rgb(103, 67, 0),
+    -1px 0 0 #db630d,
+    1px 0 0 rgb(125, 82, 1);
 }
 
 
@@ -174,10 +129,6 @@ header {
   transition: 0.5s ease;
 }
 
-header.scrolled {
-  background-color: #374253d0;
-  transition: 0.5s ease;
-}
 
 header img {
   height: 13vh;
@@ -206,7 +157,7 @@ nav div {
   background: transparent;
   cursor: pointer;
   display: flex;
-  flex-direction: column;   
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 6px;
@@ -237,7 +188,7 @@ nav div {
 }
 
 /* -------------------- DROPDOWN -------------------- */
-  #btn-menu {
+#btn-menu {
   display: none;
 }
 
@@ -268,16 +219,15 @@ nav div {
   position: absolute;
   background-image: linear-gradient(to top, #131e31, #015258);
   min-width: 200px;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   padding: 5px;
   border-radius: 10px;
   z-index: 1;
 }
 
-.dropdown-content > img {
+.dropdown-content>img {
   width: 50px;
 }
-
 
 .dropdown-content a {
   color: white;
@@ -296,10 +246,10 @@ nav div {
   display: block;
 }
 
-/* -------------------- BOTÃO CRIAR CONTA -------------------- */
-#conta {
+/* -------------------- BOTÃO CRIAR E LOGAR CONTA -------------------- */
+.criar {
   position: absolute;
-  right: 20px; 
+  right: 20px;
   background-image: linear-gradient(to top, #015258, #131e31);
   color: white;
   cursor: pointer;
@@ -308,32 +258,37 @@ nav div {
   border-radius: 10px;
   font-size: 14px;
   height: 50px;
+  top: 45px;
 }
 
-#conta:hover {
+.login {
+  position: absolute;
+  right: 150px;
+  background-image: linear-gradient(to top, #015258, #131e31);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  height: 50px;
+  top: 45px;
+}
+
+.criar,
+.login:hover {
   background-color: #00796B;
 }
 
-#conta a {
+.criar a {
   color: white;
   text-decoration: none;
   font-size: 15px;
 }
 
-.inicio {
-  opacity: 0;
-  transform: translateY(-50px);
-  transition: all 0.2s ease-out; /* QUASE INSTANTÂNEO */
-}
-
-.inicio.visivel {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* -------------------- FUNDO COM NUVEM -------------------- */
 .background {
-  background-color:  #015258;
+  background-color: #015258;
   position: fixed;
   inset: 0;
   z-index: 0;
@@ -357,9 +312,11 @@ nav div {
   pointer-events: none;
 }
 
-.nuvem-baixo, .nuvem-topo {
+.nuvem-baixo,
+.nuvem-topo {
   max-width: 100%;
 }
+
 /* -------------------- MAIN / CONTEÚDO -------------------- */
 main {
   position: relative;
@@ -382,6 +339,7 @@ p {
   font-size: 1.4em;
   line-height: 50px;
 }
+
 .conteudo-principal {
   padding: 10px;
   border-radius: 10px;
@@ -391,7 +349,7 @@ p {
 .sobre {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 20px;
 }
 
 .texto-sobre {
@@ -399,7 +357,7 @@ p {
   padding: 20px;
   border-radius: 20px;
   width: 70vw;
-  height: 95%;
+
   line-height: 40px;
   text-align: justify;
 }
@@ -408,12 +366,11 @@ p {
   background-color: #131e31;
   padding: 20px 0px 45px 20px;
   border-radius: 20px;
-  width: 100%;
+  width: 50%;
   line-height: 20px;
-  height: 95%;
 }
 
-.informacoes-sobre > ul {
+.informacoes-sobre>ul {
   list-style: none;
   margin-left: 10px;
   gap: 30px;
@@ -440,7 +397,7 @@ p {
 }
 
 
-.content li { 
+.content li {
   font-size: 1.3em;
   margin-left: 10px;
 }
@@ -467,7 +424,7 @@ p {
 }
 
 .logo {
-  margin: 0 0 0 35%;
+  margin: 15%;
   width: 160px;
 }
 
@@ -539,10 +496,11 @@ p {
   height: 300px;
   padding: 25px 15px;
   line-height: 35px;
-  font-size: large;;
+  font-size: large;
+  ;
 }
 
-.ilustracao_personagem{
+.ilustracao_personagem {
   background-color: #131e31;
   width: 500px;
   height: 300px;
@@ -553,7 +511,7 @@ p {
   width: 180px;
 }
 
-.monstros{
+.monstros {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -582,123 +540,7 @@ p {
 }
 
 /* -------------------- DOWNLOAD, ATUALIZAÇÕES E VERSÕES DO JOGO -------------------- */
-.Download {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 100px);
-  align-items: center;
-  margin-left: 10%;
-}
 
-.Download a {
-  text-decoration: underline;
-  color: white;
-}
-.Download a:hover {
-  color: #00796B;
-}
-
-.Download > div {
-  background-color: #131e31;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: large;
-  height: 60px;
-}
-
-.Download > button {
-  background-color: #131e31;
-  color: white;
-  border: none;
-  border-radius: 50px;
-  padding: 15px 30px;
-  text-decoration: underline;
-  font-size: large;
-  cursor: pointer;
-  width: 40%;
-  margin-left: 30%;
-}
-
-
-.cards-container {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  width: 100%;
-  margin: auto;
-}
-
-.card {
-  background-color: #131e31;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  flex-grow: 1;
-  flex-basis: 0;
-  transition: all 0.5s ease;
-}
-
-.card.expanded {
-  flex-grow: 2; 
-}
-
-.card:not(.expanded) {
-  flex-grow: 1;
-}
-
-.card.expanded p {
-  display: block;
-  animation: fadeIn 0.8s;
-}
-
-.card p {
-  display: none;
-}
-
-@keyframes fadeIn {
-  from {transform: translateY(10px); }
-  to {transform: translateY(0); }
-}
-
-
-.versoes {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 20px;
-  align-items: center;
-  margin-bottom: 50px;
-}
-
-.versoes > div {
-  background-color: #131e31;
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50vw;
-  padding: 20px;
-  font-size: 1.5em;
-}
-
-.versoes > button {
-  background-color: #131e31;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  padding: 15px 30px;
-  cursor: pointer;
-  width: 85%;
-  margin-left: 10%;
-  font-size: 20px;
-}
-
-.versoes > button > p {
-  font-size: 1.2em;
-}
 
 /* -------------------- Animação -------------------- */
 
@@ -710,9 +552,17 @@ p {
 }
 
 @keyframes flutuar {
-  0%   { transform: rotate(0px); }
-  50%  { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: rotate(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 
@@ -720,14 +570,16 @@ p {
 /* -------------------- RESPONSIVIDADE -------------------- */
 
 @media (max-width: 768px) {
-  html, body {
-  overflow-x: hidden;
+
+  html,
+  body {
+    overflow-x: hidden;
   }
 
   #btn-menu {
     display: flex;
   }
-  
+
   nav .menu {
     flex-direction: column;
     display: none;
@@ -747,6 +599,7 @@ p {
   .hamburger {
     display: block;
   }
+
   .menu.show {
     display: flex;
     position: absolute;
@@ -763,7 +616,8 @@ p {
     text-align: center;
   }
 
-  .mundo,.personagens {
+  .mundo,
+  .personagens {
     display: grid;
     flex-wrap: wrap;
     gap: 20px;
@@ -773,26 +627,48 @@ p {
     display: flex;
   }
 
-  .mundo .fundo_mundo,.personagens,
-  .conteudo_personagens, .monstros,
-  .conteudo_mostros,.video {
-    flex: 1 1 300px;
+  .mundo .fundo_mundo,
+  .personagens,
+  .conteudo_personagens,
+  .monstros,
+  .conteudo_mostros,
+  .video {
+    flex-direction: column;
   }
 
-  .planeta, .ilustracao_monstros {
+  .planeta,
+  .ilustracao_monstros {
     width: 100%;
   }
 
+  .sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
+
+  .texto-sobre {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 28px;
+  }
+
+  .informacoes-sobre {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+  }
+
   .planeta img {
-    width: 90%;
+    width: 50%;
   }
 
   .ilustracao_personagem {
     background-color: #131e31;
     width: 100%;
     height: 100%;
-}
+  }
 
   .conteudo_personagens {
     width: 100%;
@@ -803,19 +679,29 @@ p {
     width: 25%;
   }
 
-  .logo{
-    margin: 0 30vw;
-    width: 200px;
-  }
-  
-  .texto-sobre {
-    width: 100%;
-  }
-
-  .sobre {
+  .imagens {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
+  }
+
+  .ilustracoes_content2 {
+    flex: 1 1 300px;
+    max-width: 100%;
+  }
+
+  .ilustracoes_content2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
   }
 
   .Download {
@@ -823,12 +709,12 @@ p {
     gap: 20px;
   }
 
-  .Download > div {
+  .Download>div {
     font-size: 16px;
     height: 50px;
   }
 
-  .Download > button {
+  .Download>button {
     font-size: 16px;
     width: 100%;
     margin-left: 0%;
@@ -842,12 +728,12 @@ p {
     width: 65%;
   }
 
-  .versoes > div {
+  .versoes>div {
     width: 50vw;
     font-size: 20px;
   }
 
-  .versoes > button {
+  .versoes>button {
     width: 80%;
     font-size: 1rem;
     height: 20vh;
@@ -858,13 +744,14 @@ p {
     line-height: 30px;
   }
 
-  #bixo > .ilustracao_personagem img {
+  #bixo>.ilustracao_personagem img {
     width: 220px;
   }
 
-  .inicio > div > button {
+  .inicio>div>button {
     margin-top: 5%;
   }
+}
 
 @media (min-width: 769px) and (max-width: 1024px) {
   #btn-menu {
@@ -884,29 +771,29 @@ p {
   }
 
   .informacoes-sobre li {
-    margin-left: 35%;
+    margin-left: 55%;
   }
 
   .Download {
     gap: 20px 20%;
   }
 
-  .Download > div {
+  .Download>div {
     font-size: 1rem;
   }
 
-  .Download > button {
+  .Download>button {
     width: 100%;
     margin-left: 0;
     height: 60px;
   }
 
-  .versoes > div {
+  .versoes>div {
     width: 60vw;
     font-size: 17px;
   }
 
-  .versoes > button {
+  .versoes>button {
     width: 80%;
     font-size: 1rem;
   }
@@ -933,9 +820,19 @@ p {
     margin: 0px 35%;
   }
 
+  .sobre {
+    display: flex;
+    gap: 20px;
+  }
+
   .texto-sobre {
     width: 100%;
     line-height: 40px;
+  }
+
+  .informacoes-sobre {
+    width: 100%;
+    margin-left: 0%;
   }
 
   .img_ilustracao img {
@@ -964,8 +861,18 @@ p {
   .conteudo_personagens {
     width: 100%;
   }
- 
+
   .ilustracao_personagem {
     width: 25.5vw;
   }
+
+  .logo {
+    margin: 0% 0% 0 25%;
+    width: 260px
+  }
+
+  .informacoes-sobre {
+    width: 100%;
+  }
+
 }

@@ -5,21 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página Inicial</title>
   <link rel="stylesheet" href="/css/Home.css">
-  <script src="/js/requisicaoAPI.js"></script>
-  <script src="/js/Home.js"></script>
+  
 </head>
 <body> 
 
   <section class="inicio">
     <div class="nuvem_inicial">
       <img src="/images/nuvem-esquerda.png" class="nuvem_inicial-topo" alt="Nuvem topo esquerda">
-      <img src="/images/nuvem-esquerda.png" class="Nuvem-central" alt="Nuvem central">
       <img src="/images/nuvem-direita.png" class="nuvem_inicial-baixo" alt="Nuvem inferior direita">
     </div>
     <div class="principal">
       <img src="/images/2.png" alt="Logo DeepMemories">
       <h1>EXPLORE UM MUNDO DESCONHECIDO</h1>
-      <!-- Caminho corrigido para a página de criação de conta -->
       <button onclick="window.location.href='/CreateAccount.html'">CRIE SUA CONTA!</button>
     </div>
   </section>
@@ -65,6 +62,7 @@
         <div class="dropdown">
           <button class="dropbtn">Comunidade</button>
           <div class="dropdown-content">
+            <a href="/comentarios.html">COMENTÁRIOS</a>
             <a href="#REDES SOCIAIS">REDES SOCIAIS</a>
             <a href="#FAÇA PARTE">FAÇA PARTE</a>
             <a href="#SUPORTE">SUPORTE</a>
@@ -72,15 +70,12 @@
         </div>
       </div>
     </nav>
-
-    <!-- Caminho corrigido para a página de criação de conta -->
-    <button type="button" class="confirmar" onclick="window.location.href='/CreateAccount.html'" id="conta">CRIAR CONTA</button>
+    <section class="botoes">
+      <button type="button" class="criar" onclick="window.location.href='/CreateAccount'" id="criar">CRIAR CONTA</button>
+      <button type="button" class="login" onclick="window.location.href='/login'" id="login">LOGAR CONTA</button>
+    </section>
   </header>
 
-  <div class="background">
-    <img src="/images/nuvem-esquerda.png" class="nuvem-topo" alt="Nuvem topo esquerda">
-    <img src="/images/nuvem-direita.png" class="nuvem-baixo" alt="Nuvem inferior direita">
-  </div>
 
   <main>
     <h1>Deep Memories</h1>
@@ -95,6 +90,13 @@
           jornada para recuperar a verdade sobre a extinção humana e enfrentar as
           abominações que restaram. Cada planeta é uma área livremente explorável do mapa, com ambientes únicos, segredos enterrados, e mutações brutais da raça humana.
           Prepare-se para descobrir memórias corrompidas, vestígios de civilizações extintas e a fúria grotesca do que restou da humanidade.</p>
+          <p>Resumo do jogo
+          Protagonista: Você joga como um "resquício profundo", uma criatura monstruosa criada a partir de experimentos humanos passados.
+          </p>
+          <p>Objetivo: Sua missão é viajar por planetas abandonados do sistema solar para recuperar a verdade sobre o que causou a extinção da humanidade.
+          </p>
+          <p>Exploração: Cada planeta é uma área do mapa de mundo aberto, com ambientes distintos e segredos escondidos para serem descobertos. Você precisará explorar esses locais e lidar com as "mutações brutais da raça humana" que restaram.</p>
+          <p>Combate e perigos: O jogo envolve enfrentar as "abominações" que surgiram após os experimentos, com a ação e a exploração sendo partes centrais da experiência.</p>
         </section>
 
         <section class="informacoes-sobre">
@@ -139,13 +141,13 @@
 
       <div class="imagens">
         <div class="ilustracoes_content2">
-          <img src="/images/planetas-monstros/ilustracao-1.jpg" alt="Floresta">
+          <img src="/images/ilustracao-1.jpg" alt="Floresta">
         </div>
           <div class="ilustracoes_content2">
-            <img src="/images/planetas-monstros/ilustracao-2.jpg" alt="Ferreiro">
+            <img src="/images/ilustracao-2.jpg" alt="Ferreiro">
           </div>
           <div class="ilustracoes_content2">
-            <img src="/images/planetas-monstros/ilustracao-3.jpg" alt="Castelo">
+            <img src="/images/ilustracao-3.jpg" alt="Castelo">
           </div>
       </div>
 
@@ -161,14 +163,16 @@
             <!-- bloco das imagens -->
             <section class="wiki">
               <div class="img_ilustracao">
-                <img src="/images/planetas-monstros/marte-1.jpg" alt="Ilustração de Marte">
-                <img src="/images/planetas-monstros/marte-2.jpg" alt="Ilustração de Marte">
-                <img src="/images/planetas-monstros/marte-3.jpg" alt="Ilustração de Marte">
+                <img src="/images/marte-1.jpg" alt="Ilustração de Marte">
+                <img src="/images/marte-2.jpg" alt="Ilustração de Marte">
+                <img src="/images/marte-3.jpg" alt="Ilustração de Marte">
               </div>
             </section>
           </div>
-          <div class="video">
-        
-            <!-- bloco do vídeo -->
-            <section class="planeta">
-              <img src="/images/planetas-monstros/marte-removebg-preview.png" alt="Planeta girando" class="animar">
+        </article>
+      </section>
+      <!-- Fim da seção NÍVEIS -->
+    </section>
+  </main>
+</body>
+</html>

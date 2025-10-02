@@ -3,18 +3,18 @@ const menu = document.querySelector('.menu');
 
 
 btn.addEventListener('click', () => {
-    btn.classList.toggle('active');
-    menu.classList.toggle('show');
+  btn.classList.toggle('active');
+  menu.classList.toggle('show');
 });
 
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
+window.addEventListener('scroll', function () {
+  const header = document.querySelector('header');
 
-    if (window.scrollY > 100) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
+  if (window.scrollY > 100) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -31,58 +31,27 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
-  window.addEventListener('load', function () {
-    const inicio = document.querySelector('.inicio');
-    if (inicio) {
-      setTimeout(() => {
-        inicio.classList.add('animado');
-      }, 100);
-    }
-    animarAoScroll();
-  });
-
-  window.addEventListener('scroll', animarAoScroll);
-
-  function animarAoScroll() {
-    const elementos = document.querySelectorAll('.scroll-animado');
-    const alturaTela = window.innerHeight;
-
-    elementos.forEach(el => {
-      const posicao = el.getBoundingClientRect().top;
-      if (posicao < alturaTela - 100) {
-        el.classList.add('apareceu');
-      }
-    });
+window.addEventListener('load', function () {
+  const inicio = document.querySelector('.inicio');
+  if (inicio) {
+    setTimeout(() => {
+      inicio.classList.add('animado');
+    }, 100);
   }
+  animarAoScroll();
+});
 
+window.addEventListener('scroll', animarAoScroll);
 
-  let scrollAutomatico = false;
+function animarAoScroll() {
+  const elementos = document.querySelectorAll('.scroll-animado');
+  const alturaTela = window.innerHeight;
 
-  window.addEventListener('wheel', (e) => {
-    const scrollAtual = window.scrollY;
-
-    if (!scrollAutomatico && scrollAtual < 10 && e.deltaY > 0) {
-      scrollAutomatico = true;
-      window.scrollTo({
-        top: window.innerHeight,
-        behavior: 'smooth'
-      });
-
-      setTimeout(() => {
-        scrollAutomatico = false;
-      }, 100);
-    }
-
-    if (!scrollAutomatico && scrollAtual < window.innerHeight + 100 && e.deltaY < 0) {
-      scrollAutomatico = true;
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-
-      setTimeout(() => {
-        scrollAutomatico = false;
-      }, 100);
+  elementos.forEach(el => {
+    const posicao = el.getBoundingClientRect().top;
+    if (posicao < alturaTela - 100) {
+      el.classList.add('apareceu');
     }
   });
+}
+
