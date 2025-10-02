@@ -42,6 +42,7 @@ public class LoginController {
         String nomeUsuario = CookieService.getCookie(request, "nomeUsuario");
         if (nomeUsuario != null) {
             model.addAttribute("nomeUsuario", nomeUsuario);
+            return "Home";
         }
         return "Home";
     }
