@@ -23,7 +23,10 @@ public class LoginInterceptorAppConfig implements WebMvcConfigurer {
                 "/js/**",             // scripts JS
                 "/images/**",         // imagens
                 "/error",             // página de erro padrão
-                "/favicon.ico"        // ícone do navegador (pra evitar requisição inútil)
+                "/favicon.ico",        // ícone do navegador (pra evitar requisição inútil)
+                "/",
+                "/comentarios"
+                
             );
     }
 }

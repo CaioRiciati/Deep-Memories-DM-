@@ -16,6 +16,12 @@ body {
   align-items: center;
 }
 
+.container {
+
+  height: 690px;
+
+}
+
 .nuvem-topo {
   position: absolute;
   bottom: 51%;
