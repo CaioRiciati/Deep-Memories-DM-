@@ -16,9 +16,9 @@
     <!-- Adiciona a informação do usuário aqui -->
     <div class="user-info">
       <!-- Exibe o nome do usuário se ele estiver logado -->
-      <span th:if="${nomeUsuario}" th:text="'Olá, ' + ${nomeUsuario} + '!'">Olá, Nome do Usuário!</span>
+      <span>Olá  <strong th:text="${nomeUsuario}">Usuário</strong>!</span>
       <!-- Se não estiver logado, pode-se mostrar algo diferente, como um botão de login -->
-      <a th:unless="${nomeUsuario}" href="/login">Login</a>
+      <button type="button" th:unless="${nomeUsuario}"  class="login" onclick="window.location.href='/login'">LOGAR CONTA</button>
     </div>
 
     <a href="/" class="btn-voltar">Voltar</a> 

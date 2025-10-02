@@ -69,10 +69,21 @@
         </div>
       </div>
     </nav>
-    <section class="botoes">
-      <button type="button" class="criar" onclick="window.location.href='/CreateAccount'" id="criar">CRIAR CONTA</button>
-      <button type="button" class="login" onclick="window.location.href='/login'" id="login">LOGAR CONTA</button>
-    </section>
+	
+	</div>
+
+	<section class="botoes">
+	    <!-- Se não estiver logado, mostra criar e logar -->
+	    <div th:if="${nomeUsuario == null}">
+	        <button type="button" class="criar" onclick="window.location.href='/CreateAccount'">CRIAR CONTA</button>
+	        <button type="button" class="login" onclick="window.location.href='/login'">LOGAR CONTA</button>
+	    </div>
+
+	    <!-- Se estiver logado, mostra o nome do usuário -->
+	    <div th:if="${nomeUsuario != null}">
+	        <span class="A">Olá, <strong th:text="${nomeUsuario}">Usuário</strong>!</span>
+	    </div>
+	</section>
   </header>
 
 

@@ -134,6 +134,15 @@ header img {
   margin-left: 20px;
 }
 
+.botoes{
+  margin-left: 40%;
+  text
+}
+
+.A{
+  font-size: 1.2em;
+}
+
 /* -------------------- NAV -------------------- */
 nav {
   display: flex;
