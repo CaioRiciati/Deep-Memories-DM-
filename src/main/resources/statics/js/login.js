@@ -5,7 +5,7 @@ document.querySelector("#formCadastro1").addEventListener("submit", async (e) =>
   const senha = document.querySelector("#senha").value;
 
   try {
-    await login(email, senha); // usa a função do api.js
+    await login(email, senha);
     window.location.href = "CreateAccount.html";
   } catch (error) {
     alert("Login inválido.");
