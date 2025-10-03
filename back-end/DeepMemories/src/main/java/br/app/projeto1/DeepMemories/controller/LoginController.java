@@ -71,10 +71,11 @@ public class LoginController {
 		return "CreateAccount";
 	}
 	
+	
 	@RequestMapping(value = "/CreateAccount", method = RequestMethod.POST)
 	public String cadastroUsuario(@Valid Usuario usuario, BindingResult result) {	
 		if(result.hasErrors()) {
-			return "CreateAccount";
+			return "login";
 		}
 
 		ur.save(usuario);
